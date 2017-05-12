@@ -1,0 +1,32 @@
+{
+  "name": "acchain-js",
+  "version": "1.0.0",
+  "description": "acchain javascript library",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify build.js -o browserify-acchain.js && uglifyjs browserify-acchain.js > browserify-acchain-min.js"
+  },
+  "keywords": [
+    "acchain",
+    "js",
+    "library"
+  ],
+  "author": "sqf1225@foxmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "browserify-bignum": "^1.3.0-2",
+    "buffer": "^4.7.0",
+    "bytebuffer": "^5.0.1",
+    "crypto-browserify": "^3.11.0",
+    "js-nacl": "^0.6.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "should": "^9.0.2",
+    "uglify-js": "^2.7.3"
+  }
+}

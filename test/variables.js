@@ -4,7 +4,7 @@ var chai = require('chai');
 var supertest = require('supertest');
 var async = require('async');
 var request = require('request');
-var asch = require('../pylink-js');
+var asch = require('../acchain-js');
 
 var DappType = require('../src/utils/dapp-types.js');
 var DappCategory = require('../src/utils/dapp-category.js');

@@ -1,6 +1,6 @@
 var fs = require('fs');
 var Api = require('../helpers/api.js');
-var aschJS = require('../../pylink-js');
+var aschJS = require('../../acchain-js');
 
 var globalOptions;
 

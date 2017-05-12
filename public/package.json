@@ -7,7 +7,7 @@
     "postinstall": "npm run build",
     "preinstall": "bower install",
     "start": "gulp",
-    "build": "browserify build.js -o bower_components/bitcore-mnemonic.js && cp ../pylink-js/browserify-pylink.js bower_components/"
+    "build": "browserify build.js -o bower_components/bitcore-mnemonic.js && cp ../acchain-js/browserify-acchain.js bower_components/"
   },
   "dependencies": {
     "bitcore-mnemonic": "1.0.1",
