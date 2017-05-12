@@ -41,7 +41,7 @@ function main() {
     .option('-g, --genesisblock <path>', 'Genesisblock path')
     .option('-x, --peers [peers...]', 'Peers list')
     .option('-l, --log <level>', 'Log level')
-    .option('-d, --daemon', 'Run asch node as daemon')
+    .option('-d, --daemon', 'Run acchain node as daemon')
     .option('-e, --execute <path>', 'exe')
     .option('--reindex', 'Reindex blockchain')
     .option('--base <dir>', 'Base directory')
@@ -51,7 +51,7 @@ function main() {
 
   var pidFile = path.join(baseDir, 'acchain.pid');
   if (fs.existsSync(pidFile)) {
-    console.log('Failed: asch server already started');
+    console.log('Failed: acchain server already started');
     return;
   }
 
