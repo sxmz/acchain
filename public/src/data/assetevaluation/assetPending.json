@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "assets": [
+    {
+        "name": "Longjing tea", 
+        "currency": "LONG", 
+        "desc": "Longjing tea", 
+        "category": "010101", 
+        "precision": 6, 
+        "estimatePrice": 10, 
+        "estimateUnit": "USD", 
+        "issuerId": "14762548536863074694", 
+        "unlockCondition": 1, 
+        "extra": "......", 
+        "votes": "500/1000(50%)",
+        "approved": 0
+    },
+    {
+        "name": "Longjing tea", 
+        "currency": "LONG", 
+        "desc": "Longjing tea", 
+        "category": "010101", 
+        "precision": 6, 
+        "estimatePrice": 10, 
+        "estimateUnit": "USD", 
+        "issuerId": "14762548536863074694", 
+        "unlockCondition": 1, 
+        "extra": "......", 
+        "votes": "500/1000(50%)",
+        "approved": 0
+    },
+    {
+        "name": "Longjing tea", 
+        "currency": "LONG", 
+        "desc": "Longjing tea", 
+        "category": "010101", 
+        "precision": 6, 
+        "estimatePrice": 10, 
+        "estimateUnit": "USD", 
+        "issuerId": "14762548536863074694", 
+        "unlockCondition": 1, 
+        "extra": "......", 
+        "votes": "500/1000(50%)",
+        "approved": 0
+    }
+  ],
+  "totalCount": 3
+}

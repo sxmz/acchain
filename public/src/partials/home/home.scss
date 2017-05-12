@@ -1,0 +1,156 @@
+#home {
+    /*background: #300;*/
+    .homeinfo{
+        //display: box;
+        //display: flex;
+        //display: -webkit-box;
+        padding: 0 auto;
+    .account {
+        width: 32%;
+        display: inline-block;
+        margin-right: 2%;
+        float: left;
+        height: 200px;
+        border-radius: 6px;
+        overflow: hidden;
+
+        position: relative;
+        span {
+            //margin-left: 30px;
+            //margin-right: 30px;
+            font-size: 18px;
+            color: #131e22;
+           // line-height: 140px;
+            position: absolute;
+            left: 40px;
+            top: 30px;
+        }
+        i {
+            font-size: 30px;
+            color: #4098f3;
+            font-style: normal;
+            position: absolute;
+            left: 40px;
+            top: 90px;
+            strong{
+                font-weight: normal;
+                font-size: 20px;
+                margin-left: 5px;
+            }
+        }
+        b {
+            font-style: normal;
+            font-size: 20px;
+            color: #919ab0;
+            position: absolute;
+            left: 40px;
+            top: 155px;
+        }
+        &:nth-child(1){
+            //background: #ffffff url("/assets/home/account_bg.png") no-repeat 90% center;
+            background: #ffffff;
+            border: 1px solid #e1e4e9;
+            border-left:5px solid #4199f3;
+        }
+        &:nth-child(2){
+            background: #ffffff;
+            border: 1px solid #e1e4e9;
+            border-left:5px solid #4199f3;
+        }
+        &:nth-child(3){
+            background: #ffffff;
+            border: 1px solid #e1e4e9;
+            border-left:5px solid #4199f3;
+            margin-right:0;
+        }
+    }
+
+    }
+    .latest {
+        height: 70px;
+        line-height: 70px;
+        padding: 0 0 0 40px;
+        border: 0;
+        .table_title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #394047;
+        }
+        .table {
+
+        }
+    }
+    .deal_table{
+        width: 100%;
+        min-height: 400px;
+        border: 1px solid #e1e4e9;
+        border-radius: 6px;
+        background-color: #fff;
+        margin: 30px 0 0 0;
+    	.table{
+            width: 100%;
+            height: auto;
+            th{
+                border-top: 0;
+            }
+    		td {
+                text-align: center;
+                border: 0;
+                max-width: 200px;
+                overflow-x: auto;
+            }
+            tr:nth-child(even) {
+                background: #ffffff;
+                border: 0;
+            }
+            tr:nth-child(odd) {
+                background: #f8fbfc;
+                border: 0;
+            }
+            tr:nth-child(1){
+                background: #eef0f3;
+                color: #919ab0;
+                font-weight: 600;
+            }
+            tr:nth-child(1):hover{
+                background: #eef0f3;
+            }
+            tr:hover{
+            	background: #ebf4ff;
+            }
+    	}
+        .deal_table_title{
+            font-size: 20px;
+            color:#333;
+        }
+        .pagination{
+            margin: 0px 40px 20px;
+        }
+    }
+}
+#accept{
+    width: 840px;
+    //height: 530px;
+    z-index: 1000;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -420px;
+    margin-top: -295px;
+}
+
+#sent{
+    width: 840px;
+    //height: 530px;
+    z-index: 1000;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -420px;
+    margin-top: -295px;
+}
+.item_accept{
+    cursor: pointer;
+}

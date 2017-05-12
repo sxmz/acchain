@@ -1,0 +1,13 @@
+{
+  "name": "普洱茶",
+  "desc": "普洱茶简介",
+  "currency": "PuerBank.PEB",
+  "maximum": "10000000000000",
+  "precision": 6,
+  "category": "010203",
+  "estimateUnit": "RMB",
+  "estimatePrice": "20",
+  "exerciseUnit": "10",
+  "unlockCondition": 0,
+  "extra": "附加信息"
+}

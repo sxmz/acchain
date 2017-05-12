@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "asset": {
+      "rate": 1,
+      "name": "龙井茶", 
+			"currency": "LONG", 
+			"desc": "龙井茶主要产于浙江。龙井茶讲究冲泡技巧和品饮艺术", 
+			"category": "010101", 
+			"precision": 6, 
+			"estimatePrice": 10, 
+			"estimateUnit": "USD", 
+			"issuerId": "14762548536863074694", 
+			"unlockCondition": 1, 
+			"extra": "no extra information", 
+			"votes": "500/1000(50%)",
+			"total": 50000,
+			"information": "测试信息",
+			"index": "测试指标",
+			"brand": "Google",
+			"production": "产地浙江",
+			"packing": "400克1饼",
+			"other": "..."
+  }
+}

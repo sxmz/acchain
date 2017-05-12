@@ -1,0 +1,1 @@
+window.AschJS = AschJS = require('./index.js');

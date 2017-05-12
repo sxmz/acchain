@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "balances": [
+    {
+        "name": "test asset 1", 
+        "currency": "TEST1", 
+        "desc": "test desc", 
+        "category": "010101", 
+        "precision": 6, 
+        "estimatePrice": 10, 
+        "estimateUnit": "USD", 
+        "issuerId": "14762548536863074694", 
+        "unlockCondition": 1, 
+        "extra": "......", 
+        "votes": "500/1000(50%)",
+        "approved": 1
+    },
+    {
+        "name": "test asset 2", 
+        "currency": "TEST2", 
+        "desc": "test desc", 
+        "category": "010102", 
+        "precision": 6, 
+        "estimatePrice": 20, 
+        "estimateUnit": "USD", 
+        "issuerId": "14762548536863074694", 
+        "unlockCondition": 1, 
+        "extra": "......", 
+        "votes": "500/1000(50%)",
+        "approved": 1
+    }],
+  "totalCount": 2
+}

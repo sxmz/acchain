@@ -1,0 +1,103 @@
+#vote{
+   width: 100%;
+    min-height: 508px;
+    border: 1px solid #e1e4e9;
+    border-radius: 6px;
+    background-color: #fff;
+    .pagination{
+        margin: 0 0 20px 3%;
+    }
+  .voteheader{
+    width: 94%;
+    height: 60px;
+    border-bottom: 1px solid #e1e4e9;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 3%;
+    .titleitem{
+      height: 60px;
+      display: inline-block;
+      text-align: center;
+      margin-right: 7%;
+      line-height: 60px;
+      box-sizing: border-box;
+      color: #394047;
+      font-size:18px;
+      cursor: pointer;
+    }
+    .active{
+      color:#4199f3;
+      border-bottom: 3px solid #4199f3;
+    }
+  }
+  .content{
+    width: 100%;
+    min-height: 458px;
+    box-sizing: border-box;
+    .innerheader{
+      height: 70px;
+      width: 94%;
+      line-height: 70px;
+      box-sizing: border-box;
+      position: relative;
+      margin: 0 0 0 3%;
+      .search{
+        position: absolute;
+        right: 120px;
+        top: 12px;
+        width: 200px;
+        height: 40px;
+        padding-left: 10px;
+      }
+      button{
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #4199f3;
+        position: absolute;
+        font-size: 18px;
+        border: 0;
+        color:#fff;
+        right: 0;
+        top: 15px;
+      }
+      .delete{
+        background: #4199f3;
+      }
+    }
+    .tablewrap{
+      th{
+        border-top: 0;
+      }
+      td {
+        text-align: center;
+        border: 0;
+        max-width: 200px;
+        overflow-x: auto;
+      }
+      tr:nth-child(even) {
+        background: #ffffff;
+        border: 0;
+      }
+      tr:nth-child(odd) {
+        background: #f8fbfc;
+        border: 0;
+      }
+      tr:nth-child(1){
+        background: #eef0f3;
+        color: #919ab0;
+        font-weight: 600;
+      }
+      tr:hover{
+        background: #ebf4ff;
+      }
+      tr:nth-child(1):hover{
+        background: #eef0f3;
+      }
+    }
+  }
+  .level {
+    color: #4199f3;
+    cursor: pointer;
+  }
+}
