@@ -1,19 +1,19 @@
 # Asch CLI
 
-A command line interface for bootstrapping and managing [Asch](https://acchain.so/) blockchain apps.
+A command line interface for bootstrapping and managing [Asch](https://asch.so/) blockchain apps.
 
 ## Installation
 
 ```
-npm install -g acchain-cli
+npm install -g asch-cli
 ```
 
 ## Usage
 
 ```
-./bin/acchain-cli --help
+./bin/asch-cli --help
 
-  Usage: acchain-cli [options] [command]
+  Usage: asch-cli [options] [command]
 
 
   Commands:
@@ -62,4 +62,4 @@ npm install -g acchain-cli
 
 ## Documents
 
-https://github.com/sqfasd/acchain_docs
+https://github.com/sqfasd/asch_docs

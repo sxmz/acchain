@@ -13,7 +13,7 @@
     "cli"
   ],
   "bin": {
-    "asch-cli": "./bin/asch-cli"
+    "acchain-cli": "./bin/acchain-cli"
   },
   "author": "Acchain Team <system@acchain.org>",
   "license": "MIT",
