@@ -50,6 +50,7 @@ node app.js --help
 ```
 cd public
 npm install -g
+gulp build-testnet
 npm start serve
 ```
 
