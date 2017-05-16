@@ -1,7 +1,7 @@
 {
 	"server": {
 		"dev": "http://localhost:4096",
-		"dev2": "http://192.168.1.152:4096",
+		"dev2": "https://tnode.acchain.org",
 		"dev3": "http://192.168.1.79:5000"
 	},
 	//登录接口
@@ -110,6 +110,11 @@
 	"publishpendingApi": {
 		"mock": "/data/assetevaluation/publishPending.json",
 		"url": "/api/uia/issues/applying"
+	},
+	//获取资产评估-发行资产投票详情
+	"publishvoterApi": {
+		"mock": "/data/assetevaluation/publishvoter.json",
+		"url": "/api/uia/issues/:id/voters"
 	},
 	//获取资产评估-已通过列表
 	"assetApprovedApi": {
