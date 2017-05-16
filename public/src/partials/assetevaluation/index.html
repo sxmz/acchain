@@ -16,7 +16,7 @@
 					<th>{{'ASSET_CURRENCY' | translate}}</th>
 					<th>{{'ASSET_NAME' | translate}}</th>
 					<th>{{'ASSET_CATEGORY_CODE' | translate}}</th>
-					<th>{{'ASSET_QUANTITY' | translate}}</th>
+					<th>{{'ASSET_TOTAL' | translate}}</th>
 					<th>{{'VOTE_DETAIL' | translate}}</th>
 					<th>{{'ASSET_ESTIMATE_VALUE' | translate}}</th>
 					<th>{{'VOTE' | translate}}</th>
@@ -25,7 +25,7 @@
                     <td><i class="level" ng-click="showassetdetailInfo(i.currency)">{{i.currency }}</i></td>
                     <td>{{i.name}}</td>
 					<td>{{i.category}}</td>
-                    <td>{{i.quantity}}</td>
+                    <td>{{i.maximum}}</td>
                     <td><i class="level" ng-click="showassetvoterInfo(i.currency)">{{'VOTE_DETAIL' | translate}}</i></td>
                     <td>{{i.estimatePrice}}/{{i.estimateUnit}}</td>
                     <!--<td><button ng-disabled="i.btndisable" ng-class="{'active':i.btndisable}" ng-click="notallowed(i)">{{'VOTE' | translate}}</button></td>-->
@@ -45,17 +45,17 @@
 					<th>{{'ASSET_CURRENCY' | translate}}</th>
 					<th>{{'PUBLISH_TRANSACTION_ID' | translate}}</th>
 					<th>{{'EXCHANGE_RATE' | translate}}</th>
-					<th>{{'ASSET_QUANTITY' | translate}}</th>
+					<th>{{'PUBLISHED_NUM' | translate}}</th>
 					<th>{{'VOTE_DETAIL' | translate}}</th>
 					<th>{{'SENDER' | translate}}</th>
 					<th>{{'VOTE' | translate}}</th>
 				</tr>
                 <tr ng-repeat="i in $data"  >
                 	<td>{{i.currency }}</td>
-                    <td><i class="level" ng-click="showassetdetailInfo(i.currency)">{{i.transactionId}}</i></td>
+                    <td>{{i.transactionId}}</td>
 					<td>{{i.exchangeRate}}</td>
                     <td>{{i.amount}}</td>
-                    <td><i class="level" ng-click="showassetvoterInfo(i.currency)">{{'VOTE_DETAIL' | translate}}</i></td>
+                    <td><i class="level" ng-click="showpublishvoterInfo(i.transactionId)">{{'VOTE_DETAIL' | translate}}</i></td>
                     <td>{{i.senderId}}</td>
                     <!--<td><button ng-disabled="i.btndisable" ng-class="{'active':i.btndisable}" ng-click="notallowed(i)">{{'VOTE' | translate}}</button></td>-->
                     <td><button ng-click="votetopublish(i.transactionId)">{{'VOTE' | translate}}</button></td>    
@@ -75,7 +75,8 @@
 					<th>{{'ASSET_CURRENCY' | translate}}</th>
 					<th>{{'ASSET_NAME' | translate}}</th>
 					<th>{{'ASSET_CATEGORY_CODE' | translate}}</th>
-					<th>{{'ASSET_QUANTITY' | translate}}</th>
+					<th>{{'PUBLISHED_NUM' | translate}}</th>
+					<th>{{'ASSET_TOTAL' | translate}}</th>
 					<th>{{'VOTE_DETAIL' | translate}}</th>
 					<th>{{'ASSET_ESTIMATE_VALUE' | translate}}</th>
 					<th>{{'VOTE' | translate}}</th>
@@ -85,6 +86,7 @@
                     <td>{{i.name}}</td>
 					<td>{{i.category}}</td>
                     <td>{{i.quantity}}</td>
+                    <td>{{i.maximum}}</td>
                     <td><i class="level" ng-click="showassetvoterInfo(i.currency)">{{'VOTE_DETAIL' | translate}}</i></td>
                     <td>{{i.estimatePrice}}/{{i.estimateUnit}}</td>
                     <td><i>{{'ASSET_APPROVAL' | translate}}</i></td>

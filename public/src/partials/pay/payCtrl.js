@@ -3,16 +3,18 @@ angular.module('asch').controller('payCtrl', function ($scope, $rootScope, $filt
     $rootScope.userlogin = true;
 	$scope.userService = userService;
     $scope.sent = userService.address;
-    $scope.fee = '0.1';
+    $scope.fee = '0.01';
     $scope.currencyRange = [];
     var currency = $rootScope.currencyName === undefined ? null : $rootScope.currencyName;
-    //初始化下拉框
+    var precision = $rootScope.currencyName === undefined ? 6 : $rootScope.precision;
+   //初始化下拉框
     apiService.myBalances({
         address: userService.address
     }).success(function (res) {
  	   $scope.currencyRange = res.balances;
  	   $scope.currencyRange.unshift({
 			currency: "ACC",
+			precision: 6
 	   });
 	   for( var i=0;i<$scope.currencyRange.length;i++){
         	if($scope.currencyRange[i].currency == currency){
@@ -21,14 +23,15 @@ angular.module('asch').controller('payCtrl', function ($scope, $rootScope, $filt
        	}
     }).error(function (res) {
        toastError($translate.instant('ERR_SERVER_ERROR'));
-    });
-	
+    });	
 	$scope.currencyChange = function(){
         currency = $scope.selectedCurrency.currency === 'ACC' ? null : $scope.selectedCurrency.currency;
-    }
+        precision = $scope.selectedCurrency.currency === 'ACC' ? 6 : $scope.selectedCurrency.precision;
+   }
     $scope.calculateFee = function () {
         if ($scope.amount && Number($scope.amount) > 0) {
-            var amount = parseFloat(($scope.amount * 100000000).toFixed(0));
+        	var precision_treated = Math.pow(10,precision);
+            var amount = parseFloat(($scope.amount * precision_treated).toFixed(0));
             var fee = AschJS.transaction.calculateFee(amount);
             $scope.fee = $filter('xasFilter')(fee);
         }
@@ -40,6 +43,7 @@ angular.module('asch').controller('payCtrl', function ($scope, $rootScope, $filt
         	toastError($translate.instant('ERR_AMOUNT_INVALID'));
         }else{
         	currency = $scope.selectedCurrency.currency === 'ACC' ? null : $scope.selectedCurrency.currency;
+
         }
         if (!$scope.fromto) {
             toastError($translate.instant('ERR_NO_RECIPIENT_ADDRESS'));
@@ -57,8 +61,9 @@ angular.module('asch').controller('payCtrl', function ($scope, $rootScope, $filt
             toastError($translate.instant('ERR_AMOUNT_INVALID'));
             return false;
         }
-        var amount = parseFloat(($scope.amount * 1000000).toFixed(0));
-        var fee = 100000;
+        
+        var amount = parseFloat(($scope.amount * Math.pow(10,precision)).toFixed(0));
+        //var fee = 100000;
         
         if (userService.secondPublicKey && !$scope.secondPassword) {
             toastError($translate.instant('ERR_NO_SECND_PASSWORD'));

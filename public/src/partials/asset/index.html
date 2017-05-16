@@ -15,9 +15,9 @@
                 <tr>
                     <th>{{'ASSET_CURRENCY' | translate}}</th>
 					<th>{{'ASSET_NAME' | translate}}</th>
-					<th>{{'ASSET_CATEGORY_CODE' | translate}}</th>
+					<th>{{'BALANCE' | translate}}</th>
 					<th>{{'PRECISION' | translate}}</th>
-					<th>{{'ASSET_ESTIMATE_VALUE' | translate}}</th>
+					<th>{{'PUBLISHED_TOTAL' | translate}}</th>
                     <!--<th>{{'ALLOW_WWB' | translate}}</th>-->
                     <th>{{'OPERATION' | translate}}</th>
                 </tr>
@@ -25,9 +25,9 @@
             <tr ng-repeat="i in $data"  >
                 <td>{{i.currency}}</td>
                 <td>{{i.name}}</td>
-                <td>{{i.category}}</td>
+                <td>{{i.balance}}</td>
                 <td>{{i.precision}}</td>
-                <td>{{i.estimatePrice}}/{{i.estimateUnit}}</td>
+                <td>{{i.quantity}}</td>
                 <!--<td>{{i.allowWriteoff ? 'Y' : 'N'}}/{{i.allowWhitelist ? 'Y' : 'N'}}/{{i.allowBlacklist ? 'Y' : 'N'}}</td>-->
                 <td><a class="hand" ng-click="transferView(i,1)">{{'TRANSFER' | translate}}</a></td>
             </tr>
@@ -147,6 +147,10 @@
     			<input type="text" ng-model="otherInfo" />
     			<input type="text" ng-model="otherInfoRemark" placeholder="{{'REMARK' | translate}}"/>
     			<input type="text" ng-model="otherInfoLink" placeholder="{{'LINK' | translate}}"/>
+    		</div>
+    		<div class="item">
+    			<label>{{'MORE_DETAILS' | translate}}</label>
+    			<input type="text" ng-model="moreDetails" placeholder="{{'LINK' | translate}}"/>
     		</div>
     	</div>
     	<div class="registerasset_title">

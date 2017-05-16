@@ -178,7 +178,7 @@ window.Translations['en-us'] = {
   PRODUCED_NUMBER: 'Number of produced blocks',
   USERNAME: 'User Name',
   WEIGHT: 'Weight',
-  TOTAL_PEOPLES: 'Totally {{count}} people',
+  TOTAL_PEOPLES: 'Totally {{count}}',
 
   // model - account detail
   ACCOUNT_DETAIL: 'Account Detail',
@@ -285,6 +285,7 @@ window.Translations['en-us'] = {
   ASSET_ESTIMATE_VALUE:"Asset estimate value",
   PUBLISH_TRANSACTION_ID:"Transaction ID",
   EXCHANGE_RATE:"Exchange rate",
+  ASSET_TOTAL:'Asset total',
   //assetevaluation - votes
   VOTE_DETAIL: 'Vote detail',
   VOTER_ADDRESS: 'Voter address',
@@ -297,6 +298,7 @@ window.Translations['en-us'] = {
   ESTIMATE_UNIT:'Estimate unit',
   UNLOCK_CONDITION:'Unlock condition',
   CHAIN_OR_NOT:'Chain or not',
+  MORE_DETAILS:'More details',
   //asset - alertinfo
   NO_ASSET_INFO: 'No asset information',
   CONFIRM_DIALOG_TEXT : 'This operation will cost',

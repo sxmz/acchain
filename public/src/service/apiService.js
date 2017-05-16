@@ -111,9 +111,13 @@ angular.module('asch').service('apiService', function ($http, $rootScope, $locat
 	this.assetApproved = function (params) {
 		return fetch('{{assetApprovedApi}}', params, 'get');
 	};
-	//获取资产评估-投票详情
+	//获取资产评估-注册资产投票详情
 	this.assetvoter = function (params) {
 		return fetch('{{assetvoterApi}}', params, 'get');
+	};
+	//获取资产评估-发行资产投票详情
+	this.publishvoter = function (params) {
+		return fetch('{{publishvoterApi}}', params, 'get');
 	};
 	//获取资产评估-资产详情
 	this.assetdetail = function (params) {

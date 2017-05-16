@@ -171,7 +171,7 @@ window.Translations['zh-cn'] = {
   PRODUCED_NUMBER: '生产块数',
   USERNAME: '用户名',
   WEIGHT: '权重',
-  TOTAL_PEOPLES: '共{{count}}人',
+  TOTAL_PEOPLES: '共{{count}}个',
 
   // model - account detail
   ACCOUNT_DETAIL: '账户详情',
@@ -279,6 +279,7 @@ window.Translations['zh-cn'] = {
   ASSET_ESTIMATE_VALUE:"资产估值",
   PUBLISH_TRANSACTION_ID:"交易ID",
   EXCHANGE_RATE:"兑换率",
+  ASSET_TOTAL:'资产总量',
   //assetevaluation - votes
   VOTE_DETAIL:"投票详情",
   VOTER_ADDRESS: '投票人地址',
@@ -291,6 +292,7 @@ window.Translations['zh-cn'] = {
   ESTIMATE_UNIT:'估值单位',
   UNLOCK_CONDITION:'解锁条件',
   CHAIN_OR_NOT:'是否为链式资产',
+  MORE_DETAILS:'更多信息',
   //asset - alertinfo
   NO_ASSET_INFO: '没有资产相关信息',
   CONFIRM_DIALOG_TEXT : '该操作需要消耗手续费',

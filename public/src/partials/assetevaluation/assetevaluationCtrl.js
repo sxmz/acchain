@@ -10,6 +10,12 @@ angular.module('asch').controller('assetevaluationCtrl', function ($scope, $root
         $scope.i = i;
         $rootScope.$broadcast('assetvoter', $scope.i)
     }
+   	$rootScope.showpublishvoterInfo = function (i) {
+   		$rootScope.blockdetailinfo = false;
+        $rootScope.dealdetailinfo = false;
+        $scope.i = i;
+        $rootScope.$broadcast('publishvoter', $scope.i)
+    }
    	$rootScope.showassetdetailInfo = function (i) {
         $rootScope.blockdetailinfo = false;
         $rootScope.dealdetailinfo = false;
@@ -69,18 +75,17 @@ angular.module('asch').controller('assetevaluationCtrl', function ($scope, $root
                 total: 0,
                 counts: [],
                 getData: function ($defer, params) {
-                    //console.log($defer)
-                    // console.log(params)
                     apiService.assetPending({
                         limit: params.count(),
                         offset: (params.page() - 1) * params.count()
                     }).success(function (res) {
-                        //  $scope.res =res;
-                        // params.data=res.assets;
-                        params.total(res.totalCount);
-                        $scope.assetpendingCount = res.totalCount;
-                        // return res.assets;
-                        $defer.resolve(res.assets);
+                        params.total(res.count);
+                        $scope.assetpendingCount = res.count;
+                        for (var i in res.assets) {
+	                        var precision = res.assets[i].precision;
+	                        res.assets[i].maximum = parseInt(res.assets[i].maximum) / Math.pow(10, precision);
+	                    }
+                       	$defer.resolve(res.assets);
                     }).error(function (res) {
                         toastError($translate.instant('ERR_SERVER_ERROR'));
                     });
@@ -101,13 +106,11 @@ angular.module('asch').controller('assetevaluationCtrl', function ($scope, $root
                 total: 0,
                 counts: [],
                 getData: function ($defer, params) {
-                    //console.log($defer)
-                    // console.log(params)
                     apiService.publishpending({
                         limit: params.count(),
                         offset: (params.page() - 1) * params.count()
                     }).success(function (res) {
-                        params.total(res.totalCount);
+                        params.total(res.count);
                         $scope.publishpendingCount = res.count;
                         $defer.resolve(res.issues);
                     }).error(function (res) {
@@ -134,11 +137,13 @@ angular.module('asch').controller('assetevaluationCtrl', function ($scope, $root
                         limit: params.count(),
                         offset: (params.page() - 1) * params.count()
                     }).success(function (res) {
-                        //  $scope.res =res;
-                        // params.data=res.assets;
-                        params.total(res.totalCount);
+                        params.total(res.count);
                         $scope.assetapprovedCount = res.assets.length;
-                        // return res.assets;
+                        for (var i in res.assets) {
+	                        var precision = res.assets[i].precision;
+	                        res.assets[i].maximum = parseInt(res.assets[i].maximum) / Math.pow(10, precision);
+	                        res.assets[i].quantity = parseInt(res.assets[i].quantity) / Math.pow(10, precision);
+	                    }
                         $defer.resolve(res.assets);
                     }).error(function (res) {
                         toastError($translate.instant('ERR_SERVER_ERROR'));
@@ -161,11 +166,12 @@ angular.module('asch').controller('assetevaluationCtrl', function ($scope, $root
                         limit: params.count(),
                         offset: (params.page() - 1) * params.count()
                     }).success(function (res) {
-                        //  $scope.res =res;
-                        // params.data=res.assets;
-                        params.total(res.totalCount);
-                        $scope.assetpendingCount = res.totalCount;
-                        // return res.assets;
+                        params.total(res.count);
+                        $scope.assetpendingCount = res.count;
+                        for (var i in res.assets) {
+	                        var precision = res.assets[i].precision;
+	                        res.assets[i].maximum = parseInt(res.assets[i].maximum) / Math.pow(10, precision);
+	                    }
                         $defer.resolve(res.assets);
                     }).error(function (res) {
                         toastError($translate.instant('ERR_SERVER_ERROR'));

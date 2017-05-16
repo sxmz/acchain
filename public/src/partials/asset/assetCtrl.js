@@ -212,12 +212,12 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
                     address: userService.address
                 }).success(function (res) {
                     params.total(res.count);
-//                  for (var i in res.balances) {
-//                      var precision = res.balances[i].precision;
-//                      res.balances[i].balance = parseInt(res.balances[i].balance) / Math.pow(10, precision);
-//                      res.balances[i].maximum = parseInt(res.balances[i].maximum) / Math.pow(10, precision);
-//                      res.balances[i].quantity = parseInt(res.balances[i].quantity) / Math.pow(10, precision);
-//                  }
+                    for (var i in res.balances) {
+                        var precision = res.balances[i].precision;
+                        res.balances[i].balance = parseInt(res.balances[i].balance) / Math.pow(10, precision);
+                        //res.balances[i].maximum = parseInt(res.balances[i].maximum) / Math.pow(10, precision);
+                        res.balances[i].quantity = parseInt(res.balances[i].quantity) / Math.pow(10, precision);
+                    }
                     $defer.resolve(res.balances);
                 }).error(function (res) {
                     toastError($translate.instant('ERR_SERVER_ERROR'));
@@ -351,7 +351,8 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
 		    	"value":$scope.otherInfo,
 		    	"remark":$scope.otherInfoRemark,
 		    	"link":$scope.otherInfoLink
-		    }
+		    },
+		    "moreDetails":$scope.moreDetails
 		})
 		var payload = {
 		    name: name,
