@@ -66,6 +66,7 @@ module.exports.connect = function (connectString, cb) {
     "CREATE INDEX IF NOT EXISTS trs_senderPublicKey on trs(senderPublicKey)",
     "CREATE INDEX IF NOT EXISTS trs_type on trs(type)",
     "CREATE INDEX IF NOT EXISTS trs_timestamp on trs(timestamp)",
+    "CREATE INDEX IF NOT EXISTS trs_currency on trs(currency)",
     "CREATE INDEX IF NOT EXISTS signatures_trs_id ON signatures(transactionId)",
     "CREATE INDEX IF NOT EXISTS votes_trs_id ON votes(transactionId)",
     "CREATE INDEX IF NOT EXISTS delegates_trs_id ON delegates(transactionId)",

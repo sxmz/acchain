@@ -1,4 +1,5 @@
 var ByteBuffer = require("bytebuffer");
+var bignum = require("bignumber");
 var crypto = require('crypto');
 var async = require('async');
 var ed = require('ed25519');
@@ -173,7 +174,7 @@ private.attachApi = function () {
 }
 
 private.list = function (filter, cb) {
-  var sortFields = ['t.id', 't.blockId', 't.amount', 't.fee', 't.type', 't.timestamp', 't.senderPublicKey', 't.senderId', 't.recipientId', 't.confirmations', 'b.height'];
+  var sortFields = ['t.id', 't.blockId', 't.amount', 't.currency', 't.fee', 't.type', 't.timestamp', 't.senderPublicKey', 't.senderId', 't.recipientId', 't.confirmations', 'b.height'];
   var params = {}, fields_or = [], owner = "";
   if (filter.blockId) {
     fields_or.push('blockId = $blockId')
@@ -234,9 +235,8 @@ private.list = function (filter, cb) {
     return cb("Invalid limit. Maximum is 100");
   }
 
-  var uiaCurrencyJoin = ''
   if (filter.currency) {
-    uiaCurrencyJoin = 'inner join transfers ut on ut.transactionId = t.id and ut.currency = "' + filter.currency + '" '
+    fields_or.push('currency = ' + filter.currency)
   }
 
   library.dbLite.query("select count(t.id) " +
@@ -251,14 +251,14 @@ private.list = function (filter, cb) {
       var count = rows.length ? rows[0].count : 0;
 
       // Need to fix 'or' or 'and' in query
-      library.dbLite.query("select t.id, b.height, t.blockId, t.type, t.timestamp, lower(hex(t.senderPublicKey)), t.senderId, t.recipientId, t.amount, t.fee, lower(hex(t.signature)), lower(hex(t.signSignature)), t.signatures, (select max(height) + 1 from blocks) - b.height " +
+      library.dbLite.query("select t.id, b.height, t.blockId, t.type, t.timestamp, lower(hex(t.senderPublicKey)), t.senderId, t.recipientId, t.amount, t.currency, t.fee, lower(hex(t.signature)), lower(hex(t.signSignature)), t.signatures, (select max(height) + 1 from blocks) - b.height " +
         "from trs t " +
-        "inner join blocks b on t.blockId = b.id " + uiaCurrencyJoin +
+        "inner join blocks b on t.blockId = b.id " +
         (fields_or.length || owner ? "where " : "") + " " +
         (fields_or.length ? "(" + fields_or.join(' or ') + ") " : "") + (fields_or.length && owner ? " and " + owner : owner) + " " +
         (filter.orderBy ? 'order by ' + sortBy + ' ' + sortMethod : '') + " " +
         (filter.limit ? 'limit $limit' : '') + " " +
-        (filter.offset ? 'offset $offset' : ''), params, ['t_id', 'b_height', 't_blockId', 't_type', 't_timestamp', 't_senderPublicKey', 't_senderId', 't_recipientId', 't_amount', 't_fee', 't_signature', 't_signSignature', 't_signatures', 'confirmations'], function (err, rows) {
+        (filter.offset ? 'offset $offset' : ''), params, ['t_id', 'b_height', 't_blockId', 't_type', 't_timestamp', 't_senderPublicKey', 't_senderId', 't_recipientId', 't_amount', 't_currency', 't_fee', 't_signature', 't_signSignature', 't_signatures', 'confirmations'], function (err, rows) {
           if (err) {
             return cb(err);
           }
@@ -271,16 +271,40 @@ private.list = function (filter, cb) {
             transactions: transactions,
             count: count
           }
-          cb(null, data);
+          var assetCurrencies = new Set
+          data.transactions.forEach(function (trs) {
+            if (trs.currency) {
+              assetCurrencies.add(trs.currency)
+            }
+          })
+          assetCurrencies = Array.from(assetCurrencies)
+          async.mapSeries(assetCurrencies, function (currency, next) {
+            library.model.getAssetByCurrency(currency, next)
+          }, function (err, assets) {
+            if (err) return cb('Failed to asset info: ' + err)
+            var precisionMap = new Map
+            assets.forEach(function (a) {
+              precisionMap.set(a.currency, Math.pow(10, a.precision))
+            })
+            data.transactions.forEach(function (trs) {
+              if (trs.currency && precisionMap.has(trs.currency)) {
+                trs.precision = precisionMap.get(trs.currency)
+              } else {
+                trs.precision = 6 // ACC
+              }
+              trs.amountShow = bignum(trs.amount).div(trs.precision).toString()
+            })
+            cb(null, data)
+          })
         });
     });
 }
 
 private.getById = function (id, cb) {
-  library.dbLite.query("select t.id, b.height, t.blockId, t.type, t.timestamp, lower(hex(t.senderPublicKey)), t.senderId, t.recipientId, t.amount, t.fee, lower(hex(t.signature)), lower(hex(t.signSignature)), (select max(height) + 1 from blocks) - b.height " +
+  library.dbLite.query("select t.id, b.height, t.blockId, t.type, t.timestamp, lower(hex(t.senderPublicKey)), t.senderId, t.recipientId, t.amount, t.currency, t.fee, lower(hex(t.signature)), lower(hex(t.signSignature)), (select max(height) + 1 from blocks) - b.height " +
     "from trs t " +
     "inner join blocks b on t.blockId = b.id " +
-    "where t.id = $id", { id: id }, ['t_id', 'b_height', 't_blockId', 't_type', 't_timestamp', 't_senderPublicKey', 't_senderId', 't_recipientId', 't_amount', 't_fee', 't_signature', 't_signSignature', 'confirmations'], function (err, rows) {
+    "where t.id = $id", { id: id }, ['t_id', 'b_height', 't_blockId', 't_type', 't_timestamp', 't_senderPublicKey', 't_senderId', 't_recipientId', 't_amount', 't_currency', 't_fee', 't_signature', 't_signSignature', 'confirmations'], function (err, rows) {
       if (err || !rows.length) {
         return cb(err || "Can't find transaction: " + id);
       }
