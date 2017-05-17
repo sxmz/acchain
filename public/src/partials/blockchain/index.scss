@@ -38,6 +38,7 @@
        border: 1px solid #d5e2ec;
        border-radius: 25px;
        text-indent: 16px;
+       line-height: 50px;
      }
     .search_icon{
       position: absolute;
@@ -73,6 +74,7 @@
       border: 0;
       max-width: 200px;
       overflow-x: auto;
+      overflow-y: hidden;
     }
     tr:nth-child(even) {
       background: #ffffff;

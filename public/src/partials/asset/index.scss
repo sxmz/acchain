@@ -52,6 +52,7 @@
         border: 0;
         max-width: 200px;
         overflow-x: auto;
+        overflow-y: hidden;
       }
       tr:nth-child(even) {
         background: #ffffff;
@@ -275,7 +276,7 @@
         padding: 6px;
       }
       input[type="checkbox"]{
-          width: initial;
+          width: 14px;
       }
       textarea{
         width: 58%;
@@ -324,6 +325,7 @@
             border: 0;
             max-width: 200px;
             overflow-x: auto;
+            overflow-y: hidden;
         }
         tr:nth-child(even) {
             background: #ffffff;

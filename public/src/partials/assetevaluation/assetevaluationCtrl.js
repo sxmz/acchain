@@ -112,6 +112,10 @@ angular.module('asch').controller('assetevaluationCtrl', function ($scope, $root
                     }).success(function (res) {
                         params.total(res.count);
                         $scope.publishpendingCount = res.count;
+                        for (var i in res.issues) {
+	                        var precision = res.issues[i].precision;
+	                        res.issues[i].amount = parseInt(res.issues[i].amount) / Math.pow(10, precision);
+	                    }
                         $defer.resolve(res.issues);
                     }).error(function (res) {
                         toastError($translate.instant('ERR_SERVER_ERROR'));

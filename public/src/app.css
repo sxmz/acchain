@@ -510,8 +510,10 @@ body {
     left: 200px;
     right: 0;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 30px 48px 30px 48px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     background-color: #f4f5f7;
 }
