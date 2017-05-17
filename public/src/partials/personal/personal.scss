@@ -34,6 +34,9 @@
 }
 .accountInfo{
 	cursor: pointer;
+	.baseInfo{
+        height: 440px;
+    }
 }
 .passwordInfo{
 	cursor: pointer;
@@ -58,10 +61,7 @@
 
 
 /*.baseInfo 开始*/
-.baseInfo{
-	
-	height: 440px;
-}
+
 ._title{
 	height: 89px;
 	font-size: 30px;
