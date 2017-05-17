@@ -284,7 +284,7 @@ private.list = function (filter, cb) {
             if (err) return cb('Failed to asset info: ' + err)
             var precisionMap = new Map
             assets.forEach(function (a) {
-              precisionMap.set(a.currency, Math.pow(10, a.precision))
+              precisionMap.set(a.currency, a.precision)
             })
             data.transactions.forEach(function (trs) {
               if (trs.currency && precisionMap.has(trs.currency)) {
@@ -292,7 +292,7 @@ private.list = function (filter, cb) {
               } else {
                 trs.precision = 6 // ACC
               }
-              trs.amountShow = bignum(trs.amount).div(trs.precision).toString()
+              trs.amountShow = bignum(trs.amount).div(Math.pow(10, trs.precision)).toString()
             })
             cb(null, data)
           })
