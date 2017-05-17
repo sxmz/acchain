@@ -76,10 +76,10 @@ window.Translations['zh-cn'] = {
   APPLICATIONS: '应用中心',
   FORGING: '区块生产',
   BLOCKS: '区块浏览',
-  VOTE: '投票',
+  VOTE: '受托人投票',
   TRANSFER: '转账',
   PEERS: '节点',
-  ASSET: '资产',
+  ASSET: '我的资产',
 
   // home
   BALANCE: '余额',
@@ -273,7 +273,7 @@ window.Translations['zh-cn'] = {
   PUBLISHED_CODE:'发行代码',
   PUBLISHED_TOTAL:'发行总量',
   ASSET_VOTE_NUM:'投票数',
-  ASSET_CURRENCY:"资产符号",
+  ASSET_CURRENCY:"资产币种",
   ASSET_CATEGORY_CODE:"资产类别编号",
   ASSET_QUANTITY:"资产数量",
   ASSET_ESTIMATE_VALUE:"资产估值",

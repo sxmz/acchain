@@ -83,10 +83,10 @@ window.Translations['en-us'] = {
   APPLICATIONS: 'Applications',
   FORGING: 'Forging',
   BLOCKS: 'Blockchain',
-  VOTE: 'Vote',
+  VOTE: 'Delegate vote',
   TRANSFER: 'Transfer',
   PEERS: 'Peers',
-  ASSET: 'Asset',
+  ASSET: 'My asset',
 
   // home
   BALANCE: 'Balance',

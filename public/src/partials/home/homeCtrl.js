@@ -46,6 +46,14 @@ angular.module('asch').controller('homeCtrl', function ($scope, $rootScope, apiS
 					}).success(function (res) {
 						if (res.success == true) {
 							params.total(res.count);
+							for (var i in res.transactions) {
+								var precision = res.transactions[i].precision;
+		                        res.transactions[i].amount = parseInt(res.transactions[i].amount) / Math.pow(10, precision);
+		                    	res.transactions[i].fee = parseInt(res.transactions[i].fee) / Math.pow(10, 6);
+		                    	if(res.transactions[i].currency == ""){
+		                    		res.transactions[i].currency = "ACC";
+		                    	}
+							}
 							$defer.resolve(res.transactions);
 						} else {
 							toastError(res.error);

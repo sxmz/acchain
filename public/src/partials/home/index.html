@@ -29,6 +29,7 @@
 						<th>{{'SENDER' | translate}}</td>
 						<th>{{'RECIPIENT' | translate}}</td>
 						<th>{{'DATE' | translate}}</td>
+						<th>{{'ASSET_CURRENCY' | translate}}</td>	
 						<th>{{'AMOUNTS' | translate}}({{'FEES' | translate}})</td>
 					</tr>
 			</thread>
@@ -38,7 +39,8 @@
 				<td> <i class="level" ng-click="showaccountdetailInfo(i.senderId)">{{i.senderId}}</i></td>
 				<td class="item_accept"> <i class="level" ng-click="showaccountdetailInfo(i.recipientId)">{{i.recipientId || 'SYSTEM' | translate}}</i></td>
 				<td>{{i.timestamp | timestampFilter}}</td>
-				<td>{{i.amount | xasFilter}}({{i.fee | xasFilter}})</td>
+				<td>{{i.currency }}</td>
+				<td>{{i.amount}}({{i.fee}})</td>
 			</tr>
 		</table>
 	</div>
