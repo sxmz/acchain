@@ -16,9 +16,9 @@ function build(osVersion, netVersion) {
   var fullpath = path.join(__dirname, 'build', dir);
   var cmds = [];
   cmds.push(format('cd %s && mkdir -p public dapps tmp logs bin', fullpath));
-  cmds.push(format('cp -r package.json aschd init proto asset-category.csv %s', fullpath));
+  cmds.push(format('cp -r package.json acchaind init proto asset-category.csv %s', fullpath));
   if (netVersion != 'localnet') {
-    cmds.push(format('sed -i "s/testnet/%s/g" %s/aschd', netVersion, fullpath));
+    cmds.push(format('sed -i "s/testnet/%s/g" %s/acchaind', netVersion, fullpath));
     cmds.push(format('cp config-%s.json %s/config.json', netVersion, fullpath));
     cmds.push(format('cp genesisBlock-%s.json %s/genesisBlock.json', netVersion, fullpath));
   } else {

@@ -305,7 +305,7 @@ module.exports = function(options, done) {
       });
 
       scope.network.server.listen(scope.config.port, scope.config.address, function (err) {
-        scope.logger.log("Asch started: " + scope.config.address + ":" + scope.config.port);
+        scope.logger.log("Acchain started: " + scope.config.address + ":" + scope.config.port);
 
         if (!err) {
           if (scope.config.ssl.enabled) {

@@ -85,6 +85,11 @@ secrets=(
   "thrive noble verb skill high grape benefit try inflict park crisp educate"
 )
 
+if [ $# -lt 1 ]; then
+        echo "Please input the approval transaction id"
+        exit
+fi
+
 for secret in "${secrets[@]}"
 do  
     $CLI -P 5000 submitapproval -e "$secret" -t 2 -v "1627de59e0cfea3c6df9ee4eba2a94f87bc1afc0e62eff2b676df19a9f9aa90c"
