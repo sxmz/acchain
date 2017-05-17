@@ -440,6 +440,7 @@ class Model {
       fields: {
         'i.currency': 'currency',
         'i.amount': 'amount',
+        'a.precision': 'precision',
         'i.exchangeRate': 'exchangeRate',
         'i.approved2': 'approved',
         't.senderId': 'senderId'
@@ -448,6 +449,7 @@ class Model {
     var fieldConv = {
       currency: String,
       amount: String,
+      precision: Number,
       exchangeRate: String,
       approved: Number,
       senderId: String
@@ -505,6 +507,7 @@ class Model {
         'i.transactionId': 'transactionId',
         'i.currency': 'currency',
         'i.amount': 'amount',
+        'a.precision': 'precision',
         'i.exchangeRate': 'exchangeRate',
         't.senderId': 'senderId',
         'i.approved2': 'approved'
@@ -514,6 +517,7 @@ class Model {
       transactionId: String,
       currency: String,
       amount: String,
+      precision: Number,
       exchangeRate: String,
       senderId: String,
       approved: Number
