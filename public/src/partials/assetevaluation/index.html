@@ -118,8 +118,8 @@
     </script>
     <div id="pendingvote" ng-show="voteDialog">
         <a class="close" href="" ng-click="pendingvoteClose()"><img src="/assets/common/close.png" alt=""></a>
-        <p ng-show="dialogNUM == 1">{{'PENDING_VOTETO_1' | translate}} {{votecurrency}}, {{'OPERATION_IRREVERSIBLE' | translate}} 0.1 ACC</p>
-        <p ng-show="dialogNUM == 2">{{'PENDING_VOTETO_1' | translate}} {{votetransaction}}, {{'OPERATION_IRREVERSIBLE' | translate}} 0.1 ACC</p>
+        <p ng-show="dialogNUM == 1">{{'PENDING_VOTETO_1' | translate}} {{votecurrency}}, {{'OPERATION_IRREVERSIBLE' | translate}} 1 ACC</p>
+        <p ng-show="dialogNUM == 2">{{'PENDING_VOTETO_1' | translate}} {{votetransaction}}, {{'OPERATION_IRREVERSIBLE' | translate}} 1 ACC</p>
         <div class="_item" ng-show="secpwd">
             <label >{{'SECOND_PASSWORD' | translate}}</label>
             <input type="password"  ng-model="votesecondPassword" >
