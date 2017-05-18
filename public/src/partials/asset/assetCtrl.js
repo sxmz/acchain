@@ -507,7 +507,6 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
         
         var realAmount = parseInt($scope.amount) * Math.pow(10, $scope.currentAsset.precision);
         var exchangeRate = $scope.exchangeRate.toString();
-        console.log(exchangeRate);
         var trs = AschJS.uia.createIssue($scope.myPublishmoneyName, String(realAmount), exchangeRate, userService.secret, $scope.pbsecondPassword);
         postSerivice.writeoff(trs).success(function (res) {
             if (res.success == true) {

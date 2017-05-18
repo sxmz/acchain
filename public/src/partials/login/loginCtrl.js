@@ -106,8 +106,9 @@ angular.module('asch').controller('loginCtrl', function ($scope, $rootScope, api
 	}
 	$scope.saveTxt = function (filename) {
 		var text = $scope.newsecret.trim();
-		var address = AschJS.crypto.getAddress(newpublicKey);
-		txt = 'secret:' + '\r\n' + text + '\r\n\r\n' + 'address:' + '\r\n' + address + '\r\n';
+		//var address = AschJS.crypto.getAddress(newpublicKey);
+		//txt = 'secret:' + '\r\n' + text + '\r\n\r\n' + 'address:' + '\r\n' + address + '\r\n';
+		txt = 'secret:' + '\r\n' + text;
 		var link = document.createElement("a");
 		link.setAttribute("target", "_blank");
 		if (Blob !== undefined) {
