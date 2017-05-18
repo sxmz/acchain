@@ -63,6 +63,9 @@ function Transfer() {
   }
 
   this.apply = function (trs, block, sender, cb) {
+    if (trs.currency) {
+      return setImmediate(cb)
+    }
     modules.accounts.setAccountAndGet({ address: trs.recipientId }, function (err, recipient) {
       if (err) {
         return cb(err);
@@ -80,6 +83,9 @@ function Transfer() {
   }
 
   this.undo = function (trs, block, sender, cb) {
+    if (trs.currency) {
+      return setImmediate(cb)
+    }
     modules.accounts.setAccountAndGet({ address: trs.recipientId }, function (err, recipient) {
       if (err) {
         return cb(err);
