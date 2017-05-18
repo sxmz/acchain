@@ -302,6 +302,7 @@ window.Translations['en-us'] = {
   MORE_DETAILS:'More details',
   //asset - alertinfo
   NO_ASSET_INFO: 'No asset information',
+  PLEASE_REGISTER_ISSUER:'Please register issuer',
   CONFIRM_DIALOG_TEXT : 'This operation will cost',
   PUBLISH_ASSET_OPERATION_1: 'You are issuing',
   PENDING_VOTETO_1 : 'You are voting to',
@@ -326,4 +327,6 @@ window.Translations['en-us'] = {
   ASSET_DESC_NEEDED: 'Please enter asset description',
   ASSET_CATEGORY_NEEDED: 'Please choose asset category',
   NONE_EXTRA_INFO: 'None',
+  //asset - chain asset
+  CHAIN_ASSETS: 'Chain assets',
 };

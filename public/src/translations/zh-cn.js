@@ -292,10 +292,11 @@ window.Translations['zh-cn'] = {
   ESTIMATE_PRICE:'估值价格',
   ESTIMATE_UNIT:'估值单位',
   UNLOCK_CONDITION:'解锁条件',
-  CHAIN_OR_NOT:'是否为链式资产',
+  CHAIN_OR_NOT:'是否为链层资产',
   MORE_DETAILS:'更多信息',
   //asset - alertinfo
   NO_ASSET_INFO: '没有资产相关信息',
+  PLEASE_REGISTER_ISSUER:'请注册发行商',
   CONFIRM_DIALOG_TEXT : '该操作需要消耗手续费',
   PUBLISH_ASSET_OPERATION_1: '您正在发行',
   PENDING_VOTETO_1 : '您将投票给',
@@ -320,4 +321,6 @@ window.Translations['zh-cn'] = {
   ASSET_DESC_NEEDED: '请输入资产描述',
   ASSET_CATEGORY_NEEDED: '请选择资产类别',
   NONE_EXTRA_INFO: '无',
+  //asset - chain asset
+  CHAIN_ASSETS: '链层资产',
 };

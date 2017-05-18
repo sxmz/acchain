@@ -6,6 +6,7 @@
         <div class="titleitem"  ng-class=" {'active':registerpublish}" ng-click="registerpublishchange()">{{'REGISTERED_PUBLISHER' | translate}}</div>
         <div class="titleitem"  ng-class=" {'active':registerasset}" ng-click="registerAssetchange()">{{'REGISTERED_ASSETS' | translate}}</div>
         <div class="titleitem"  ng-class=" {'active':myAssets}" ng-click="myAssetschange()">{{'MY_ASSETS' | translate}}</div>
+        <div class="titleitem"  ng-class=" {'active':chainAssets}" ng-click="chainAssetschange()">{{'CHAIN_ASSETS' | translate}}</div>
         <!--<div class="titleitem"  ng-class=" {'active':operationRecord}" ng-click="operationRecordchange()">{{'OPERATION_RECORD' | translate}}</div>-->
     </div>
     <div class="content first deal_table" ng-show="assetprofile">
@@ -180,7 +181,7 @@
                template-pagination="custom/pager" >
             <thread>
                 <tr>
-                    <th>{{'ASSET_NAME' | translate}}</th>
+                    <th>{{'ASSET_CURRENCY' | translate}}</th>
                     <th>{{'MAXIMUM' | translate}}</th>
                     <th>{{'PRECISION' | translate}}</th>
                     <th>{{'QUANTITY' | translate}}</th>
@@ -190,7 +191,7 @@
                 </tr>
             </thread>
             <tr ng-repeat="i in $data"  >
-                <td> {{i.name}}</td>
+                <td> {{i.currency}}</td>
                 <td>{{i.maximum}}</td>
                 <td>{{i.precision}}</td>
                 <td>{{i.quantity}}</td>
@@ -207,6 +208,30 @@
             </tr>
         </table>
         
+    </div>
+    <div class="content chainAssets" ng-show="chainAssets">
+        <p class="title" ng-show="!issuerStatus">{{'PLEASE_REGISTER_ISSUER' | translate}}</p>
+        <table ng-show="issuerStatus"class="table" ng-table="chainAss" border="0" width="100%" cellpadding="0" cellspacing="0"
+               template-pagination="custom/pager" >
+            <thread>
+                <tr>
+                    <th>{{'ASSET_CURRENCY' | translate}}</th>
+                    <th>{{'MAXIMUM' | translate}}</th>
+                    <th>{{'PRECISION' | translate}}</th>
+                    <th>{{'QUANTITY' | translate}}</th>
+                    <th>{{'OPERATION' | translate}}</th>
+                </tr>
+            </thread>
+            <tr ng-repeat="i in $data"  >
+                <td> {{i.currency}}</td>
+                <td>{{i.maximum}}</td>
+                <td>{{i.precision}}</td>
+                <td>{{i.quantity}}</td>
+                <td>
+                    <span class="span publish" ng-click="chainPublish(i)">{{'ISSUE_OPERATION' | translate}}</span>
+                </td>
+            </tr>
+        </table>
     </div>
     <!--<div class="content third" ng-show="operationRecord">
         <div class="histroy-tablewrap">
@@ -255,7 +280,7 @@
         </div>
         <button class="sent" ng-click="writeoff_submit()">{{'SUBMIT' | translate}}</button>
     </div>-->
-    <div id="publish" ng-show="myAss.publish">
+    <div id="publish" ng-show="assPublish">
         <a class="close" href="" ng-click="publishClose()"><img src="/assets/common/close.png" alt=""></a>
         <p>{{'PUBLISH_ASSET_OPERATION_1' | translate}} {{myPublishmoneyName}}, {{'OPERATION_IRREVERSIBLE' | translate}} 100 ACC</p>
         <div class="_item">

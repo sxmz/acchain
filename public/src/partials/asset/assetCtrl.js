@@ -155,6 +155,7 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
     $scope.registerpublish = false;
     $scope.registerasset = false;
     $scope.myAssets = false;
+    $scope.chainAssets = false;
     $scope.operationRecord = false;
     $scope.allowValueRange = [
         {key: '0', value: $translate.instant('NOT_ALLOW')},
@@ -175,13 +176,15 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
             case 4:
                 $scope.myAssetschange();
                 break;
-            /*
             case 5:
+                $scope.chainAssetschange();
+                break;
+            /*
+            case 6:
                 $scope.operationRecordchange();
                 break;
             */
             default:
-                //$scope.registerAssetchange();
                 $scope.assetprofilechange();
         }
     }
@@ -193,6 +196,7 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
         $scope.registerasset = false;
         $scope.myAssets = false;
         $scope.operationRecord = false;
+        $scope.chainAssets = false;
         userService.saveTab(1);
         if($scope.assetprofiletableparams){
             $scope.assetprofiletableparams.reload();
@@ -233,6 +237,7 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
         $scope.registerasset = false;
         $scope.myAssets = false;
         $scope.operationRecord = false;
+        $scope.chainAssets = false;
         userService.saveTab(2);
     };
     //注册发行商
@@ -262,6 +267,7 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
         $scope.registerasset = true;
         $scope.myAssets = false;
         $scope.operationRecord = false;
+        $scope.chainAssets = false;
         userService.saveTab(3);
     };
     //注册资产
@@ -379,6 +385,7 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
         $scope.registerasset = false;
         $scope.myAssets = true;
         $scope.operationRecord = false;
+        $scope.chainAssets = false;
         userService.saveTab(4);
         // if(!userService.issuerStatus){
         //     toastError('没有资产相关记录');
@@ -398,6 +405,47 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
                 getData: function ($defer, params) {
                     apiService.myAssets({
                         name: userService.name,
+                        limit: params.count(),
+                        offset: (params.page() - 1) * params.count()
+                    }).success(function (res) {
+                        params.total(res.count);
+                        $defer.resolve(res.assets);
+                        for (var i in res.assets) {
+                            var precision = res.assets[i].precision;
+                            res.assets[i].maximum = parseInt(res.assets[i].maximum) / Math.pow(10, precision);
+                            res.assets[i].quantity = parseInt(res.assets[i].quantity) / Math.pow(10, precision);
+                        }
+                    }).error(function (res) {
+                        toastError($translate.instant('ERR_SERVER_ERROR'));
+                    });
+                }
+            });
+        }
+
+    };
+    //链层资产tab
+    $scope.chainAssetschange = function () {
+        $scope.assetprofile = false;
+        $scope.registerpublish = false;
+        $scope.registerasset = false;
+        $scope.myAssets = false;
+        $scope.operationRecord = false;
+        $scope.chainAssets = true;
+        userService.saveTab(5);
+        if($scope.chainAss){
+            $scope.chainAss.reload();
+        } else {
+            $scope.chainAss = new NgTableParams({
+                page: 1,
+                count: 10
+            }, {
+                total: 0,
+                page: 1,
+                count: 20,
+                counts: [],
+                getData: function ($defer, params) {
+                    apiService.myAssets({
+                        name: "__SYSTEM__",
                         limit: params.count(),
                         offset: (params.page() - 1) * params.count()
                     }).success(function (res) {
@@ -484,13 +532,19 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
     */
     // // 发行
     $scope.myPublish = function (i) {
-        $scope.myAss.publish = true;
+        $scope.assPublish = true;
+        $scope.myPublishmoneyName = i.currency;
+        $scope.currentAsset = i;
+        $rootScope.isBodyMask = true;
+    };
+    $scope.chainPublish = function (i) {
+        $scope.assPublish = true;
         $scope.myPublishmoneyName = i.currency;
         $scope.currentAsset = i;
         $rootScope.isBodyMask = true;
     };
     $scope.publish_submit = function () {
-        $scope.myAss.publish = false;
+        $scope.assPublish = false;
         $rootScope.isBodyMask = false;
         if(!$scope.myPublishmoneyName){
             return ;
@@ -513,7 +567,7 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
                 $scope.pbsecondPassword = '';
                 $scope.exchangeRate = '';
                 $scope.amount = '';
-                $scope.myAss.publish = false;
+                $scope.assPublish = false;
                 $rootScope.isBodyMask = false;
                 toast($translate.instant('INF_OPERATION_SUCCEEDED'));
             } else {
@@ -525,7 +579,7 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
     }
     $scope.publishClose = function () {
         $rootScope.isBodyMask = false;
-        $scope.myAss.publish = false;
+        $scope.assPublish = false;
     };
     $scope.models = [
         { value: 0, name: '黑名单模式' },
