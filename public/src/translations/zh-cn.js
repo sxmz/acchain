@@ -76,7 +76,7 @@ window.Translations['zh-cn'] = {
   APPLICATIONS: '应用中心',
   FORGING: '区块生产',
   BLOCKS: '区块浏览',
-  VOTE: '受托人投票',
+  DELEGATE_VOTE: '受托人投票',
   TRANSFER: '转账',
   PEERS: '节点',
   ASSET: '我的资产',
@@ -287,6 +287,7 @@ window.Translations['zh-cn'] = {
   //assetevaluation - assetdetail
   ASSET_DETAIL:"资产详情",
   ASSET_DESC:"资产描述",
+  VOTE: '投票',
   //asset - register asset
   ESTIMATE_PRICE:'估值价格',
   ESTIMATE_UNIT:'估值单位',

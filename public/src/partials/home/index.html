@@ -40,7 +40,7 @@
 				<td class="item_accept"> <i class="level" ng-click="showaccountdetailInfo(i.recipientId)">{{i.recipientId || 'SYSTEM' | translate}}</i></td>
 				<td>{{i.timestamp | timestampFilter}}</td>
 				<td>{{i.currency }}</td>
-				<td>{{i.amount}}({{i.fee}})</td>
+				<td>{{i.amountShow}}({{i.fee | xasFilter}})</td>
 			</tr>
 		</table>
 	</div>

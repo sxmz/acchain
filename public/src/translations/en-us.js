@@ -83,7 +83,7 @@ window.Translations['en-us'] = {
   APPLICATIONS: 'Applications',
   FORGING: 'Forging',
   BLOCKS: 'Blockchain',
-  VOTE: 'Delegate vote',
+  DELEGATE_VOTE: 'Delegate vote',
   TRANSFER: 'Transfer',
   PEERS: 'Peers',
   ASSET: 'My asset',
@@ -286,6 +286,7 @@ window.Translations['en-us'] = {
   PUBLISH_TRANSACTION_ID:"Transaction ID",
   EXCHANGE_RATE:"Exchange rate",
   ASSET_TOTAL:'Asset total',
+  VOTE: 'Vote',
   //assetevaluation - votes
   VOTE_DETAIL: 'Vote detail',
   VOTER_ADDRESS: 'Voter address',
