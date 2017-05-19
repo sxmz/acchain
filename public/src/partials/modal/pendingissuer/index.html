@@ -1,0 +1,13 @@
+<div class="pendingissuer" ng-controller="pendingissuerCtrl" ng-init="init()">
+    <div class="h_header">
+        {{'ISSUER_DETAIL' | translate}}
+        <a class="close"href="" ng-click="Close()"><img src="/assets/common/close.png" alt=""></a>
+    </div>
+
+    <div>
+		<table class="table">
+            <tr><td class="first">{{'DAPP_NAME' | translate}}:</td><td class="second">{{issuer.name}}</td></tr>
+            <tr><td class="first">{{'DESCRIBE' | translate}}:</td><td class="second">{{issuer.desc}}</td></tr>
+        </table>
+    </div>
+</div>

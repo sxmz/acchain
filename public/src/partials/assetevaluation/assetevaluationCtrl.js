@@ -16,6 +16,12 @@ angular.module('asch').controller('assetevaluationCtrl', function ($scope, $root
         $scope.i = i;
         $rootScope.$broadcast('publishvoter', $scope.i)
     }
+   	$rootScope.showpendingissuerInfo = function (i) {
+   		$rootScope.blockdetailinfo = false;
+        $rootScope.pendingissuerInfo = false;
+        $scope.i = i;
+        $rootScope.$broadcast('pendingissuer', $scope.i)
+    }
    	$rootScope.showassetdetailInfo = function (i) {
         $rootScope.blockdetailinfo = false;
         $rootScope.dealdetailinfo = false;

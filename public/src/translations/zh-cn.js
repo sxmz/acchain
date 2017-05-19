@@ -323,4 +323,6 @@ window.Translations['zh-cn'] = {
   NONE_EXTRA_INFO: '无',
   //asset - chain asset
   CHAIN_ASSETS: '链层资产',
+  //assetevaluation - issuer info
+  ISSUER_DETAIL: '发行商详情',
 };

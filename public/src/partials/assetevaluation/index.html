@@ -56,7 +56,7 @@
 					<td>{{i.exchangeRate}}</td>
                     <td>{{i.amount}}</td>
                     <td><i class="level" ng-click="showpublishvoterInfo(i.transactionId)">{{'VOTE_DETAIL' | translate}}</i></td>
-                    <td>{{i.senderId}}</td>
+                    <td><i class="level" ng-click="showpendingissuerInfo(i.senderId)">{{i.senderId}}</i></td>
                     <!--<td><button ng-disabled="i.btndisable" ng-class="{'active':i.btndisable}" ng-click="notallowed(i)">{{'VOTE' | translate}}</button></td>-->
                     <td><button ng-click="votetopublish(i.transactionId)">{{'VOTE' | translate}}</button></td>    
                 </tr>

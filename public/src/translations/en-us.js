@@ -329,4 +329,6 @@ window.Translations['en-us'] = {
   NONE_EXTRA_INFO: 'None',
   //asset - chain asset
   CHAIN_ASSETS: 'Chain assets',
+  //assetevaluation - issuer info
+  ISSUER_DETAIL: 'Issuer Detail',
 };
