@@ -25,7 +25,7 @@ function Issuer() {
     if (trs.amount != '0') return setImmediate(cb, 'Invalid transaction amount')
 
     var issuer = trs.asset.uiaIssuer
-    if (!/^[A-Za-z]{1,16}$/.test(issuer.name)) return setImmediate(cb, 'Invalid issuer name')
+    if (!/^[A-Za-z][A-Za-z0-9_\-]{0,19}$/.test(issuer.name)) return setImmediate(cb, 'Invalid issuer name')
     if (!issuer.desc) return setImmediate(cb, 'Invalid issuer desc')
     if (issuer.desc.length > 4096) return setImmediate(cb, 'Invalid issuer desc size')
 
