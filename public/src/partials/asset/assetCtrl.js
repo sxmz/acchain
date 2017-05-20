@@ -150,6 +150,26 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
 		}
 		selwrapStr = sel.id;
 	}
+	$scope.verifyNumTypeIn = function(){
+		if(!$scope.estimatePrice){
+			return;
+		}
+		var num = $scope.estimatePrice;
+		var numStr = num.toString();
+		if(num > 999999999){
+			toastError($translate.instant('ESTIMATE_PRICE_ENTER_WRONG_1'));	
+		}
+		if(num < 0){
+			toastError($translate.instant('ESTIMATE_PRICE_ENTER_WRONG_2'));	
+		}
+		if(numStr.indexOf(".") >= 0){
+			var begin = numStr.indexOf(".");
+			var subNum = numStr.substring(begin+1,numStr.length);
+			if(subNum.length > 6){
+			    toastError($translate.instant('ESTIMATE_PRICE_ENTER_WRONG_3'));
+			}
+		}
+	}
 	
     $scope.assetprofile = true;
     $scope.registerpublish = false;
@@ -306,6 +326,9 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
         if(!$scope.selectedLevelOne){
     		return toast($translate.instant('ASSET_CATEGORY_NEEDED'));
     	}
+        if(selDeepest){
+        	return toast($translate.instant('CHOOSE_NEXT_CATEGORY'));
+        }
         var name = $scope.publishName;
         var currency = $scope.chainCheck ? $scope.currencySet : $scope.monname +'.'+ $scope.currencySet;
         var estimatePrice = $scope.estimatePrice;

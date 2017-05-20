@@ -331,4 +331,15 @@ window.Translations['en-us'] = {
   CHAIN_ASSETS: 'Chain assets',
   //assetevaluation - issuer info
   ISSUER_DETAIL: 'Issuer Detail',
+  //asset - placeholder
+  UPPERCASE_NO_MORE_THAN_16: 'Please enter uppercase English letters no more than 16',
+  UPPERCASE_NO_MORE_THAN_10: 'Please enter uppercase English letters no more than 10',
+  INTEGER_NO_MORE_THAN_9: 'Please enter no more than 9 integers',
+  INTEGER_NO_MORE_THAN_12: 'Please enter no more than 12 integers',
+  INTEGER_UP_TO_6: 'Please enter integer between 0 to 6',
+  ESTIMATE_PRICE_LIMIT: 'Please enter positive number no more than 999999999, up to 6 decimal places',
+  ESTIMATE_PRICE_ENTER_WRONG_1: 'Estimate price is more than 999999999',
+  ESTIMATE_PRICE_ENTER_WRONG_2: 'Estimate price is less than 0',
+  ESTIMATE_PRICE_ENTER_WRONG_3: 'Estimate price can not have more than 6 decimal places',
+  CHOOSE_NEXT_CATEGORY: 'Please continue choosing next category',
 };

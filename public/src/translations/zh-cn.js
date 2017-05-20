@@ -325,4 +325,15 @@ window.Translations['zh-cn'] = {
   CHAIN_ASSETS: '链层资产',
   //assetevaluation - issuer info
   ISSUER_DETAIL: '发行商详情',
+  //asset - placeholder
+  UPPERCASE_NO_MORE_THAN_16: '请输入不超过16位的大写英文字母',
+  UPPERCASE_NO_MORE_THAN_10: '请输入不超过10位的大写英文字母',
+  INTEGER_NO_MORE_THAN_9: '请输入不超过9位的整数',
+  INTEGER_NO_MORE_THAN_12: '请输入不超过12位的整数',
+  INTEGER_UP_TO_6: '请输入0-6之间的整数',
+  ESTIMATE_PRICE_LIMIT: '请输入不超过999999999的正数，小数点后数字不得超过6位',
+  ESTIMATE_PRICE_ENTER_WRONG_1: '估值价格不得大于999999999',
+  ESTIMATE_PRICE_ENTER_WRONG_2: '估值价格不得小于0',
+  ESTIMATE_PRICE_ENTER_WRONG_3: '估值价格小数点后数字不得超过6位',
+  CHOOSE_NEXT_CATEGORY: '请继续选择下级类目',
 };

@@ -39,7 +39,7 @@
         <p class="title" ng-show="issuerStatus">{{'ISSUER_REG_COMPLETED' | translate}}</p>
 		<div class="_item">
             <label >{{'DAPP_NAME' | translate}}</label>
-            <input type="text" ng-disabled="issuerStatus" maxlength="16" ng-model="monname" id="pay_item1" >
+            <input type="text" ng-disabled="issuerStatus" maxlength="16" ng-model="monname" id="pay_item1" placeholder="{{'UPPERCASE_NO_MORE_THAN_16' | translate}}" >
         </div>
         <div class="_item">
             <label >{{'DESCRIBE' | translate}}</label>
@@ -63,11 +63,11 @@
 	        </div>
 	        <div class="_item">
 	            <label >{{'ASSET_CURRENCY' | translate}}</label>
-	            <input type="text"  ng-model="currencySet" >
+	            <input type="text"  ng-model="currencySet" placeholder="{{'UPPERCASE_NO_MORE_THAN_10' | translate}}">
 	        </div>
 	        <div class="_item">
 	            <label >{{'ESTIMATE_PRICE' | translate}}</label>
-	            <input type="text"  ng-model="estimatePrice" >
+	            <input type="number"  ng-model="estimatePrice" placeholder="{{'ESTIMATE_PRICE_LIMIT' | translate}}" ng-blur="verifyNumTypeIn()">
 	        </div>
 	        <div class="_item">
 	            <label >{{'ESTIMATE_UNIT' | translate}}</label>
@@ -79,7 +79,7 @@
 	        </div>
 	        <div class="_item">
 	            <label >{{'EXERCISE_UNIT' | translate}}</label>
-	            <input type="text"  ng-model="exerciseUnit" >
+	            <input type="number"  ng-model="exerciseUnit" placeholder="{{'INTEGER_NO_MORE_THAN_9' | translate}}">
 	        </div>
 	        <div class="_item">
 	            <label >{{'CHAIN_OR_NOT' | translate}}</label>
@@ -160,12 +160,12 @@
     	<div class="clearfix published_num">
     		<div class="published_num_left">
     			<div class="_item">
-		            <label >{{'TOPLIMIT' | translate}}</label>
-		            <input type="text" ng-model="topLimt" >
+		            <label >{{'MAXIMUM' | translate}}</label>
+		            <input type="number" ng-model="topLimt" placeholder="{{'INTEGER_NO_MORE_THAN_12' | translate}}" >
 		        </div>
 		        <div class="_item">
 		            <label >{{'ACCURACY' | translate}}</label>
-		            <input type="text"  ng-model="precision" >
+		            <input type="text"  ng-model="precision" placeholder="{{'INTEGER_UP_TO_6' | translate}}" >
 		        </div>
 		        <div class="_item" ng-show="secpwd">
 		            <label >{{'SECOND_PASSWORD' | translate}}</label>
