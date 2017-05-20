@@ -94,8 +94,9 @@ function Approval() {
         var transactionId = value
         library.model.getAssetIssue(transactionId, function (err, issue) {
           if (err) return cb('Failed to get asset issue: ' + err)
-          var unlockAccAmount = bignum(issue.amount).mul(issue.exchangeRate).toString()
-          var lockAccAmount = bignum(issue.amount).mul(issue.exchangeRate).mul(0.25).toString()
+          var diffPrecision = 6 - issue.precision
+          var unlockAccAmount = bignum(issue.amount).mul(issue.exchangeRate).mul(Math.pow(10, diffPrecision)).toString()
+          var lockAccAmount = bignum(issue.amount).mul(issue.exchangeRate).mul(Math.pow(10, diffPrecision)).mul(0.25).toString()
           library.model.getTotalAccQuantity(function (err, totalAccQuantity) {
             if (err) return cb('Failed to get acc quantity: ' + err)
             if (bignum(unlockAccAmount).plus(lockAccAmount).plus(totalAccQuantity).gt(constants.totalAmount)) {
@@ -156,8 +157,9 @@ function Approval() {
         var transactionId = value
         library.model.getAssetIssue(transactionId, function (err, issue) {
           if (err) cb('Failed to get asset issue: ' + err)
-          var unlockAccAmount = bignum(issue.amount).mul(issue.exchangeRate).toString()
-          var lockAccAmount = bignum(issue.amount).mul(issue.exchangeRate).mul(0.25).toString()
+          var diffPrecision = 6 - issue.precision
+          var unlockAccAmount = bignum(issue.amount).mul(issue.exchangeRate).mul(Math.pow(10, diffPrecision)).toString()
+          var lockAccAmount = bignum(issue.amount).mul(issue.exchangeRate).mul(Math.pow(10, diffPrecision)).mul(0.25).toString()
           library.model.setIssueApproved(transactionId, 0, function (err) {
             if (err) return cb('Failed to set issue approved' + err)
             library.model.addAssetQuantity(issue.currency, '-' + issue.amount, function (err) {
