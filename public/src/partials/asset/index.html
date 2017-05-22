@@ -67,7 +67,7 @@
 	        </div>
 	        <div class="_item">
 	            <label >{{'ESTIMATE_PRICE' | translate}}</label>
-	            <input type="number"  ng-model="estimatePrice" placeholder="{{'ESTIMATE_PRICE_LIMIT' | translate}}" ng-blur="verifyNumTypeIn()">
+	            <input type="number"  ng-model="estimatePrice" placeholder="{{'ESTIMATE_PRICE_LIMIT' | translate}}" ng-blur="verifyEstimatePrice()">
 	        </div>
 	        <div class="_item">
 	            <label >{{'ESTIMATE_UNIT' | translate}}</label>
@@ -79,7 +79,7 @@
 	        </div>
 	        <div class="_item">
 	            <label >{{'EXERCISE_UNIT' | translate}}</label>
-	            <input type="number"  ng-model="exerciseUnit" placeholder="{{'INTEGER_NO_MORE_THAN_9' | translate}}">
+	            <input type="text"  ng-model="exerciseUnit" placeholder="{{'INTEGER_NO_MORE_THAN_9' | translate}}" ng-change="verifyExerciseUnit()">
 	        </div>
 	        <div class="_item">
 	            <label >{{'CHAIN_OR_NOT' | translate}}</label>
@@ -87,7 +87,7 @@
 	        </div>
 	        <div class="_item">
 	            <label >{{'DESCRIBE' | translate}}</label>
-	            <textarea  required ng-model="publishDesc" ></textarea>
+	            <textarea  required ng-model="publishDesc" ng-blur="verifyPublishDesc()"></textarea>
 			</div>
     	</div>
     	<div class="registerasset_title">
@@ -161,11 +161,11 @@
     		<div class="published_num_left">
     			<div class="_item">
 		            <label >{{'MAXIMUM' | translate}}</label>
-		            <input type="number" ng-model="topLimt" placeholder="{{'INTEGER_NO_MORE_THAN_12' | translate}}" >
+		            <input type="text" ng-model="topLimt" placeholder="{{'INTEGER_NO_MORE_THAN_12' | translate}}" ng-change="verifyTopLimt()">
 		        </div>
 		        <div class="_item">
 		            <label >{{'ACCURACY' | translate}}</label>
-		            <input type="text"  ng-model="precision" placeholder="{{'INTEGER_UP_TO_6' | translate}}" >
+		            <input type="text"  ng-model="precision" placeholder="{{'INTEGER_UP_TO_6' | translate}}" ng-change="verifyPrecision()">
 		        </div>
 		        <div class="_item" ng-show="secpwd">
 		            <label >{{'SECOND_PASSWORD' | translate}}</label>

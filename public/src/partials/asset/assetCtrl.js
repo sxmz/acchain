@@ -159,7 +159,7 @@ angular.module('acchain').controller('assetCtrl', function ($scope, $rootScope, 
         	return toast($translate.instant('BYTES_NO_MORE_THAN_256'));
         }
 	}
-	$scope.verifyNumTypeIn = function(){
+	$scope.verifyEstimatePrice = function(){
 		if(!$scope.estimatePrice){
 			return;
 		}
@@ -179,6 +179,43 @@ angular.module('acchain').controller('assetCtrl', function ($scope, $rootScope, 
 			}
 		}
 	}
+	$scope.verifyExerciseUnit = function(){
+		if(!$scope.exerciseUnit){
+			return;
+		}
+		var reg = /^[1-9][0-9]{0,8}$/;
+		if(!reg.test($scope.exerciseUnit)){
+			return toastError($translate.instant('INTEGER_NO_MORE_THAN_9'));
+		}
+	}
+	$scope.verifyPublishDesc = function(){
+		if(!$scope.publishDesc){
+			return;
+		}
+		var strLen = $scope.publishDesc.replace( /[^\x00-\xff]/g, "**" ).length;
+        if(strLen > 4096){
+        	return toast($translate.instant('BYTES_NO_MORE_THAN_4096'));
+        }
+	}
+	$scope.verifyTopLimt = function(){
+		if(!$scope.topLimt){
+			return;
+		}
+		var reg = /^[1-9][0-9]{0,11}$/;
+		if(!reg.test($scope.topLimt)){
+			return toastError($translate.instant('INTEGER_NO_MORE_THAN_12'));
+		}
+	}
+	$scope.verifyPrecision = function(){
+		if(!$scope.precision){
+			return;
+		}
+		var reg = /^[0-6]$/;
+		if(!reg.test($scope.precision)){
+			return toastError($translate.instant('INTEGER_UP_TO_6'));
+		}
+	}
+	
 	
     $scope.assetprofile = true;
     $scope.registerpublish = false;
@@ -307,8 +344,8 @@ angular.module('acchain').controller('assetCtrl', function ($scope, $rootScope, 
             return false;
         }
         var reg = /^[A-Z][A-Z0-9]{2,9}$/;
-        if(!reg.test($scope.publishName)){
-            return toast($translate.instant('UPPERCASE_NO_MORE_THAN_16'));
+        if(!reg.test($scope.currencySet)){
+            return toast($translate.instant('CURRENCY_SET_WRONG'));
         }
 		if(!$scope.publishName){
         	return toast($translate.instant('ASSET_NAME_NEEDED'));
@@ -350,7 +387,7 @@ angular.module('acchain').controller('assetCtrl', function ($scope, $rootScope, 
         if (!parseInt(maximum)) {
             return toastError($translate.instant('INCORRECT_ISSUING_AMOUNT'));
         }
-        if (!precision ||precision < 0 || precision > 16) {
+        if (!precision ||precision < 0 || precision > 6) {
             return toastError($translate.instant('INCORRECT_PRECISION'));
         }
         if (String($scope.precision).indexOf('.') != -1) {

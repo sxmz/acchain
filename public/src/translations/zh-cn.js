@@ -332,6 +332,8 @@ window.Translations['zh-cn'] = {
   INTEGER_NO_MORE_THAN_12: '请输入不超过12位的正整数',
   INTEGER_UP_TO_6: '请输入0-6之间的整数',
   ESTIMATE_PRICE_LIMIT: '请输入不超过999999999的正数，小数点后数字不得超过2位',
+  //asset - reg error
+  CURRENCY_SET_WRONG: '资产币种输入有误',
   ESTIMATE_PRICE_ENTER_WRONG_1: '估值价格不得大于999999999',
   ESTIMATE_PRICE_ENTER_WRONG_2: '估值价格不得小于0',
   ESTIMATE_PRICE_ENTER_WRONG_3: '估值价格小数点后数字不得超过2位',
