@@ -1,4 +1,4 @@
-angular.module('asch').service('postSerivice', function ($http) {
+angular.module('acchain').service('postSerivice', function ($http) {
     this.post = function (data) {
         var req = {
             method: 'post',

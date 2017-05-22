@@ -1,5 +1,5 @@
 
-angular.module('asch').controller('pendingissuerCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $translate) {
+angular.module('acchain').controller('pendingissuerCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $translate) {
 
     $rootScope.pendingissuerInfo = false;
 

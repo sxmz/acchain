@@ -1,5 +1,5 @@
 
-angular.module('asch').controller('blockdetailCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $translate) {
+angular.module('acchain').controller('blockdetailCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $translate) {
 
     $rootScope.blockdetailinfo = false;
 

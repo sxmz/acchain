@@ -1,4 +1,4 @@
-angular.module('asch').controller('loginCtrl', function ($scope, $rootScope, apiService, ipCookie, $window, $location, userService, $translate) {
+angular.module('acchain').controller('loginCtrl', function ($scope, $rootScope, apiService, ipCookie, $window, $location, userService, $translate) {
 	$rootScope.userlogin = false;
 	$rootScope.register = true;
 	$rootScope.creatpwd = false;
@@ -41,7 +41,7 @@ angular.module('asch').controller('loginCtrl', function ($scope, $rootScope, api
 		$rootScope.checkpwd = false;
 		var code = new Mnemonic(Mnemonic.Words.ENGLISH);
 		$scope.newsecret = code.toString();
-		newpublicKey = AschJS.crypto.getKeys($scope.newsecret).publicKey;
+		newpublicKey = AcchainJS.crypto.getKeys($scope.newsecret).publicKey;
 		$rootScope.newpublicKey = newpublicKey
 	};
 
@@ -106,7 +106,7 @@ angular.module('asch').controller('loginCtrl', function ($scope, $rootScope, api
 	}
 	$scope.saveTxt = function (filename) {
 		var text = $scope.newsecret.trim();
-		//var address = AschJS.crypto.getAddress(newpublicKey);
+		//var address = AcchainJS.crypto.getAddress(newpublicKey);
 		//txt = 'secret:' + '\r\n' + text + '\r\n\r\n' + 'address:' + '\r\n' + address + '\r\n';
 		txt = 'secret:' + '\r\n' + text;
 		var link = document.createElement("a");
@@ -135,7 +135,7 @@ angular.module('asch').controller('loginCtrl', function ($scope, $rootScope, api
 		if (!Mnemonic.isValid($scope.secret)) {
 			return toastError($translate.instant('ERR_VIOLATE_BIP39'));
 		}
-		var publicKey = AschJS.crypto.getKeys($scope.secret).publicKey;
+		var publicKey = AcchainJS.crypto.getKeys($scope.secret).publicKey;
 		$rootScope.publickey = publicKey;
 		apiService.login({
 			publicKey: publicKey

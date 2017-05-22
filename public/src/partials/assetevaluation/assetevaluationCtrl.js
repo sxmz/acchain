@@ -1,4 +1,4 @@
-angular.module('asch').controller('assetevaluationCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams,userService,postSerivice, $translate,$uibModal) {
+angular.module('acchain').controller('assetevaluationCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams,userService,postSerivice, $translate,$uibModal) {
     $rootScope.active = 'assetevaluation';
     $rootScope.userlogin = true;
     $rootScope.isBodyMask = false;
@@ -52,9 +52,9 @@ angular.module('asch').controller('assetevaluationCtrl', function ($scope, $root
 	$scope.vote_submit = function(){
 		var trs ;
         if($scope.dialogNUM == 1){
-            trs = AschJS.uia.createApproval(1, $scope.votecurrency, userService.secret, $scope.votesecondPassword);
+            trs = AcchainJS.uia.createApproval(1, $scope.votecurrency, userService.secret, $scope.votesecondPassword);
 		} else if($scope.dialogNUM == 2){
-            trs = AschJS.uia.createApproval(2, $scope.votetransaction, userService.secret, $scope.votesecondPassword);
+            trs = AcchainJS.uia.createApproval(2, $scope.votetransaction, userService.secret, $scope.votesecondPassword);
         }
         postSerivice.post(trs).success(function (res) {
             if (res.success == true) {

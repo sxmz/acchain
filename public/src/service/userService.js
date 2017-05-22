@@ -1,4 +1,4 @@
-angular.module('asch').service('userService', function () {
+angular.module('acchain').service('userService', function () {
     this.setData = function (secret, address, publicKey, balance, secondPublicKey) {
         this.secret = secret;
         this.address = address;

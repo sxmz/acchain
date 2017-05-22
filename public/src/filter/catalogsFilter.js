@@ -1,7 +1,7 @@
 /**
  * Created by zenking on 16/8/27.
  */
-angular.module('asch').filter('catalogsFilter', function ($filter) {
+angular.module('acchain').filter('catalogsFilter', function ($filter) {
     return function (value) {
         var type = '';
         if (value == '1') {

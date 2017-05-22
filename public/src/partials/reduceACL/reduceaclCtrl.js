@@ -1,4 +1,4 @@
-angular.module('asch').controller('reduceaclCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams, userService,postSerivice, $translate) {
+angular.module('acchain').controller('reduceaclCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams, userService,postSerivice, $translate) {
     $rootScope.userlogin = true;
     $rootScope.active = 'acl';
     $scope.comfirmDialog = false;
@@ -15,7 +15,7 @@ angular.module('asch').controller('reduceaclCtrl', function ($scope, $rootScope,
         if (!userService.secondPublicKey) {
             $scope.secondPassword = '';
         }
-        $scope.reduceacltrs = AschJS.uia.createAcl(currency, operator, flag, list, userService.secret, $scope.secondPassword);
+        $scope.reduceacltrs = AcchainJS.uia.createAcl(currency, operator, flag, list, userService.secret, $scope.secondPassword);
         $scope.comfirmDialog = true;
         $rootScope.isBodyMask = true;
     };

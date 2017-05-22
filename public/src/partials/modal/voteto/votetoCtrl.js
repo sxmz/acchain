@@ -1,4 +1,4 @@
-angular.module('asch').controller('votetoCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $http, userService, postSerivice, $translate) {
+angular.module('acchain').controller('votetoCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $http, userService, postSerivice, $translate) {
 
     $rootScope.votetoinfo = false;
 
@@ -13,7 +13,7 @@ angular.module('asch').controller('votetoCtrl', function ($scope, $rootScope, ap
             toastError($translate.instant('ERR_SECOND_PASSWORD_FORMAT'));
             return;
         }
-        var transaction = AschJS.vote.createVote($rootScope.voteContent, userService.secret, $scope.secondpassword);
+        var transaction = AcchainJS.vote.createVote($rootScope.voteContent, userService.secret, $scope.secondpassword);
         postSerivice.post(transaction).success(function (res) {
             if (res.success == true) {
                 $rootScope.checkobj = {}

@@ -1,4 +1,4 @@
-angular.module('asch').controller('addaclCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams, userService,postSerivice, $translate) {
+angular.module('acchain').controller('addaclCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams, userService,postSerivice, $translate) {
     $rootScope.userlogin = true;
     $rootScope.active = 'acl';
     $scope.comfirmDialog = false;
@@ -12,7 +12,7 @@ angular.module('asch').controller('addaclCtrl', function ($scope, $rootScope, ap
         if (!userService.secondPublicKey) {
             $scope.secondPassword = '';
         }
-        $scope.addacltrs = AschJS.uia.createAcl(currency, operator, flag, list, userService.secret, $scope.secondPassword);
+        $scope.addacltrs = AcchainJS.uia.createAcl(currency, operator, flag, list, userService.secret, $scope.secondPassword);
         $scope.comfirmDialog = true;
         $rootScope.isBodyMask = true;
 

@@ -1,4 +1,4 @@
-var app = angular.module('asch', ['ngRoute', 'ui.bootstrap', 'ngTable', 'ipCookie', 'pascalprecht.translate']);
+var app = angular.module('acchain', ['ngRoute', 'ui.bootstrap', 'ngTable', 'ipCookie', 'pascalprecht.translate']);
 
 app.config(function ($httpProvider) {
     // Use x-www-form-urlencoded Content-Type
