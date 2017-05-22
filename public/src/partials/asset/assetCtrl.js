@@ -150,6 +150,15 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
 		}
 		selwrapStr = sel.id;
 	}
+	$scope.verifyPublishName = function(){
+		if(!$scope.publishName){
+			return;
+		}
+		var strLen = $scope.publishName.replace( /[^\x00-\xff]/g, "**" ).length;
+        if(strLen > 256){
+        	return toast($translate.instant('BYTES_NO_MORE_THAN_256'));
+        }
+	}
 	$scope.verifyNumTypeIn = function(){
 		if(!$scope.estimatePrice){
 			return;
@@ -165,7 +174,7 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
 		if(numStr.indexOf(".") >= 0){
 			var begin = numStr.indexOf(".");
 			var subNum = numStr.substring(begin+1,numStr.length);
-			if(subNum.length > 6){
+			if(subNum.length > 2){
 			    toastError($translate.instant('ESTIMATE_PRICE_ENTER_WRONG_3'));
 			}
 		}
@@ -297,12 +306,11 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
             toastError($translate.instant('ISSUER_REG_NOT_COMPLETED'));
             return false;
         }
-//      var reg = /^[A-Z]{3,6}$/;
-//      if(!reg.test($scope.publishName)){
-//          toastError('请输入3-6位大写字母');
-//          return false;
-//      }
-        if(!$scope.publishName){
+        var reg = /^[A-Z][A-Z0-9]{2,9}$/;
+        if(!reg.test($scope.publishName)){
+            return toast($translate.instant('UPPERCASE_NO_MORE_THAN_16'));
+        }
+		if(!$scope.publishName){
         	return toast($translate.instant('ASSET_NAME_NEEDED'));
         }
         if(!$scope.currencySet){

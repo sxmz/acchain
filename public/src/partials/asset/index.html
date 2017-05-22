@@ -59,11 +59,11 @@
     	<div class="asset_name">
     		<div class="_item">
 	            <label >{{'DAPP_NAME' | translate}}</label>
-	            <input type="text"  ng-model="publishName" maxlength="256" >
+	            <input type="text"  ng-model="publishName" ng-blur="verifyPublishName()">
 	        </div>
 	        <div class="_item">
 	            <label >{{'ASSET_CURRENCY' | translate}}</label>
-	            <input type="text"  ng-model="currencySet" placeholder="{{'UPPERCASE_NO_MORE_THAN_10' | translate}}">
+	            <input type="text"  ng-model="currencySet" placeholder="{{'UPPERCASE_UP_TO_10' | translate}}" maxlength="10">
 	        </div>
 	        <div class="_item">
 	            <label >{{'ESTIMATE_PRICE' | translate}}</label>
