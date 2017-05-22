@@ -161,11 +161,11 @@
     		<div class="published_num_left">
     			<div class="_item">
 		            <label >{{'MAXIMUM' | translate}}</label>
-		            <input type="text" ng-model="topLimt" placeholder="{{'INTEGER_NO_MORE_THAN_12' | translate}}" ng-change="verifyTopLimt()">
+		            <input type="text" ng-model="topLimt" placeholder="{{'INTEGER_NO_MORE_THAN_12' | translate}}" ng-change="verifyTopLimt()" maxlength="12">
 		        </div>
 		        <div class="_item">
 		            <label >{{'ACCURACY' | translate}}</label>
-		            <input type="text"  ng-model="precision" placeholder="{{'INTEGER_UP_TO_6' | translate}}" ng-change="verifyPrecision()">
+		            <input type="text"  ng-model="precision" placeholder="{{'INTEGER_UP_TO_6' | translate}}" ng-change="verifyPrecision()" maxlength="1">
 		        </div>
 		        <div class="_item" ng-show="secpwd">
 		            <label >{{'SECOND_PASSWORD' | translate}}</label>

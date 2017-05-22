@@ -215,9 +215,7 @@ angular.module('acchain').controller('assetCtrl', function ($scope, $rootScope, 
 			return toastError($translate.instant('INTEGER_UP_TO_6'));
 		}
 	}
-	
-	
-    $scope.assetprofile = true;
+	$scope.assetprofile = true;
     $scope.registerpublish = false;
     $scope.registerasset = false;
     $scope.myAssets = false;
