@@ -391,8 +391,8 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
 		    precision: precision,
 		    maximum: realMaximum.toString(),
 		    estimateUnit: estimateUnit,
-		    estimatePrice: estimatePrice,
-		    exerciseUnit: exerciseUnit,
+		    estimatePrice: estimatePrice.toString(),
+		    exerciseUnit: exerciseUnit.toString(),
 		    unlockCondition: unlockCondition,
 		    extra: extra
 		}
