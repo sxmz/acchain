@@ -1,0 +1,60 @@
+{
+  "success": true,
+  "assets": [
+    {
+        "currency":"A.AAA",
+        "name":"A.sfsf",
+        "desc":"sfasfsa",
+        "maximum":"1000000000",
+        "precision":1,
+        "quantity":"0",
+        "height":6931,
+        "issuerId":"ACfjnjJtP9ZkprdLioohFS6Jp2CrAGfMS",
+        "issuerName":"A",
+        "category":"010912",
+        "estimateUnit":"RMB",
+        "estimatePrice":"100000000",
+        "exerciseUnit":"sfasfsa",
+        "extra":"......",
+        "unlockCondition":0,
+        "approved":0
+    },
+    {
+        "currency":"A.BBB",
+        "name":"A.sfsf",
+        "desc":"sfasfsa",
+        "maximum":"1000000000",
+        "precision":2,
+        "quantity":"0",
+        "height":6931,
+        "issuerId":"ACfjnjJtP9ZkprdLioohFS6Jp2CrAGfMS",
+        "issuerName":"A",
+        "category":"010913",
+        "estimateUnit":"RMB",
+        "estimatePrice":"100000000",
+        "exerciseUnit":"sfasfsa",
+        "extra":"......",
+        "unlockCondition":0,
+        "approved":0
+    },
+    {
+        "currency":"A.CCC",
+        "name":"A.sfsf",
+        "desc":"sfasfsa",
+        "maximum":"1000000000",
+        "precision":3,
+        "quantity":"0",
+        "height":6931,
+        "issuerId":"ACfjnjJtP9ZkprdLioohFS6Jp2CrAGfMS",
+        "issuerName":"A",
+        "category":"010914",
+        "estimateUnit":"RMB",
+        "estimatePrice":"100000000",
+        "exerciseUnit":"sfasfsa",
+        "extra":"......",
+        "unlockCondition":0,
+        "approved":0
+    }
+  ],
+  "count": 3
+}

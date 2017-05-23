@@ -1,0 +1,22 @@
+<div class="assetvoter" ng-controller="assetvoterCtrl" ng-init="init()">
+    <div class="h_header">
+        {{'VOTE_DETAIL' | translate}}
+        <a class="close"href="" ng-click="Close()"><img src="/assets/common/close.png" alt=""></a>
+    </div>
+
+    <div class="deal_info" >
+    	<div class="innerheader">
+            <span translate="TOTAL_PEOPLES" translate-values="{ count: votersCount }"></span>
+        </div>
+		<table class="table">
+			<tr>
+				<th>{{'MY_VOTERS' | translate}}</th>
+				<th>{{'VOTER_WEIGHT' | translate}}</th>
+			</tr>
+			<tr ng-repeat="i in votes">
+			   <td>{{ i.voter }}</td>
+			   <td>{{ i.weight }}</td>
+			</tr>
+		</table>
+	</div>
+</div>

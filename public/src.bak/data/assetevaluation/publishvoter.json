@@ -1,0 +1,34 @@
+{
+	"success": true,
+	"voters": [
+		{
+			"voter": "Raymond01",
+			"weight": "100"
+		}, {
+			"voter": "Raymond02",
+			"weight": "200"
+		},{
+			"voter": "Raymond03",
+			"weight": "100"
+		}, {
+			"voter": "Raymond04",
+			"weight": "200"
+		},{
+			"voter": "Raymond05",
+			"weight": "100"
+		}, {
+			"voter": "Raymond06",
+			"weight": "200"
+		},{
+			"voter": "Raymond07",
+			"weight": "100"
+		}, {
+			"voter": "Raymond08",
+			"weight": "200"
+		}, {
+			"voter": "Raymond09",
+			"weight": "300"
+		}
+	],
+	"count": 9
+}

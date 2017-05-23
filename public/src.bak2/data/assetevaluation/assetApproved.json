@@ -1,0 +1,60 @@
+{
+  "success": true,
+  "assets": [
+    {
+        "currency":"BTC",
+        "name":"Bitcoin",
+        "desc":"Bitcoin is a cryptocurrency and a digital payment system invented by an unknown programmer, or a group of programmers, under the name Satoshi Nakamoto. It was released as open-source software in 2009",
+        "maximum":"21000000000000",
+        "precision":6,
+        "quantity":"50000000000",
+        "height":1,
+        "issuerId":"AGUaZUoJG5CYqPX32mWAcYQSKjvXu83V8o",
+        "issuerName":"__SYSTEM__",
+        "category":"1801",
+        "estimateUnit":"RMB",
+        "estimatePrice":"8000",
+        "exerciseUnit":"1",
+        "extra":"No extra information",
+        "unlockCondition":0,
+        "approved":1
+    },
+    {
+        "currency":"asd.BUHG",
+        "name":"asd.BUHG",
+        "desc":"BUHG",
+        "maximum":"1000000000",
+        "precision":1,
+        "quantity":"10000000",
+        "height":6158,
+        "issuerId":"APfs15A8KegKu1TtnJsWJvLoFxCKT7pRos",
+        "issuerName":"asd",
+        "category":"1717",
+        "estimateUnit":"RMB",
+        "estimatePrice":"100000000",
+        "exerciseUnit":"BUHG",
+        "extra":"No extra information",
+        "unlockCondition":1,
+        "approved":1
+    },
+    {
+        "currency":"meiyingjugroup.RETSCHSR",
+        "name":"RETSCHSR",
+        "desc":"RET to House",
+        "maximum":"6558750000",
+        "precision":1,
+        "quantity":"0",
+        "height":7199,
+        "issuerId":"ADfjWCQ6Ff5c2g62jzJbyQwHAe68TH1QWJ",
+        "issuerName":"meiyingjugroup",
+        "category":"1732",
+        "estimateUnit":"USD",
+        "estimatePrice":"655875000",
+        "exerciseUnit":"220000",
+        "extra":"No extra information",
+        "unlockCondition":0,
+        "approved":1
+    }
+  ],
+  "count": 3
+}

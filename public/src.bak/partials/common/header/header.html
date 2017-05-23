@@ -1,0 +1,41 @@
+<div>
+    <div class="asch_nav">
+        <div class="logo"></div>
+        <ul ng-controller="headerCtrl" ng-init="init()">
+            <li ng-class="{'active':$root.active=='home'}">
+                <a  ng-href="#/home"><img src="/assets/common/home.png" ng-hide="$root.active=='home'"><img src="/assets/common/home_active.png" ng-show="$root.active=='home'">{{'HOME' | translate}}</a>
+            </li>
+            <li ng-class="{'active':$root.active=='asset'}">
+                <a  ng-href="#/asset"><img src="/assets/common/asset.png" ng-hide="$root.active=='asset'"><img src="/assets/common/asset_active.png" ng-show="$root.active=='asset'">{{'ASSET' | translate}}</a>
+            </li>
+            <li ng-class="{'active':$root.active=='personal'}" >
+                <a ng-href="#/personal"><img src="/assets/common/personal.png" ng-hide="$root.active=='personal'"><img src="/assets/common/personal_active.png" ng-show="$root.active=='personal'">{{'PERSONAL' | translate}}</a>
+            </li>
+            <li ng-class="{'active':$root.active=='application'}" >
+                <a ng-href="#/application"><img src="/assets/common/application.png" ng-hide="$root.active=='application'"><img src="/assets/common/application_active.png" ng-show="$root.active=='application'">{{'APPLICATIONS' | translate}}</a>
+            </li>
+            <li ng-class="{'active':$root.active=='assetevaluation'}" >
+                <a ng-href="#/assetevaluation"><img src="/assets/common/assetevaluation.png" ng-hide="$root.active=='assetevaluation'"><img src="/assets/common/assetevaluation_active.png" ng-show="$root.active=='assetevaluation'">{{'ASSET_EVALUATION' | translate}}</a>
+            </li>
+            <li ng-class="{'active':$root.active=='blockforging'}">
+                <a  ng-href="#/blockforging" ><img src="/assets/common/blockforging.png" ng-hide="$root.active=='blockforging'"><img src="/assets/common/blockforging_active.png" ng-show="$root.active=='blockforging'">{{'FORGING' | translate}}</a>
+                <!-- 下拉菜单  -->
+            </li>
+            <li ng-class="{'active':$root.active=='blockchain'}">
+                <a  ng-href="#/blockchain"><img src="/assets/common/blockchain.png" ng-hide="$root.active=='blockchain'"><img src="/assets/common/blockchain_active.png" ng-show="$root.active=='blockchain'">{{'BLOCKS' | translate}}</a>
+            </li>
+            <li ng-class="{'active':$root.active=='vote'}" >
+                <a ng-href="#/vote"><img src="/assets/common/vote.png" ng-hide="$root.active=='vote'"><img src="/assets/common/vote_active.png" ng-show="$root.active=='vote'">{{'DELEGATE_VOTE' | translate}}</a>
+            </li>
+            <li ng-class="{'active':$root.active=='pay'}">
+            <a  ng-click="goPay()"><img src="/assets/common/pay.png" ng-hide="$root.active=='pay'"><img src="/assets/common/pay_active.png" ng-show="$root.active=='pay'">{{'TRANSFER' | translate}}</a>
+           </li>
+            <li ng-class="{'active':$root.active=='peer'}">
+                <a  ng-href="#/peer"><img src="/assets/common/peer.png" ng-hide="$root.active=='peer'"><img src="/assets/common/peer_active.png" ng-show="$root.active=='peer'">{{'PEERS' | translate}}</a>
+            </li>
+          
+
+        </ul>
+    </div>
+</div>
+

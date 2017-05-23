@@ -1,0 +1,14 @@
+{
+"success": true,
+"issues": [
+	{
+	"name":"LONG",
+	"transactionId": "431dd812d00e2c7a9242b1b0f1bbf33b80b27e4a8bf333755673ab3ac0ff9d08",
+	"currency": "HEI.LONG",
+	"amount": "10000000",
+	"exchangeRate": "0.2",
+	"senderId": "A7KaYaLnWhSwCzrFVeE1TcXCQUY8WHB9hR"
+	}
+],
+"count": 1
+}
