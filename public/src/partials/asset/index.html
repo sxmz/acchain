@@ -63,11 +63,11 @@
 	        </div>
 	        <div class="_item">
 	            <label >{{'ASSET_CURRENCY' | translate}}</label>
-	            <input type="text"  ng-model="currencySet" placeholder="{{'UPPERCASE_UP_TO_10' | translate}}" maxlength="10">
+	            <input type="text"  ng-model="currencySet" placeholder="{{'UPPERCASE_UP_TO_10' | translate}}" ng-blur="verifyCurrencySet()" maxlength="10" >
 	        </div>
 	        <div class="_item">
 	            <label >{{'ESTIMATE_PRICE' | translate}}</label>
-	            <input type="number"  ng-model="estimatePrice" placeholder="{{'ESTIMATE_PRICE_LIMIT' | translate}}" ng-blur="verifyEstimatePrice()">
+	            <input type="text"  ng-model="estimatePrice" placeholder="{{'ESTIMATE_PRICE_LIMIT' | translate}}" ng-blur="verifyEstimatePrice()" maxlength="12">
 	        </div>
 	        <div class="_item">
 	            <label >{{'ESTIMATE_UNIT' | translate}}</label>
@@ -79,7 +79,7 @@
 	        </div>
 	        <div class="_item">
 	            <label >{{'EXERCISE_UNIT' | translate}}</label>
-	            <input type="text"  ng-model="exerciseUnit" placeholder="{{'INTEGER_NO_MORE_THAN_9' | translate}}" ng-change="verifyExerciseUnit()">
+	            <input type="text"  ng-model="exerciseUnit" placeholder="{{'INTEGER_NO_MORE_THAN_9' | translate}}" ng-change="verifyExerciseUnit()" maxlength="9">
 	        </div>
 	        <div class="_item">
 	            <label >{{'CHAIN_OR_NOT' | translate}}</label>

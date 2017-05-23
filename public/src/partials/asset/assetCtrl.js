@@ -159,24 +159,22 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
         	return toast($translate.instant('BYTES_NO_MORE_THAN_256'));
         }
 	}
+	$scope.verifyCurrencySet = function(){
+		if(!$scope.currencySet){
+			return;
+		}
+		var reg = /^[A-Z][A-Z0-9]{2,9}$/;
+		if(!reg.test($scope.currencySet)){
+			return toastError($translate.instant('CURRENCY_SET_WRONG'));
+		}
+	}
 	$scope.verifyEstimatePrice = function(){
 		if(!$scope.estimatePrice){
 			return;
 		}
-		var num = $scope.estimatePrice;
-		var numStr = num.toString();
-		if(num > 999999999){
-			toastError($translate.instant('ESTIMATE_PRICE_ENTER_WRONG_1'));	
-		}
-		if(num < 0){
-			toastError($translate.instant('ESTIMATE_PRICE_ENTER_WRONG_2'));	
-		}
-		if(numStr.indexOf(".") >= 0){
-			var begin = numStr.indexOf(".");
-			var subNum = numStr.substring(begin+1,numStr.length);
-			if(subNum.length > 2){
-			    toastError($translate.instant('ESTIMATE_PRICE_ENTER_WRONG_3'));
-			}
+		var reg = /^(([1-9]|[1-9]\d{0,8})|(([1-9]|[1-9]\d{0,8})\.[0-9][0-9]{0,1})|(0\.(0[1-9]|[1-9][0-9]{0,1})))$/g;
+		if(!reg.test($scope.estimatePrice)){
+			return toastError($translate.instant('ESTIMATE_PRICE_ENTER_WRONG'));
 		}
 	}
 	$scope.verifyExerciseUnit = function(){
@@ -185,7 +183,7 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
 		}
 		var reg = /^[1-9][0-9]{0,8}$/;
 		if(!reg.test($scope.exerciseUnit)){
-			return toastError($translate.instant('INTEGER_NO_MORE_THAN_9'));
+			return toastError($translate.instant('EXERCISE_UNIT_WRONG'));
 		}
 	}
 	$scope.verifyPublishDesc = function(){
@@ -341,18 +339,29 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
             toastError($translate.instant('ISSUER_REG_NOT_COMPLETED'));
             return false;
         }
-        var reg = /^[A-Z][A-Z0-9]{2,9}$/;
-        if(!reg.test($scope.currencySet)){
-            return toast($translate.instant('CURRENCY_SET_WRONG'));
-        }
-		if(!$scope.publishName){
+        if(!$scope.publishName){
         	return toast($translate.instant('ASSET_NAME_NEEDED'));
+        }else{
+        	var strLen = $scope.publishName.replace( /[^\x00-\xff]/g, "**" ).length;
+	        if(strLen > 256){
+	        	return toast($translate.instant('BYTES_NO_MORE_THAN_256'));
+	        }
         }
         if(!$scope.currencySet){
         	return toast($translate.instant('ASSET_CURRENCY_NEEDED'));
+        }else{
+        	var reg = /^[A-Z][A-Z0-9]{2,9}$/;
+	        if(!reg.test($scope.currencySet)){
+	            return toast($translate.instant('CURRENCY_SET_WRONG'));
+	        }
         }
-        if(!$scope.estimatePrice){
+   		if(!$scope.estimatePrice){
         	return toast($translate.instant('ESTIMATE_PRICE_NEEDED'));
+        }else{
+        	var reg = /^(([1-9]|[1-9]\d{0,8})|(([1-9]|[1-9]\d{0,8})\.[0-9][0-9]{0,1})|(0\.(0[1-9]|[1-9][0-9]{0,1})))$/g;
+			if(!reg.test($scope.estimatePrice)){
+				return toastError($translate.instant('ESTIMATE_PRICE_ENTER_WRONG'));
+			}
         }
         if(!$scope.estimateUnit){
         	return toast($translate.instant('ESTIMATE_UNIT_NEEDED'));
@@ -362,9 +371,19 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
         }
         if(!$scope.exerciseUnit){
         	return toast($translate.instant('EXERCISE_UNIT_NEEDED'));
+        }else{
+        	var reg = /^[1-9][0-9]{0,8}$/;
+			if(!reg.test($scope.exerciseUnit)){
+				return toastError($translate.instant('EXERCISE_UNIT_WRONG'));
+			}
         }
         if(!$scope.publishDesc) {
             return toastError($translate.instant('ASSET_DESC_NEEDED'));
+        }else{
+        	var strLen = $scope.publishDesc.replace( /[^\x00-\xff]/g, "**" ).length;
+	        if(strLen > 4096){
+	        	return toast($translate.instant('BYTES_NO_MORE_THAN_4096'));
+	        }
         }
         if(!$scope.selectedLevelOne){
     		return toast($translate.instant('ASSET_CATEGORY_NEEDED'));
@@ -385,11 +404,13 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
         if (!parseInt(maximum)) {
             return toastError($translate.instant('INCORRECT_ISSUING_AMOUNT'));
         }
-        if (!precision ||precision < 0 || precision > 6) {
+        if (!precision) {
             return toastError($translate.instant('INCORRECT_PRECISION'));
-        }
-        if (String($scope.precision).indexOf('.') != -1) {
-            return toastError($translate.instant('PRECISION_STANDARD'));
+        }else{
+        	var reg = /^[0-6]$/;
+			if(!reg.test($scope.precision)){
+				return toastError($translate.instant('INTEGER_UP_TO_6'));
+			}
         }
         if (!userService.secondPublicKey) {
             $scope.regAssetSecondPassword = '';
