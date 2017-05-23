@@ -1,4 +1,4 @@
-angular.module('acchain').filter('typeFilter', function ($filter) {
+angular.module('asch').filter('typeFilter', function ($filter) {
     const TYPE_LABEL = [
         'TRS_TYPE_TRANSFER',
         'TRS_TYPE_SECOND_PASSWORD',

@@ -1,4 +1,4 @@
-angular.module('acchain').controller('reduceaclCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams, userService,postSerivice, $translate) {
+angular.module('asch').controller('reduceaclCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams, userService,postSerivice, $translate) {
     $rootScope.userlogin = true;
     $rootScope.active = 'acl';
     $scope.comfirmDialog = false;

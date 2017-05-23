@@ -1,5 +1,5 @@
 
-angular.module('acchain').controller('assetvoterCtrl', function ($scope, $rootScope, NgTableParams, apiService, ipCookie, $location, $translate) {
+angular.module('asch').controller('assetvoterCtrl', function ($scope, $rootScope, NgTableParams, apiService, ipCookie, $location, $translate) {
 
     $rootScope.assetvoterinfo = false;
 

@@ -1,4 +1,4 @@
-angular.module('acchain').controller('assetevaluationCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams,userService,postSerivice, $translate,$uibModal) {
+angular.module('asch').controller('assetevaluationCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams,userService,postSerivice, $translate,$uibModal) {
     $rootScope.active = 'assetevaluation';
     $rootScope.userlogin = true;
     $rootScope.isBodyMask = false;

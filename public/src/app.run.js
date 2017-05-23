@@ -1,4 +1,4 @@
-angular.module('acchain').run(function ($rootScope, $location, ipCookie, apiService, $window, userService) {
+angular.module('asch').run(function ($rootScope, $location, ipCookie, apiService, $window, userService) {
     $rootScope.isBodyMask = false;
     $rootScope.userlogin = false;
     $rootScope.checkobj = {};

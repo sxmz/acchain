@@ -1,4 +1,4 @@
-angular.module('acchain').filter('saveCodeFilter', function ($rootScope) {
+angular.module('asch').filter('saveCodeFilter', function ($rootScope) {
     return function (key) {
 
         if( $rootScope.coedobj[key]){
