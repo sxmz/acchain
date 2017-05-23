@@ -1,7 +1,7 @@
 /**
  * Created by zenking on 16/7/2.
  */
-angular.module('asch').controller('assigneeCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $http, userService, postSerivice, $translate) {
+angular.module('acchain').controller('assigneeCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $http, userService, postSerivice, $translate) {
 
     $rootScope.assigneeinfo = false;
     $scope.userService = userService;

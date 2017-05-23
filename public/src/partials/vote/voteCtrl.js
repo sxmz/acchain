@@ -1,4 +1,4 @@
-angular.module('asch').controller('voteCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams, userService, $translate) {
+angular.module('acchain').controller('voteCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams, userService, $translate) {
     $rootScope.active = 'vote';
     $rootScope.userlogin = true;
     $scope.letin = true;

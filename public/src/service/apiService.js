@@ -1,4 +1,4 @@
-angular.module('asch').service('apiService', function ($http, $rootScope, $location) {
+angular.module('acchain').service('apiService', function ($http, $rootScope, $location) {
 
 	function json2url(json) {
 		var arr = [];

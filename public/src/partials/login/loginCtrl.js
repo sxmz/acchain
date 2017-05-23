@@ -1,4 +1,4 @@
-angular.module('asch').controller('loginCtrl', function ($scope, $rootScope, apiService, ipCookie, $window, $location, userService, $translate) {
+angular.module('acchain').controller('loginCtrl', function ($scope, $rootScope, apiService, ipCookie, $window, $location, userService, $translate) {
 	$rootScope.userlogin = false;
 	$rootScope.register = true;
 	$rootScope.creatpwd = false;

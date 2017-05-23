@@ -1,6 +1,6 @@
 
 
-angular.module('asch').filter('feeFilter', function () {
+angular.module('acchain').filter('feeFilter', function () {
     return function (fee) {
         if (!fee) {
             return 0;

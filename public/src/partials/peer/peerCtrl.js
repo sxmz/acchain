@@ -1,4 +1,4 @@
-angular.module('asch').controller('peerCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams, $translate) {
+angular.module('acchain').controller('peerCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams, $translate) {
     $rootScope.active = 'peer';
     $rootScope.userlogin = true;
     $rootScope.showdealInfo = function (i) {
