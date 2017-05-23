@@ -1,4 +1,4 @@
-angular.module('acchain').controller('blockchainCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams, $translate) {
+angular.module('asch').controller('blockchainCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams, $translate) {
 	$rootScope.active = 'blockchain';
 	$rootScope.userlogin = true;
 	$rootScope.showdealInfo = function (i) {

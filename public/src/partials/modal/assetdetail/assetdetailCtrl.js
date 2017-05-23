@@ -1,5 +1,5 @@
 
-angular.module('acchain').controller('assetdetailCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $translate) {
+angular.module('asch').controller('assetdetailCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $translate) {
 
     $rootScope.assetdetailinfo = false;
 
