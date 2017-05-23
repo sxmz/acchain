@@ -1,4 +1,4 @@
-angular.module('acchain').controller('assetCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams,userService,postSerivice, $translate,$uibModal) {
+angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $window, NgTableParams,userService,postSerivice, $translate,$uibModal) {
     $rootScope.active = 'asset';
     $rootScope.userlogin = true;
     $rootScope.isBodyMask = false;
@@ -159,22 +159,24 @@ angular.module('acchain').controller('assetCtrl', function ($scope, $rootScope, 
         	return toast($translate.instant('BYTES_NO_MORE_THAN_256'));
         }
 	}
-	$scope.verifyCurrencySet = function(){
-		if(!$scope.currencySet){
-			return;
-		}
-		var reg = /^[A-Z][A-Z0-9]{2,9}$/;
-		if(!reg.test($scope.currencySet)){
-			return toastError($translate.instant('CURRENCY_SET_WRONG'));
-		}
-	}
 	$scope.verifyEstimatePrice = function(){
 		if(!$scope.estimatePrice){
 			return;
 		}
-		var reg = /^(([1-9]|[1-9]\d{0,8})|(([1-9]|[1-9]\d{0,8})\.[0-9][0-9]{0,1})|(0\.(0[1-9]|[1-9][0-9]{0,1})))$/g;
-		if(!reg.test($scope.estimatePrice)){
-			return toastError($translate.instant('ESTIMATE_PRICE_ENTER_WRONG'));
+		var num = $scope.estimatePrice;
+		var numStr = num.toString();
+		if(num > 999999999){
+			toastError($translate.instant('ESTIMATE_PRICE_ENTER_WRONG_1'));	
+		}
+		if(num < 0){
+			toastError($translate.instant('ESTIMATE_PRICE_ENTER_WRONG_2'));	
+		}
+		if(numStr.indexOf(".") >= 0){
+			var begin = numStr.indexOf(".");
+			var subNum = numStr.substring(begin+1,numStr.length);
+			if(subNum.length > 2){
+			    toastError($translate.instant('ESTIMATE_PRICE_ENTER_WRONG_3'));
+			}
 		}
 	}
 	$scope.verifyExerciseUnit = function(){

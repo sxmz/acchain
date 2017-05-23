@@ -1,5 +1,5 @@
 
-angular.module('acchain').controller('accountdetailCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $translate) {
+angular.module('asch').controller('accountdetailCtrl', function ($scope, $rootScope, apiService, ipCookie, $location, $translate) {
 
     $rootScope.accountdetailinfo = false;
 

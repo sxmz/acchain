@@ -545,7 +545,7 @@ body {
     height: 100vh;
     width: 100vw;
     position: relative;
-    background: url('/assets/common/acchain_bg.png') top center no-repeat #2b354f;
+    background: url('/assets/common/asch_bg.png') top center no-repeat #2b354f;
     background-size: 100% auto;
 }
 
