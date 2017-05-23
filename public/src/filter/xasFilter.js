@@ -1,4 +1,4 @@
-angular.module('acchain').filter('xasFilter', function () {
+angular.module('asch').filter('xasFilter', function () {
     return function (fee) {
         if (!fee) {
             return 0;

@@ -1,4 +1,4 @@
-angular.module('acchain').controller('payCtrl', function ($scope, $rootScope, $filter, apiService, ipCookie, $http, $window, userService, postSerivice, $translate) {
+angular.module('asch').controller('payCtrl', function ($scope, $rootScope, $filter, apiService, ipCookie, $http, $window, userService, postSerivice, $translate) {
     $rootScope.active = 'pay';
     $rootScope.userlogin = true;
 	$scope.userService = userService;

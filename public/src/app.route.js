@@ -1,4 +1,4 @@
-angular.module('acchain').config(function ($routeProvider) {
+angular.module('asch').config(function ($routeProvider) {
 
 	$routeProvider.when('/personal', {
 		templateUrl: 'partials/personal/index.html'

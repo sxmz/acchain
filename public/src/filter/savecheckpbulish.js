@@ -1,4 +1,4 @@
-angular.module('acchain').filter('savecheckpbulish', function ($rootScope) {
+angular.module('asch').filter('savecheckpbulish', function ($rootScope) {
     return function (key) {
 
         if( $rootScope.checkdelitem[key]){

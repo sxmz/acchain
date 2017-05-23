@@ -1,4 +1,4 @@
-angular.module('acchain').controller('homeCtrl', function ($scope, $rootScope, apiService, $http, ipCookie, $location, $interval, NgTableParams, $window, userService, $translate) {
+angular.module('asch').controller('homeCtrl', function ($scope, $rootScope, apiService, $http, ipCookie, $location, $interval, NgTableParams, $window, userService, $translate) {
 	$rootScope.active = 'home';
 	$rootScope.userlogin = true;
 	$scope.acceptShowInfo = function (i) {
