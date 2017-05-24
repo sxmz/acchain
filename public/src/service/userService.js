@@ -5,20 +5,20 @@ angular.module('asch').service('userService', function () {
         this.publicKey = publicKey;
         this.balance = balance;
         this.secondPublicKey = secondPublicKey;
-        if (window.localStorage) {
-            window.localStorage.setItem('secret', secret);
-            window.localStorage.setItem('address', address);
-            window.localStorage.setItem('publicKey', publicKey);
-            window.localStorage.setItem('balance', balance);
-            window.localStorage.setItem('secondPublicKey', secondPublicKey);
+        if (window.sessionStorage) {
+            window.sessionStorage.setItem('secret', secret);
+            window.sessionStorage.setItem('address', address);
+            window.sessionStorage.setItem('publicKey', publicKey);
+            window.sessionStorage.setItem('balance', balance);
+            window.sessionStorage.setItem('secondPublicKey', secondPublicKey);
         }
     }
     this.update = function (account) {
         this.balance = account.balance;
         this.secondPublicKey = account.secondPublicKey;
-        if (window.localStorage) {
-            window.localStorage.setItem('balance', account.balance);
-            window.localStorage.setItem('secondPublicKey', account.secondPublicKey);
+        if (window.sessionStorage) {
+            window.sessionStorage.setItem('balance', account.balance);
+            window.sessionStorage.setItem('secondPublicKey', account.secondPublicKey);
         }
     }
     this.saveTab = function (tab) {

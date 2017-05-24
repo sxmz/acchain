@@ -186,8 +186,8 @@ window.Translations['en-us'] = {
   // model - delegate register
   REGISTER_DELEGATE: 'Register as Delegate',
   DELEGATE_NAME: 'Delegate\'s Name',
-  INPUT_DELEGATE_NAME: 'Please type the delegate name',
-  DELEGATE_NAME_RULE_TIP: 'Name must be at least 8 alphanumeric characters.',
+  INPUT_DELEGATE_NAME: '2 to 18 combination of numbers and english letters',
+  DELEGATE_NAME_RULE_TIP: 'At least 8 combination of numbers and english letters',
   REGISTER: 'Register',
   NEED_PAY: 'Payment Required',
 

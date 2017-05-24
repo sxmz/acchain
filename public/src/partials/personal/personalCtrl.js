@@ -71,11 +71,11 @@ angular.module('asch').controller('personalCtrl', function ($scope, $rootScope, 
 	}
 	// 退出函数
 	$scope.quitout = function () {
-	   window.localStorage.removeItem('secret');
-	   window.localStorage.removeItem('address');
-	   window.localStorage.removeItem('publicKey');
-	   window.localStorage.removeItem('balance');
-	   window.localStorage.removeItem('secondPublicKey');
+	   window.sessionStorage.removeItem('secret');
+	   window.sessionStorage.removeItem('address');
+	   window.sessionStorage.removeItem('publicKey');
+	   window.sessionStorage.removeItem('balance');
+	   window.sessionStorage.removeItem('secondPublicKey');
        $window.location.href = '#/login';     
 	}
 });

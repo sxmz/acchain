@@ -4,13 +4,13 @@ angular.module('asch').run(function ($rootScope, $location, ipCookie, apiService
     $rootScope.checkobj = {};
     $rootScope.coedobj = {};
     $rootScope.$on('$routeChangeStart', function (r, n, x) {
-        if (!userService.secret && window.localStorage && window.localStorage.getItem('secret')) {
+        if (!userService.secret && window.sessionStorage && window.sessionStorage.getItem('secret')) {
             userService.setData(
-                window.localStorage.getItem('secret'),
-                window.localStorage.getItem('address'),
-                window.localStorage.getItem('publicKey'),
-                window.localStorage.getItem('balance'),
-                window.localStorage.getItem('secondPublicKey')
+                window.sessionStorage.getItem('secret'),
+                window.sessionStorage.getItem('address'),
+                window.sessionStorage.getItem('publicKey'),
+                window.sessionStorage.getItem('balance'),
+                window.sessionStorage.getItem('secondPublicKey')
             )
         }
         if (!userService.secret) {

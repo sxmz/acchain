@@ -9,6 +9,16 @@ angular.module('asch').controller('assigneeCtrl', function ($scope, $rootScope, 
         $rootScope.isBodyMask = false;
         $rootScope.assigneeinfo = false;
     };
+    $scope.verifyUserName = function(){
+    	if(!$scope.userName){
+			return;
+		}
+		var reg = /^[a-z0-9!@$&_.]{2,}$/g;
+		if(!reg.test($scope.userName)){
+			return toastError($translate.instant('ERR_DELEGATE_NAME_FORMAT'));
+		}
+    	
+    }
     $scope.nextstep = function () {
         var reg = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$/;
         var usernamereg = /^[a-z0-9!@$&_.]{2,}$/;
