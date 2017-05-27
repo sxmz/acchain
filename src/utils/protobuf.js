@@ -102,28 +102,6 @@ Protobuf.prototype.transactionStringToBytes = function (obj) {
         obj.asset.delegate.publicKey = new Buffer(obj.asset.delegate.publicKey, 'hex');
       }
       break;
-    case TransactionTypes.VOTE:
-      break;
-    case TransactionTypes.MULTI:
-      break;
-    case TransactionTypes.DAPP:
-      break;
-    case TransactionTypes.IN_TRANSFER:
-      break;
-    case TransactionTypes.OUT_TRANSFER:
-      break;
-    case TransactionTypes.UIA_ISSUER:
-      break;
-    case TransactionTypes.UIA_ASSET:
-      break;
-    case TransactionTypes.UIA_FLAGS:
-      break;
-    case TransactionTypes.UIA_ACL:
-      break;
-    case TransactionTypes.UIA_ISSUE:
-      break;
-    case TransactionTypes.UIA_TRANSFER:
-      break;
     default:
       break;
   }
@@ -150,28 +128,6 @@ Protobuf.prototype.transactionBytesToString = function (obj) {
       if (obj.asset.delegate) {
         obj.asset.delegate.publicKey = obj.asset.delegate.publicKey.toString('hex');
       }
-      break;
-    case TransactionTypes.VOTE:
-      break;
-    case TransactionTypes.MULTI:
-      break;
-    case TransactionTypes.DAPP:
-      break;
-    case TransactionTypes.IN_TRANSFER:
-      break;
-    case TransactionTypes.OUT_TRANSFER:
-      break;
-    case TransactionTypes.UIA_ISSUER:
-      break;
-    case TransactionTypes.UIA_ASSET:
-      break;
-    case TransactionTypes.UIA_FLAGS:
-      break;
-    case TransactionTypes.UIA_ACL:
-      break;
-    case TransactionTypes.UIA_ISSUE:
-      break;
-    case TransactionTypes.UIA_TRANSFER:
       break;
     default:
       break;

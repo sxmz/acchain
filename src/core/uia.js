@@ -27,6 +27,7 @@ function UIA(cb, scope) {
   library.base.transaction.attachAssetType(TransactionTypes.UIA_ISSUER, require('../uia/issuer.js'))
   library.base.transaction.attachAssetType(TransactionTypes.UIA_ASSET, require('../uia/asset.js'))
   library.base.transaction.attachAssetType(TransactionTypes.UIA_ISSUE, require('../uia/issue.js'))
+  library.base.transaction.attachAssetType(TransactionTypes.UIA_EXERCISE, require('../uia/exercise.js'))
 
   library.model.getAllAssetBalances((err, results) => {
     if (err) return cb('Failed to load asset balances: ' + err)
@@ -66,6 +67,7 @@ private.attachApi = function () {
     'get /issues/applying': 'getApplyingIssues',
     'get /issues/approved': 'getApprovedIssues',
     'get /issues/:id/voters': 'getIssueVoters',
+    'get /exercises': 'getExercises',
 
     'put /issuers': 'registerIssuer',
     'put /assets': 'registerAssets',
@@ -493,6 +495,52 @@ shared.getIssues = function (req, cb) {
 
         cb(null, {
           issues: results,
+          count: count
+        })
+      })
+    })
+  })
+}
+
+shared.getExercises = function (req, cb) {
+  var query = req.body
+  library.scheme.validate(query, {
+    type: 'object',
+    properties: {
+      limit: {
+        type: 'integer',
+        minimum: 0,
+        maximum: 100
+      },
+      offset: {
+        type: 'integer',
+        minimum: 0
+      },
+      currency: {
+        type: 'string',
+        maxLength: 30
+      }
+    }
+  }, function (err) {
+    if (err) return cb('Invalid parameters: ' + err[0])
+    var condition = null
+    if (typeof query.currency !== 'undefined') {
+      condition = { currency2: query.currency }
+    }
+    library.model.count('exercises', condition, function (err, count) {
+      if (err) return cb('Failed to get count: ' + err)
+
+
+      var filter = {
+        condition: condition,
+        limit: query.limit,
+        offset: query.offset
+      }
+      library.model.getExercises(filter, function (err, results) {
+        if (err) return cb('Failed to get exercises: ' + err)
+
+        cb(null, {
+          exercises: results,
           count: count
         })
       })

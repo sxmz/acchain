@@ -91,7 +91,7 @@ function Issue() {
         currency: {
           type: 'string',
           minLength: 3,
-          maxLength: 26
+          maxLength: 30
         },
         amount: {
           type: 'string',

@@ -25,7 +25,7 @@ function Api(options) {
   this.options = options || {};
   this.mainnet = this.options.mainnet;
   this.host = this.options.host || "127.0.0.1";
-  this.port = this.options.port || (this.mainnet ? 8192 : 4096);
+  this.port = this.options.port || (this.mainnet ? 8192 : 5000);
   this.baseUrl = "http://" + this.host + ":" + this.port;
   this.magic = this.mainnet ? '5f5b3cf5' : '8e9b66ed';
 }

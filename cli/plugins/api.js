@@ -294,6 +294,13 @@ function issueAsset(options) {
   });
 }
 
+function exercise(options) {
+  var trs = aschJS.uia.createExercise(options.currency, options.amount, options.secret, options.secondSecret);
+  getApi().broadcastTransaction(trs, function (err, result) {
+    console.log(err || result.transactionId);
+  });
+}
+
 module.exports = function (program) {
   globalOptions = program;
 
@@ -507,4 +514,13 @@ module.exports = function (program) {
     .option("-c, --currency <currency>", "")
     .option("-r, --rate <value>", "exchange rate by ACC")
     .action(issueAsset)
+
+  program
+    .command("exercise")
+    .description("exercise product right")
+    .option("-e, --secret <secret>", "")
+    .option("-s, --secondSecret <secret>", "")
+    .option("-a, --amount <amount>", "")
+    .option("-c, --currency <currency>", "")
+    .action(exercise)
 }
