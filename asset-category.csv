@@ -1,0 +1,1841 @@
+01,食品生鲜,Fresh food
+02,服装,Clothing
+03,鞋、箱、包,Shoes、 boxes、 bags
+04,美妆护肤,Beauty skin care
+05,钟表、珠宝,Watches、 jewelry
+06,家用电器,Household Electric Appliances
+07,休闲娱乐,Recreation & Entertainment
+08,百年老字号名优特产品,Famous brand products in centrury years
+09,影视,Movies
+10,手机、数码、电脑办公,Mobile phones、 digital、 computer office
+11,医疗保健,Medical care
+12,母婴玩具,Baby toys
+13,运动户外,Outdoor sports
+14,汽车、汽车用品,Auto、 auto supplies
+15,家居、家具、家装、厨具,Home、 furniture、 home improvement、 kitchen
+16,图书音像,Books、 Audio & Video Products
+17,权益类,Equity class
+18,链层代币,Chain tokens
+0101,中外名酒,World Famous Alcoholic Drinks
+0102,茶叶,Tea
+0103,饮料冲调,Beverage punch
+0104,粮油调味,Grain seasoning
+0105,休闲零食,Leisure snacks
+0106,冷饮冻食,Cold drink
+0107,新鲜水果,Fresh fruit
+0108,蔬菜蛋品,Vegetable egg
+0109,海鲜水产,Seafood aquaculture
+0110,肉类,Meat
+0111, 地方特产,Local specialty
+0112,精选干货,Selected drysaltery
+0113,进口食品,Imported food
+0201,女装,Ladies wear
+0202,男装,Men's wear
+0203,家居服,Leisure wear
+0204,袜类,Socks
+0205,运动服,Sport Wear
+0206,进口服装,Imported clothing
+0301,女鞋,Women's Shoes
+0302,男鞋,Men's Shoes
+0303,拉杆箱,Draw bar box
+0304,男包,Men's bag
+0305,女包,Female bag
+0306,功能包,Function bag
+0401,护肤品,Skin care products
+0402,香水彩妆,Perfume makeup
+0403,身体护理,Body care
+0404,口腔护理,Oral nursing
+0405,清洁、护理用品,Cleaning and nursing products
+0501,国内表,Domestic watch
+0502,国外表,Foreign watch
+0503,儿童手表,Children watch
+0504,智能手表,Intelligent Watch
+0505,闹钟,Alarm clock
+0506,座钟挂钟,Clock 
+0507,钟表配件,Watch accessories
+0508,其他钟表,Other watches
+0509,进口钟表,Imported watches
+0510,黄金,Gold
+0511,K金,K-Gold
+0512,时尚饰品,Fashion accessories
+0513,钻石,Diamonds
+0514,翡翠玉石,Jade
+0515,银饰,Silver
+0516,水晶玛瑙,Crystal agate
+0517,彩宝,Multicolored
+0518,铂金,Platinum
+0519,木手串/把件,Wooden hand string
+0520,珍珠,Pearl
+0521,其他珠宝,Other jewelry
+0522,进口珠宝,Imported jewelry
+0601,电视,Television
+0602,空调,Air conditioner
+0603,洗衣机,Washing machine
+0604,冰箱,Fridge
+0605,厨卫大电器,Kitchen appliances
+0606,厨房小电,Small kitchen
+0607,生活电器,Life appliance
+0608,个护健康,Protect health
+0609,家庭影音,Home video
+0701,境外游（国外游）,Overseas travel (abroad)
+0702,境内游（国内游）,Domestic travel (domestic)
+0703,娱乐,Entertainment
+0704,购物,Shopping
+0705,美容,Cosmetology
+0706,国内/国外住宿,Domestic / foreign accommodation
+0707,美食,Delicious food
+0801,百货,Department store
+0802,中药,Traditional Chinese medicine
+0803,调味品,Condiment
+0804,服装,Clothing
+0805,羽绒,Eiderdown
+0806,木雕,Wood carving
+0807,牙雕,Ivory carving
+0808,玉雕,Jade carving
+0809,石雕,stone carving
+0810,木偶,Puppet
+0811,玉器,Jadeware
+0812,漆器,Lacquer ware
+0813,玻璃器皿,Glassware
+0814,剪纸,Paper-cut
+0815,京绣,Beijing embroidery
+0816,苏绣,Suzhou embroidery
+0817,丝绸,Silk
+0818,苏扇,Suzhou Fan
+0819,人参,Ginseng
+0820,枸杞,Matrimony vine
+0821,阿胶,Donkey-hide gelatin
+0822,天麻,Rhizoma gastrodiae
+0823,黄芪,Astragalus mongholicus
+0824,鹿茸,Pilose antler
+0825,冬虫夏草,Cordyceps sinensis
+0826,灵芝,Glossy ganoderma
+0827,古玩,Antique
+0828,古画,Ancient painting
+0829,瓷板彩画,Porcelain painting
+0830,瓷板画,Porcelain painting
+0831,瓷器,Porcelain
+0832,工艺瓷,Art porcelain
+0833,民间工艺品,Folk arts and crafts
+0834,工艺灯具,Craft lamps
+0835,徽墨,Huimo
+0836,歙砚,She inkstone
+0837,摄影器材,Camera Equipment
+0838,珠宝,Jewellery
+0839,首饰,Jewelry
+0840,玉器,Jade article
+0841,乐器,Musical Instruments
+0842,剪刀,Scissors
+0843,其他名优特产品,Other famous brand products
+0901,电视剧,TV play
+0902,电影,Film
+0903,广告,Advertisement
+0904,MV,MV
+0905,网络影视,Network movie
+0906,报纸,Newspaper
+0907,宣传片,Trailer
+0908,网络媒体,Network media
+0909,自媒体,Self media
+0910,综艺,Variety
+0911,动漫,Comic
+0912,娱乐,Entertainment
+0913,其他影视传媒,Other media
+0914,海外影视传媒,Overseas media
+1001,手机通讯,Mobile communication
+1002,手机配件,Mobile Accessories
+1003,摄影摄像,Photography
+1004,数码配件,Digital accessories
+1005,影音娱乐,Video entertainment
+1006,智能设备,Intelligent equipment
+1007,电子教育,Electronic education
+1008,电脑整机,Computer machine
+1009,电脑配件,Computer accessories
+1010,外设产品,Peripheral products
+1011,游戏产品,Game product
+1012,网络产品,Network product
+1013,办公设备,Office equipment
+1014,文具耗材,Stationery supplies
+1015,服务产品,Service products
+1101,中西药品,Pharmaceuticals
+1102,营养健康,Nutrition health
+1103,营养成分,Nutritional composition
+1104,滋补养生,Nourishing health
+1105,计生情趣,Family interest
+1106,保健器械,Health apparatus
+1107,护理护具,Nursing care
+1201,奶粉,Powdered Milk
+1202,营养辅食,Nutritional supplement
+1203,尿裤湿巾,Diaper wipes
+1204,喂养用品,Feeding products
+1205,洗护用品,Toiletries
+1206,童床桌椅,Crib chairs
+1207,童车,Baby carrier
+1208,妈妈专区,Mama zone
+1209,寝居服饰,Bedroom apparel
+1210,益智早教 ,Intelligence Education
+1211,遥控户外,Remote outdoor
+1212,毛绒娃娃,Plush toys
+1213,钢琴,Piano
+1214,电子琴,Electronic organ
+1215,电钢琴,Electric piano
+1216,吉他,Guitar
+1217,尤克里里,Wuke Lili
+1218,打击乐器,Percussion instrument
+1219,西洋管弦,Western orchestra
+1220,名族管弦乐器,Orchestral music
+1221,乐器配件,Musical instrument accessories
+1222,其他乐器,Other instruments
+1223,进口乐器,Imported instruments
+1301,运动鞋包,Sports bag
+1302,运动服饰,Sportswear
+1303,健身训练,Fitness training
+1304,骑行运动,Cycling exercise
+1305,体育用品,Sports goods
+1306,鞋服,Shoes
+1307,装备,equipment
+1308,垂钓用品,Fishing supplies
+1309,游泳用品,Swimming products
+1401,新车/二手车,New / used car
+1402,维修保养,Maintenance
+1403,汽车装饰,Car decoration
+1404,车载电器,Vehicle appliance
+1405,美容清洗,Beauty cleaning
+1406,安全自驾,Safe driving
+1407,外饰改装,Exterior modification
+1408,赛事改装,Match modification
+1501,厨具,Kitchenware
+1502,家纺,Home textiles
+1503,生活日用,Daily life
+1504,家装软饰,Home decoration
+1505,灯具,Lamps and lanterns
+1506,家具,Furniture
+1507,家装主材,Decoration materials
+1508,厨房卫浴,Kitchen bathroom
+1509,五金电工,Hardware electrician
+1510,装修定制,Custom decoration
+1601,邮币,Youbi
+1602,音像,Audio and video
+1603,少儿,A juvenile
+1604,教育,Education
+1605,文艺,Literature
+1606,经管励志,Economic encouragement
+1607,人文社科,Social science
+1608,生活,Life
+1609,科技,Science and technology
+1610,刊/原版,Original edition
+1701,电子信息,Electronic information
+1702,化工,Chemical industry
+1703,汽车,Motor vehicle
+1704,机械工业,Machinery industry
+1705,仪表仪器,Instrument
+1706,发电与输变电设备,Power generation and transmission equipment
+1707,生物技术,Biotechnology
+1708,制药,Pharmacy
+1709,新材料,New material
+1710,光电子,Photoelectron
+1711,纳米,Nanometer
+1712,新能源,New energy
+1713,环保,Environmental protection
+1714,食品与农产品精加工,Food and agricultural products finishing
+1715,印刷与包装,Printing and packaging
+1716,钻石珠宝,Diamond jewelry
+1717,化妆品及洗涤用品,Cosmetics and washing products
+1718,服装服饰,Clothing
+1719,纺织,Spin
+1720,轻工,Light industry
+1721,商业零售业,Retail business
+1722,物流业,Logistics industry
+1723,会展业,MICE industry
+1724,金融业,Finance
+1725,餐饮业,Catering
+1726,旅游业,Tourism
+1727,房地产业,Estate
+1728,广告业,Advertising
+1729,信息咨询服务业,Information consulting service
+1730,其他行业上市公司,Listed companies in other industries
+1731,工业产权,industrial property
+1732,著作权,Copyright
+1801,比特币,Bitcoin
+1802,莱特币,Litecoin
+1803,以太坊,ETH
+1804,以太经典,ETC
+010101,白酒,Spirit
+010102,黄酒/养生酒,Yellow rice wine
+010103,保健酒,Health wine
+010104,果酒,Fruit wine
+010105,啤酒,Beer
+010106,红酒,Red wine
+010107,葡萄酒,Wine
+010108,基酒,The base wine
+010109,原浆酒,Pulp liquor
+010110,收藏酒/陈年老酒,Wine / wine
+010111,洋酒,Imported wine
+010112,其他酒类,Other liquor
+010201,养生茶,Health tea
+010202,花茶,Scented tea
+010203,绿茶,Green Tea
+010204,白茶,White tea
+010205,黑茶,Black tea
+010206,红茶,Black tea
+010207,黄茶,Yellow tea
+010208,铁观音,Tie Guanyin
+010209,普洱,Puer Tea
+010210,龙井,Longjing
+010211,其它茶,Other tea
+010301,饮料,Drinks
+010302,饮用水,Drinking water
+010303,茶饮,Tea
+010304,果汁,Fruit juice
+010305,牛奶乳品,Milk dairy
+010306,其它饮料,Other drinks
+010307,成人奶粉,Adult milk powder
+010308,儿童奶粉,Children milk powder
+010309,冲饮谷物,Washed grain
+010310,咖啡/奶茶,Coffee / tea
+010311,其它冲调饮品,Other drinks
+010401,食用油,Edible oil
+010402,大米,Rice
+010403,杂粮,Coarse Cereals
+010404,南北干货,Dry cargo
+010405,面条及米面制品,Noodles and rice products
+010406,调味品,Condiment
+010407,方便食品,Instant food
+010408,罐头,Can
+010409,果酱,Jam
+010410,烘培原料,Baking ingredients
+010411,有机食品,Organic food
+010412,其他食品,Other food
+010501,零食,Snacks
+010502,肉干肉脯,Dried meat jerky
+010503,熟食腊味,Cooked meat
+010504,糖果/巧克力,Candy / chocolate
+010505,坚果炒货,Roasted seeds and nuts
+010506,饼干/蛋糕,Biscuit / Cake
+010507,糕点/面包,Cake / bread
+010508,蜜饯果干,Candied dried fruit
+010509,其他休闲零食,Other snacks
+010601,馄饨,Wonton
+010602,饺子,Dumplings
+010603,汤圆,Glutinous Rice Balls
+010604,冷藏果蔬汁,Chilled fruit and vegetable juice
+010605,低温乳品,Low-temperature dairy
+010606,速冻半成品,Frozen semi-finished products
+010607,火锅丸串,Chafing dish pill string
+010608,冰淇淋,Ice cream
+010609,肉串,Meat string
+010610,其它,Other
+010611,黄油奶酪,Butter cheese
+010612,面食,Noodle & Pastries
+010613,其它冷饮冻食,Other cold drinks
+010701,苹果,Apple
+010702,香蕉,Banana
+010703,橙子,orange
+010704,奇异果/猕猴桃,Kiwi fruit
+010705,火龙果,Pitaya
+010706,瓜类,Melon
+010707,芒果,Mango
+010708,百香果,Passion fruit
+010709,榴莲,Durian
+010710,国产水果,Domestic fruit
+010711,进口水果,Imported fruit
+010712,其他水果,Other fruit
+010801,蛋品,Egg
+010802,叶菜类,Leafy
+010803,根茎类,Rhizome
+010804,葱姜蒜椒,Onion ginger garlic pepper
+010805,鲜菌菇,Fresh mushroom
+010806,茄果瓜类,Eggplant melon
+010807,半加工蔬菜,Semi processed vegetable
+010808,半加工豆制品,Semi processed soybean products
+010809,玉米,Corn
+010810,山药,Yam
+010811,萝卜,Radish
+010812,其他蔬菜,Other vegetables
+010901,鱼类,Fish
+010902,虾类,Shrimp
+010903,蟹类,Crabs
+010904,贝类,Shellfish
+010905,海参活鲜,Fresh sea cucumber
+010906,特色水产,Special aquatic products
+010907,海产干货,Dry cargo
+010908,小龙虾,Crayfish
+010909,帝王蟹,King crab
+010910,三文鱼,Salmon
+010911,其他海水产品,Other sea products
+010912,其他淡水产品,Other freshwater products
+011001,猪肉,Pork
+011002,牛肉,Beef
+011003,羊肉,Lamb
+011004,鸡肉,chicken
+011005,鸭肉,Duck
+011006,冷鲜肉,Chilled fresh meat
+011007,特色肉类,Specialty meat
+011008,内脏类,Viscera
+011009,冷藏熟食,Frozen cooked food
+011010,牛排/牛腩,Sirloin steak
+011011,其他肉类,Other meat
+011101,新疆,Xinjiang
+011102,四川,Sichuan
+011103,云南,Yunnan
+011104,湖南,Hunan
+011105,内蒙,Inner Mongolia
+011106,北京,Beijing
+011107,山西,Shanxi
+011108,江西,Jiangxi
+011109,广东,Guangdong
+011110,福建,Fujian
+011111,东北,Northeast
+011112,陕西,Shaanxi
+011113,其他地方特产,Other local specialties
+011201,干贝/瑶柱,Scallops / scallops
+011202,虾皮/虾米/海米,Small shrimp shrimp / khemis
+011203,大虾干,Dried prawns
+011204,花胶/鱼胶,Fish / fish
+011205,海带,Kelp
+011206,紫菜,Laver
+011207,鱼干,Dried fish
+011208,墨鱼干,Dried squid
+011209,其他干货,Other dry goods
+011301,牛奶,Milk
+011302,饼干/蛋糕,Biscuit / Cake
+011303,糖果/巧克力,Candy / chocolate
+011304,休闲零食,Leisure snacks
+011305,冲调饮品,Adjustable drink
+011306,粮油调味,Grain seasoning
+011307,其他进口食品,Other imported food
+020101,女士上装,Lady dress
+020102,女士裤装,Pants
+020103,裙装,Dress
+020104,特色女装,Featured women
+020105,文胸塑身/内裤,Bra / underwear
+020201,男士上装,Weat
+020202,男士裤装,The men's pants
+020203,特色男装,Featured men's clothes
+020204,男士内衣/内搭,Men's underwear
+020301,春夏家居服,Spring summer home clthoes
+020302,秋冬家居服,Autumn winter clothing
+020303,春夏睡裙,Spring and summer Nightgown
+020304,秋冬睡裙,Autumn and winter dress
+020305,情侣家居服,Couple home service
+020306,其他家居服,Other home clothes
+020401,船袜,Boat socks
+020402,长筒丝袜,Long silk stockings
+020403,男士运动袜,Men's sports socks
+020404,女士装饰袜,Ladies socks
+020405,潮流渔网袜,Tidal fishnet socks
+020406,其他袜类,Other hosiery
+020501,运动裤,Sports pants
+020502,运动卫衣,Sports sweater
+020503,运动套装,Sports suit
+020504,运动夹克,Sports jacket
+020601,进口男装,Import men
+020602,进口女装,Imported women
+020603,进口袜类,Imported socks
+020604,其他进口服装,Other imported garments
+030101,单鞋,Single shoes
+030102,帆布鞋,Canvas shoe
+030103,豆豆鞋,Doug shoes
+030104,平底鞋,Flat shoes
+030105,渔夫鞋,Fisherman shoes
+030106,休闲鞋,Casual shoes
+030107,布鞋/绣花鞋,Cloth shoes/Embroidered shoes
+030108,高跟鞋,High-heeled shoes
+030109,内增高鞋,Inner heightening shoes
+030110,坡跟鞋,Slipsole
+030111,松糕鞋,Shoe of sponge cake
+030112,雪地靴,Snow boots
+030113,马丁靴,Dr Martens shoes
+030114,雨鞋/雨靴,Raining boots
+030115,凉鞋,Sandals
+030116,皮鞋,Leather shoes
+030117,运动鞋,Sport shoes
+030118,鱼嘴鞋,Peep-toe
+030119,拖鞋,Slipper
+030120,其他,Other
+030121,进口女鞋,Import shoes
+030201,休闲鞋,Casual shoes
+030202,帆布鞋,Canvas shoe
+030203,皮鞋,Leather shoes
+030204,正装鞋,Dress shoes
+030205,沙滩鞋,Beach shoes
+030206,凉鞋,Sandals
+030207,增高鞋,Heighten shoes
+030208,工装鞋,Work clothes
+030209,拖鞋,Slipper
+030210,运动鞋,Gym shoes
+030211,其他,Other
+030212,进口男鞋,Import shoes
+030301,登机箱,Boarding case
+030302,托运箱,Checking box
+030303,旅行箱,Suitcase
+030304,其他,Other
+030305,进口拉杆箱,Import rod box
+030401,单肩/斜跨包,Single shoulder / diagonal bag
+030402,商务公文包,Business briefcase
+030403,双肩包,Backpack
+030404,男士手包,Handbags
+030405,男士钱包,Men's Wallet
+030406,卡片名片夹,Card card holder
+030407,钥匙包,Key case
+030408,手机包,Mobile phone bag
+030409,其他男士包,Other men's bag
+030410,进口男包,Import bag
+030501,斜挎包,Inclined shoulder bag
+030502,单肩包,The single shoulder bag
+030503,双肩包,Backpack
+030504,手提包,Handbag
+030505,手拿包,Clutch bag
+030506,钱包,Wallet
+030507,卡包/零钱包,Card bag / zero wallet
+030508,钥匙包,Key case
+030509,贝壳包,Shell bag
+030510,其他女士包,Other ladies bag
+030511,进口女包,Import bag
+030601,休闲运动包,Leisure sports bag
+030602,旅行包,Travelling bag
+030603,电脑包,Computer package
+030604,书包,Bag
+030605,登山包,Mountaineering bag
+030606,相机包,Camera bag
+030607,腰包/胸包,Waist bag
+030608,其他功能包,Other function pack
+030609,进口功能包,Import function pack
+040101,补水保湿,Moisture replenishment
+040102,精华液,Essence
+040103,爽肤水,Toner
+040104,洁面,Cleansing
+040105,眼霜,Eye cream
+040106,身体乳,Body Lotion
+040107,卸妆,Remover
+040108,身体护理,Body care
+040109,精油芳疗,Essential oil aromatherapy
+040110,防晒,Sunscreen
+040111,护肤套装,Skincare Set
+040112,面膜,Facial mask
+040113,其他护肤用品,Other skin care products
+040114,进口护肤品,Imported skin care products
+040201,彩妆,Makeup
+040202,BB霜,BB cream
+040203,美容工具,Beauty tools
+040204,口红,Lipstick
+040205,隔离,Quarantine
+040206,粉底,Foundation make-up
+040207,粉饼,Powder
+040208,气垫bb,Air cushion BB
+040209,指甲油,Nail Polish
+040210,眉笔,Eyebrow pencil
+040211,睫毛膏,Mascara
+040212,眼线,Eyeliner
+040213,唇彩,Lip Gloss
+040214,眼影,Eye shadow
+040215,蜜粉,Powder
+040216,香水,Perfume
+040217,其他彩妆用品,Other cosmetic products
+040218,进口香水彩妆,Imported perfume
+040301,补水保湿,Moisture replenishment
+040302,香皂,Soap
+040303,洗发护发,Shampoo and conditioner
+040304,沐浴,Bath
+040305,润肤,Moisten the skin
+040306,精油,Essential oil
+040307,颈部,Neck
+040308,手足,Brothers
+040309,纤体塑形,Slimming shaping
+040310,美胸,Breast
+040311,其他身体护理用品,Other body care products
+040312,进口身体护理品,Imported body care products
+040401,牙膏/牙粉,Toothpaste / dentifrice
+040402,牙刷/牙线,Toothbrush / floss
+040403,漱口水,Mouth wash
+040404,其他口腔用品,Other oral products
+040405,进口口腔护理,Imported oral care
+040501,纸巾湿巾,Towel wipes
+040502,衣物清洁,Laundry cleaning
+040503,清洁工具,Cleaning tool
+040504,家庭清洁,Home cleaning
+040505,一次性用品,Disposable supplies
+040506,驱虫用品,Insect repellent
+040507,皮具护理,Leather care
+040508,卫生巾,Tampon
+040509,卫生护垫,Sanitary pad
+040510,私密护理,Private nursing
+040511,脱毛膏,Hair removal cream
+040512,其他清洁用品,Other cleaning products
+040513,其他护理用品,Other care products
+040514,进口清洁/护理用品,Import cleaning / care products
+060101,国产,Domestic product
+060102,背投电视,Rear-projection TV
+060103,平板电视,Flat panel TV
+060104,等离子电视,Plasma TV
+060105,4K电视,4K TV
+060106,量子点电视,Quantum dot TV
+060107,3D电视,3D TV
+060108,液晶电视,LCD TV
+060109,外资品牌,Foreign brands
+060110,超级大屏,Super large screen
+060111,曲面,Curved surface
+060112,智能电视,Smart TV
+060113,云电视,Cloud TV
+060114,其它类型电视,Other types of television
+060115,进口电视,Imported TV
+060201,节能,Energy conservation
+060202,环绕风空调,Ambient air conditioning
+060203,绿色空调,Green air-conditioning
+060204,定频式空调,Fixed frequency air conditioner
+060205,智能,Intelligence
+060206,变频,Frequency conversion
+060207,艺术柜机,Art Guiji
+060208,挂机,Hang up
+060209,中央空调,Central air-conditioning
+060210,其他类型空调,Other types of air conditioning
+060211,进口空调,Imported air-conditioning
+060301,滚筒洗衣机,Drum washing machine
+060302,多桶型洗衣机,Multi drum washing machine
+060303,半自动型洗衣机,Semi automatic washing machine
+060304,全自动型洗衣机,Full automatic washing machine
+060305,波轮洗衣机,Pulsator washing machine
+060306,洗烘一体,Washing and drying
+060307,迷你,Mini
+060308,烘干机,Dryer
+060309,双杠/双桶,Double / double barrel
+060310,大容量,High-capacity
+060311,其它类型洗衣机,Other types of washing machines
+060312,进口洗衣机,Imported washing machine
+060401,无霜,No frost
+060402,单门冰箱,Single door refrigerator
+060403,双门冰箱,Double door refrigerator
+060404,工业级冰箱,Industrial refrigerator
+060405,三门,Three door
+060406,对开门,Open door
+060407,电脑控温,Computer temperature control
+060408,智能,Intelligence
+060409,冷柜,Freezer
+060410,酒柜,Wine cabinet
+060411,其它类型冰箱,Other types of refrigerator
+060412,进口冰箱,Imported refrigerator
+060501,烟灶套装,Cooker set
+060502,测吸油烟机,Measuring hood
+060503,欧式油烟机,European range hood
+060504,燃气机,Gas engine
+060505,消毒柜,Sterilizer
+060506,洗碗机,Dishwasher
+060507,集成灶,Integrated stove
+060508,电热水器,Electric water heater
+060509,燃气热水器,Gas water heater
+060510,嵌入式厨电,Embedded kitchen electric
+060511,其他厨卫大电,Other kitchen electric
+060512,进口厨卫大电器,Import kitchen appliances
+060601,电饭煲,Rice cooker
+060602,微波炉,Microwave Oven
+060603,电烤箱,Electric oven
+060604,电磁炉,Electromagnetic furnace
+060605,电压力锅,Electric pressure cooker
+060606,豆浆机,Soybean Milk machine
+060607,咖啡机,Coffee machine
+060608,面包机,Bread machine
+060609,榨汁机,Juice maker
+060610,料理机,Food processor
+060611,电饼铛,Electric baking pan
+060612,养生壶/煎药壶,Health pot / pot
+060613,酸奶机,Yogurt machine
+060614,煮蛋器,Egg Cooker
+060615,电水壶/热水瓶,Electric kettle / thermos bottle
+060616,电炖锅,Electric cooker
+060617,多用途锅,Multipurpose pot
+060618,其他厨房小电,Other kitchen small electricity
+060619,进口厨房小电,Small kitchen imports
+060701,电风扇,Electric fan
+060702,扫地机器人,Sweeping robot
+060703,空气净化器,Air cleaner
+060704,吸尘器,Vacuum cleaner
+060705,除湿器,Dehumidifier
+060706,挂烫机,Hanging ironing machine
+060707,干衣机,Dryer
+060708,其他生活电器,Other household appliances
+060709,进口生活电器,Imported household appliances
+060801,剃须刀,Razor
+060802,吹风机,Hair drier
+060803,电动牙刷,Electric toothbrush
+060804,体重秤,Weighing scale
+060805,理发器,Barber
+060806,足浴器,Foot bath
+060807,按摩椅,Massage chair
+060808,其他个护产品,Other care products
+060809,进口个护健康,Imported health care
+060901,家庭影音,Home video
+060902,迷你音响,Mini audio
+060903,DVD,DVD
+060904,电视影音配件,Video accessories
+060905,其他家庭影音品,Other home video quality
+060906,进口家庭影音品,The import of home video quality
+070101,海岛,Island
+070102,马尔代夫,Maldives
+070103,夏威夷,Hawaii
+070104,普吉岛,Phuket
+070105,巴厘岛,Bali
+070106,韩国,The Republic of Korea
+070107,日本,Japan
+070108,东京,Tokyo
+070109,大阪,Osaka
+070110,北海道,Hokkaido
+070111,东南亚,Southeast Asia
+070112,泰国,Thailand
+070113,新加坡,Singapore
+070114,菲律宾,The Philippines
+070115,马来西亚,Malaysia
+070116,缅甸,Myanmar
+070117,越南,Vietnam
+070118,老挝,Laos
+070119,意大利,Italy
+070120,法国,France
+070121,英国,Britain
+070122,境外其他国家,Other overseas countries
+070201,香港,Hong Kong
+070202,澳门,Macao
+070203,台湾,Taiwan
+070204,虎门,Humen
+070205,珠海,Zhuhai
+070206,东莞,Dongguan
+070207,三亚,Sanya
+070208,厦门,Xiamen
+070209,北京,Beijing
+070210,西藏,Tibet
+070211,新疆,Xinjiang
+070212,青海,Qinghai
+070213,山东,Shandong
+070214,青岛,Qingdao
+070215,成都,Chengdu
+070216,重庆,Chongqing
+070217,杭州,Hangzhou
+070218,苏州,Suzhou
+070219,广州,Guangzhou
+070220,深圳,Shenzhen
+070221,珠海,Zhuhai
+070222,无锡,Wuxi
+070223,南京,Nanjing
+070224,宁波,Ningbo
+070225,丽江,Lijiang
+070226,哈尔滨,Harbin
+070227,九寨沟,Jiuzhaigou
+070228,庐山,Lushan Mountain
+070229,长白山,Changbai Mountain
+070230,国内其他游玩地区,Other domestic tourist areas
+070301,电影,Film
+070302,游戏,Game
+070303,游乐场,Playground
+070304,KTV,KTV
+070305,高尔夫,Golf
+070306,棋牌室,Chess and card room
+070307,篮球,Basketball
+070308,真人CS,Real CS
+070309,农家乐,Agritainment
+070310,私人影院,Private cinema
+070311,运动健身,Sports fitness
+070312,桌游,Board role-playing games
+070313,轰趴馆,party house
+070314,游泳馆,Natatorium
+070315,夜总会,Nightclub
+070316,书吧,Book bar
+070317,音乐厅,A music hall
+070318,其他娱乐,Other entertainment
+070401,电商平台,Electronic business platform
+070402,实体店,Physical store
+070501,厂商,Manufacturer
+070502,美容美发,Beauty salon
+070503,美甲美睫,Beauty nail
+070504,瑜伽舞蹈,Yoga Dance
+070505,瘦身纤体,Slim
+070506,桑拿洗浴,Sauna bath
+070507,水疗足疗馆,Spa Pedicure
+070508,温泉,Hot spring
+070509,韩式定妆,Korean makeup
+070510,祛痘,Acne treatment
+070511,纹身,Tattoo
+070512,其他美容,Other beauty
+070601,韩式纹眉,Korean tattoo
+070602,海外酒店,Overseas hotel
+070603,海外民宿+短租,Overseas pension + short rent
+070604,国内酒店,Domestic hotel
+070605,主题酒店,Theme Hotel
+070606,公寓酒店,Apartment Hotel
+070607,特色酒店,Characteristic hotel
+070608,青年旅社客栈,Youth Hostel
+070609,民宿,B & B
+070610,豪华酒店,Luxury Hotel
+070611,其他住宿,Other accommodation
+070701,会场,Conference Hall
+070702,甜点饮品,Dessert drink
+070703,火锅,Hot pot
+070704,自助餐,Buffet
+070705,小吃快餐,Snack
+070706,日韩料理,Japanese cuisine
+070707,西餐,Western-style food
+070708,聚餐宴请,Dinner party
+070709,烧烤烤肉,Barbecue
+070710,东北菜,Northeast cuisine
+070711,川湘菜,Hunan cuisine
+070712,江浙菜,Jiangsu and Zhejiang cuisine
+070713,香锅烤鱼,Incense pot roast fish
+070714,粤港菜,Guangdong cuisine
+070715,中式烧烤,Chinese BBQ
+070716,烤串,Skewer
+070717,西北菜,Northwest cuisine
+070718,咖啡酒吧,Coffee bar
+070719,茶馆,Teahouse
+070720,京菜,Beijing cuisine
+070721,鲁菜,Shandong
+070722,云贵菜,Yunnan Guizhou cuisine
+070723,东南亚菜,Southeast Asian cuisine
+070724,海鲜,Seafood
+070725,素食,Vegetarian diet
+070726,台湾菜,Taiwan cuisine
+070727,客家菜,Hakka cuisine
+070728,创意菜汤,Creative soup
+070729,炖菜,Stew
+070730,粥,Porridge
+070731,炖菜餐,A meal
+070732,新疆菜,Xinjiang cuisine
+070733,云贵菜,Yunnan Guizhou.
+070734,其它美食,Other food
+100101,手机,Mobile phone
+100102,对讲机,Walkie-talkie
+100103,以旧换新,Old for new
+100104,手机维修,Cellphone Repairs
+100105,进口手机通讯,Import mobile communication
+100201,手机壳,Mobile phone shell
+100202,贴膜,Film
+100203,手机存储卡,Mobile memory card
+100204,数据线,Data line
+100205,充电器,Charger
+100206,手机耳机,Mobile phone earphone
+100207,创意配件,Creative accessories
+100208,手机饰品,Mobile accessories
+100209,手机电池,Mobile phone battery
+100210,苹果周边,Apple periphery
+100211,移动电源,Portable source
+100212,蓝牙耳机,Bluetooth headset
+100213,手机支架,Mobile support
+100214,车载配件,Car accessories
+100215,拍照配件,Camera accessories
+100216,进口手机配件,Imported mobile phone accessories
+100301,数码相机,Digital camera
+100302,单电/微单相机,Single / micro single camera
+100303,单反相机,SLR camera
+100304,拍立得,Polaroid
+100305,运动相机,Motion camera
+100306,摄像机,Video camera
+100307,镜头,Camera lens
+100308,户外器材,Outdoor equipment
+100309,影棚器材,Studio equipment
+100310,冲印服务,Print service
+100311,数码相框,Digital photo frame
+100312,进口摄影摄像,Import photography
+100401,存储卡,Memory card
+100402,三脚架/云台,Three tripod / PAN
+100403,相机包,Camera bag
+100404,滤镜,Filter
+100405,闪光灯/手柄,Flash / handle
+100406,相机清洁/贴膜,Camera cleaning / film
+100407,机身附件,Fuselage accessories
+100408,镜头附件,Lens attachment
+100409,读卡器,Card reader
+100410,支架,Bracket
+100411,电池/充电器,Battery / charger
+100412,进口数码配件,Import digital accessories
+100501,耳机/耳麦,Headset / headphone
+100502,音响/音箱,Sound / speaker
+100503,便携/无线音箱,Portable / wireless speaker
+100504,收音机,Radio
+100505,麦克风,Microphone
+100506,mp3/mp4,Mp3/mp4
+100507,专业音频,Professional audio
+100508,进口影音娱乐,Import video entertainment
+100601,智能手环,Smart Bracelet
+100602,智能手表,Intelligent Watch
+100603,智能眼镜,Smart glasses
+100604,智能机器人,Intelligent robot
+100605,运动跟踪器,Motion Tracker
+100606,健康监测,Health monitoring
+100607,智能配饰,Smart accessories
+100608,智能家居,Smart home
+100609,体感车,Car body
+100610,无人机,UAV
+100611,其他配件,Other accessories
+100612,进口智能设备,Imported intelligent equipment
+100701,学生平板,Student tablet
+100702,点读机/笔,Dot reader / pen
+100703,早教益智,Early education
+100704,录音笔,Recording pen
+100705,电纸书,Electronic paper book
+100706,电子词典,Electronic dictionary
+100707,复读机,Repeater
+100708,进口电子教育,Import electronic education
+100801,笔记本,Notebook
+100802,游戏本,Game book
+100803,平板电脑,Tablet PC
+100804,平板电脑配件,Tablet accessories
+100805,台式机,Desktop
+100806,一体机,Integrated machine
+100807,服务器/工作站,Server / workstation
+100808,笔记本配件,Notebook accessories
+100809,进口电脑整机,Imported computer
+100901,显示器,Monitor
+100902,CPU,CPU
+100903,主板,A main board
+100904,显卡,Graphics
+100905,硬盘,Hard disk
+100906,内存,Memory
+100907,机箱,Chassis
+100908,电源,Power Supply
+100909,散热器,Radiator
+100910,刻录机/光驱,CD / CD
+100911,声卡/扩展卡,Sound card / expansion card
+100912,装机配件,Mounting accessories
+100913,SSD固态硬盘,SSD solid
+100914,组装电脑,Assemble computer
+100915,进口电脑配件,Imported computer accessories
+101001,鼠标,Mouse
+101002,键盘,Keyboard
+101003,键鼠套装,Keyboards
+101004,网络仪表仪器,Network instrument
+101005,U盘,USB drive
+101006,移动硬盘,Mobile hard disk drive
+101007,鼠标垫,Mouse pad
+101008,摄像头,Camera
+101009,线缆,Cable
+101010,手写板,Handwriting board
+101011,硬盘盒,Hard-disk cartridge
+101012,电脑工具,Computer tools
+101013,电脑清洁,Computer cleaning
+101014,UPS电源,UPS power supply
+101015,插座,Socket
+101016,进口外设产品,Imported peripheral products
+101101,游戏机,Recreational machines
+101102,游戏耳机,Game headset
+101103,手柄/方向盘,Handle / steering wheel
+101104,游戏软件,Game software
+101105,游戏周边,Game peripherals
+101106,进口游戏产品,Import game products
+101201,路由器,Router
+101202,网络机顶盒,Iptv
+101203,交换机,Switch
+101204,网络存储,Network storage
+101205,网卡,Network card
+101206,4G/3G上网,4G/3G Internet
+101207,网络配件,Network accessories
+101208,进口网络产品,Import network products
+101301,投影机,Projector
+101302,投影配件,Projection accessories
+101303,多功能一体机,Multifunctional integrated machine
+101304,打印机,Printer
+101305,传真设备,Facsimile equipment
+101306,验钱/点钞机,Money checking machine
+101307,扫描设备,Scanning equipment
+101308,复合机,Composite machine
+101309,碎纸机,Shredder
+101310,考勤机,Attendance machine
+101311,收银机,Cash register
+101312,会议音频视频,Conference audio video
+101313,保险柜,Safe
+101314,装订/封装机,Binding / packaging machine
+101315,安防监控,Security monitoring
+101316,办公家具,Office furniture
+101317,白板,Whiteboard
+101318,进口办公设备,Import office equipment
+101401,硒鼓/墨粉,Toner cartridge
+101402,墨盒,Ink cartridge
+101403,色带,Ribbon
+101404,纸类,Paper
+101405,办公文具,Office stationery
+101406,学生文具,School Supplies
+101407,文件管理,File management
+101408,本册/便签,Book / memo
+101409,计算器,Calculator
+101410,笔类,Pen
+101411,画具画材,Painting painting materials
+101412,财会用品,Accounting supplies
+101413,刻录碟片/附件,CD / attachment
+101414,进口文具耗材,Imported stationery supplies
+101501,延保服务,Extended warranty service
+101502,上门安装,Door installation
+101503,维修保养,Maintenance
+101504,电脑软件,Computer software
+101505,进口服务产品,Import service products
+110101,感冒咳嗽,Cold cough
+110102,补肾壮阳,Tonifying kidney and strengthening yang
+110103,补气养血,Invigorating qi and nourishing blood
+110104,止痛镇痛,Analgesia
+110105,耳鼻喉用药,Otorhinolaryngology
+110106,眼科用药,Ophthalmic medication
+110107,口腔用药,Oral medication
+110108,皮肤用药,Skin medication
+110109,肠胃消化,Gastrointestinal digestion
+110110,风湿骨外伤,Rheumatic bone injury
+110111,男科/泌尿,Andrology / urology
+110112,妇科用药,Gynecological medication
+110113,儿科用药,Pediatric medication
+110114,心脑血管,Cardio cerebrovascular
+110115,肝胆用药,Hepatobiliary drugs
+110116,进口药品,Imported drugs
+110201,调节免疫,Regulating immunity
+110202,调节三高,Regulate three high
+110203,缓解疲劳,Relieve fatigue
+110204,美体塑身,Body sculpting
+110205,美容养颜,Maintain beauty and keep young
+110206,肝肾养护,Liver and kidney conservation
+110207,肠胃养护,Gastrointestinal maintenance
+110208,明目益智,Eyesight improving
+110209,骨骼健康,Bone health
+110210,改善睡眠,Improve sleep
+110211,抗氧化,Antioxidant
+110212,耐缺氧,Hypoxia tolerance
+110213,进口保健品,Imported health products
+110301,维生素/矿物质,Vitamins / minerals
+110302,蛋白质,Protein
+110303,鱼油/磷脂,Fish oil / phospholipid
+110304,螺旋藻,Spirulina
+110305,番茄红素,Lycopene
+110306,叶酸,Folic acid
+110307,葡萄籽,Grape pip
+110308,左旋肉碱,L-carnitine
+110309,辅酶Q10,Coenzyme Q10
+110310,益生菌,Probiotics
+110311,玛咖?,Maca
+110312,膳食纤维,Dietary fiber
+110313,牛初乳,Bovine colostrum
+110314,胶原蛋白,Collagen protein
+110315,大豆异黄酮,Soybean isoflavone
+110316,芦荟提取,Aloe extract
+110317,酵素,Enzyme
+110401,阿胶,Donkey-hide gelatin 
+110402,蜂蜜/蜂产品,Honey / bee products
+110403,枸杞,Matrimony vine
+110404,燕窝,The bird's nest
+110405,海参,Sea cucumber
+110406,冬虫夏草,Cordyceps sinensis
+110407,人参/西洋参,Ginseng / American ginseng
+110408,三七,.
+110409,鹿茸,Antler
+110410,雪蛤,Snow toad
+110411,青钱柳,Cyclocarya paliurus
+110412,石斛/枫斗,Dendrobium candidum /
+110413,灵芝/孢子粉,Ganoderma lucidum spore powder
+110414,当归,Angelica
+110415,养生茶饮,Health tea
+110416,药食同源,Medicine food homology
+110417,进口滋补品,Import invigorant
+110501,安全避孕,Safe contraception
+110502,验孕测孕,Pregnancy pregnancy test
+110503,人体润滑,Human lubrication
+110504,男用延时,Male delay
+110505,男用器具,Male apparatus
+110506,女用器具,Female implements
+110507,情趣内衣,Sexy lingerie
+110508,进口计生情趣品,Imports of raw materials
+110601,血压计,Sphygmomanometer
+110602,血糖仪,Blood glucose meter
+110603,血氧仪,Oximeter
+110604,体温计,The thermometer
+110605,体重秤,Weighing scale
+110606,胎心仪,Fetal heart
+110607,呼吸制氧,Respiratory oxygen
+110608,雾化器,Atomizer
+110609,助听器,Deaf-aid
+110610,轮椅,Wheelchair
+110611,拐杖,A cane
+110612,中医保健,TCM health
+110613,养生器械,Health apparatus
+110614,理疗仪,Physiotherapy instrument
+110615,家庭护理,Home care
+110616,智能健康,Intelligent health
+110617,进口保健器械,Imported health apparatus
+110701,隐形眼镜,Contact lenses
+110702,护理液,Nursing liquid
+110703,口罩,Mask
+110704,眼罩/耳塞,Eye mask / earplug
+110705,跌打损伤,Traumatic injury
+110706,暖贴,Warm paste
+110707,鼻喉护理,Nose and throat care
+110708,眼部保健,Eye care
+110709,美体护理,Body care
+110710,进口护理护具,Import care
+120101,1段,The 1 Section
+120102,2段,The 2 section
+120103,3段,The 3 section
+120104,4段,The 4 section
+120105,孕妈奶粉,Pregnant mother milk powder
+120106,有机奶粉,Organic milk powder
+120107,特殊配方奶粉,Special formula milk powder
+120108,其他奶粉,Other milk
+120109,进口奶粉,Imported milk powder
+120201,辅食,Food supplement
+120202,营养品,Nutrition
+120203,零食,Snacks
+120204,进口营养辅食品,Imported nutritious food
+120301,NB号,No. NB
+120302,S号,No. S
+120303,M号,No. M
+120304,L号,No. L
+120305,XL号,No. XL
+120306,XXL号,No. XXL
+120307,拉拉裤,Lala pants
+120308,成人尿裤,Adult Diaper
+120309,婴儿湿巾,Baby wipes
+120310,其他尿裤湿巾,Other diaper wipes
+120311,进口尿裤湿巾,Wet diaper
+120401,奶嘴奶瓶,Nipple bottle
+120402,牙胶安抚,Gutta percha
+120403,食物存储,Food storage
+120404,儿童餐具,Children tableware
+120405,围兜,Bib
+120406,防溅衣,Splash coat
+120407,水壶,kettle
+120408,水杯,Cup
+120409,暖奶消毒,Warm milk disinfection
+120410,辅食料理机,Food feeding machine
+120411,吸奶器,Breast pump
+120412,其他喂养用品,Other feeding products
+120413,进口喂养用品,Imported feed
+120501,洗发,Shampoo
+120502,沐浴,Bath
+120503,洗澡用具,Bathing utensil
+120504,洗衣液,Washing liquid
+120505,洗衣皂,Laundry soap
+120506,座便器,Toilet seat
+120507,宝宝护肤,Baby skin
+120508,日常护理,Daily care
+120509,理发器,Barber
+120510,婴儿口腔清洁,Baby mouth cleaning
+120511,驱蚊,Mosquito repellent
+120512,防晒,Sunscreen
+120513,其他洗护用品,Other toiletries
+120514,进口洗护用品,Import toiletries
+120601,婴儿推车,Baby stroller
+120602,安全座椅,Safety seat
+120604,婴儿床,Baby bed
+120605,婴儿床垫,Baby mattress
+120606,摇篮,Cradle
+120607,婴儿摇椅,Baby rocking chair
+120608,其他童床,Other crib
+120609,进口童床桌椅,Import crib chairs
+120701,婴儿推车,Baby stroller
+120702,童乐车,Tong Le Che
+120703,进口童车,Imported bassinet
+120801,防辐射服,Radiation-proof clothes
+120802,孕妈装,Pregnant mother dress
+120803,文胸,Bras
+120804,内裤,Underpants
+120805,产后塑身,Postpartum fitness
+120806,其他孕妇服饰,Other maternity dress
+120807,孕妇护肤,Skin care for pregnant women
+120808,孕期营养,Nutrition for Pregnancy
+120809,其他孕妇护肤,Other skin care
+120810,其他孕妇营养,Other pregnant women nutrition
+120811,妈咪包,Mummy Bag
+120812,背婴带,Dorsal band
+120813,待产护理,Expectant nursing
+120814,防溢乳垫,Overflow proof pad
+120815,其他孕妇用品,Other maternity products
+120816,进口孕妇用品,Import maternity supplies
+120901,婴儿内衣,Baby underwear
+120902,学步鞋,Prewalker
+120903,婴儿外出服,Baby clothes
+120904,婴儿礼盒,Baby gift
+120905,其他婴儿服饰鞋帽,Other baby shoes
+120906,睡袋,Sleeping bag
+120907,抱被 ,Be hold
+120908,家居床品,Home bedding
+120909,安全防护,safety protection
+120910,爬行垫,Creeping mat
+120911,其他床品防护,Other bedding protection
+120912,进口寝居服饰品,Import bedroom clothing accessories
+121001,益智玩具,Souptoys
+121002,积木拼插,LEGO
+121003,DIY玩具,DIY toys
+121004,创意减压,Creative decompression
+121005,其他益智早教用品,Other educational supplies
+121006,摇控,Remote control
+121007,进口益智早教品,Import puzzle
+121101,电动,Electric
+121102,健身玩具,Fitness toy
+121103,其他,Other
+121104,进口遥控户外品,Imported outdoor products
+121201,毛绒布艺,Plush fabric
+121202,娃娃玩具,Doll toys
+121203,其他,Other
+121204,进口毛绒娃娃,Imported Plush Doll
+130101,出游踏青,Outing outing
+130102,跑步鞋,Running shoes
+130103,休闲鞋,Casual shoes
+130104,篮球鞋,Basketball shoes
+130105,帆布鞋,Canvas shoe
+130106,凉鞋,Sandals
+130107,拖鞋,Slipper
+130108,功能鞋,Functional shoes
+130109,增高鞋,Heighten shoes
+130110,工装鞋,Tooling shoes
+130111,雨鞋,Rainshoes
+130112,传统布鞋,Traditional cloth shoes
+130113,男靴,Boots
+130114,鞋配件,Shoes accessories
+130115,其它,Other
+130116,进口运动鞋包,Imported sports shoes bag
+130201,T恤,T-shirt
+130202,运动裤,Sports pants
+130203,紧身衣,Tights
+130204,运动套装,Sports suit
+130205,运动背心,Sports vest
+130206,羽绒服,Down Jackets
+130207,卫衣,Sweater
+130208,套头衫,Pullovers
+130209,棉服,Cotton
+130210,夹克,Jacket
+130211,风衣,Windbreaker
+130212,运动配饰,Sports accessories
+130213,乒羽网服,Pingyuwang.
+130214,其他运动服饰,Other sports apparel
+130215,进口运动服饰,Imported sportswear
+130301,跑步机,Treadmill
+130302,健身车,Exercise bike
+130303,动感单车,Dynamic bicycle
+130304,椭圆机,Elliptical machine
+130305,综合训练器,Comprehensive training device
+130306,划船机,Rowing machine
+130307,甩增机,Throwing machine
+130308,倒立机,Handstand machine
+130309,武术搏击,Wushu fighting
+130310,踏步机,Stepper
+130311,哑铃,Dumbbell
+130312,仰卧板,Supine board
+130313,收腹机,Abdomen machine
+130314,瑜伽用品,Yoga products
+130315,舞蹈用品,Dance supplies
+130316,运动护具,Sport ware
+130317,健腹轮,Abdominal wheel
+130318,拉力器,Wall pulley
+130319,臂力器,Arm apparatus
+130320,跳绳,Rope skipping
+130321,其他健身训练用品,Other fitness training products
+130322,进口运动训练用品,Imported sports training supplies
+130401,山地车,Mountain bike
+130402,公路车,Road vehicle
+130403,折叠车,Folding bike
+130404,骑行服,Cycling wear
+130405,电动车,Electric vehicle
+130406,电动滑板车,Electric scooter
+130407,城市自行车,City bike
+130408,平衡车,Balance car
+130409,穿戴装备,Wear equipment
+130410,自行车配件,Bicycle accessories
+130411,其他,Other
+130412,进口骑行运动品,Imported sports goods
+130501,乒乓球,Table Tennis
+130502,羽毛球,Badminton
+130503,篮球,Basketball
+130504,足球,Football
+130505,轮滑滑板,Roller skate
+130506,网球,Tennis
+130507,高尔夫,Golf
+130508,台球,Billiards
+130509,排球,Volleyball
+130510,棋牌麻将,Mahjong
+130511,民俗运动,Folklore movement
+130512,其它,Other
+130513,进口骑行体育用品,Imported sports goods
+130601,户外出游,Outdoor travel
+130602,户外风衣,Outdoor trench coat
+130603,徒步鞋,Hiking shoes
+130604,T恤,T-shirt
+130605,冲锋衣裤,Assault suit
+130606,速干衣裤,Quick dry
+130607,越野跑鞋,Trail shoes
+130608,滑雪服,Ski suit
+130609,羽绒服,Down Jackets
+130610,棉服,Cotton
+130611,休闲衣裤,Casual wear
+130612,抓绒衣裤,Cashmere underwear
+130613,溯溪鞋,Upstream shoes
+130614,沙滩,Sandy beach
+130615,凉拖,Sandals
+130616,休闲鞋,Casual shoes
+130617,软壳衣裤,Soft shell underwear
+130618,功能内衣,Functional underwear
+130619,军迷服饰,Military Costume
+130620,登山鞋,Climbing shoes
+130621,工装鞋,Tooling shoes
+130622,户外袜,Outdoor socks
+130623,其他鞋服,Other shoes
+130624,进口鞋服,Import shoes
+130701,露营烧烤,Camping barbecue
+130702,背包,knapsack
+130703,账逢,Tent
+130704,垫子,Mat
+130705,望远镜,Telescope
+130706,烧烤用具,Barbecue tools
+130707,便携桌椅床,Portable bed and chair bed
+130708,户外配饰,Outdoor accessories
+130709,军迷用品,Army fans
+130710,野餐用品,Picnic supplies
+130711,睡袋,Sleeping bag
+130712,吊床,Hammock
+130713,救援装备,Rescue equipment
+130714,户外照明,Outdoor lighting
+130715,旅行装备,Travel equipment
+130716,户外工具,Outdoor tools
+130717,户外仪表,Outdoor instrument
+130718,登山攀岩,Mountaineering
+130719,极限户外,Extreme outdoor
+130720,冲浪潜水,Surf dive
+130721,滑雪装备,Ski equipment
+130722,其他装备,Other equipment
+130723,进口户外装备,Imported outdoor equipment
+130801,钓竿,Fishing rod
+130802,鱼线,Fishing line
+130803,浮漂,Buoy
+130804,鱼饵,Bait
+130805,钓鱼配件,Fishing accessories
+130806,渔具包,FishingBag
+130807,钓箱钓椅,Fishing box
+130808,鱼线轮,Fishing reel
+130809,钓鱼灯,Fishing Light
+130810,辅助装备,Auxiliary equipment
+130811,进口垂钓用品,Import fishing supplies
+130901,女士泳衣,Ladies swimwear
+130902,比基尼,Bikini
+130903,男士泳衣,Mens swimwear
+130904,泳镜,Goggles
+130905,游泳圈,Swimming ring
+130906,游泳包,Swimming bag
+130907,防水包,Waterproof bag
+130908,泳帽,Bathing cap
+130909,游泳配件,Swimming accessories
+130910,其他游泳用品,Other swimming products
+130911,进口旅游用品,Import tourist products
+140101,微型车,Mini car
+140102,小型车,Light-Duty Vehicle
+140103,紧凑型车,Compact car
+140104,中型车,Midsize car
+140105,中大型车,Medium and large vehicle
+140106,豪华车,Luxury car
+140107,MPV,MPV
+140108,SUV,SUV
+140109,跑车,Sports car
+140110,其他类型整车,Other types of vehicles
+140111,进口汽车,Imported car
+140201,出游必备,Essential travel
+140202,机油,Engine oil
+140203,轮胎,tyre
+140204,添加剂,Additive
+140205,防冻剂,Antifreeze
+140206,滤清器,Filter
+140207,蓄电池,Battery
+140208,雨刷,Wiper
+140209,刹车片/盘,Brake disc
+140210,火花塞,Spark plug
+140211,车灯,Automative lighting
+140212,车毂,Car hub
+140213,维修配件,Maintenance parts
+140214,汽车玻璃,Automotive glass
+140215,减震器,Shock absorber
+140216,正时皮带,Timing belt
+140217,底盘装甲/护板,Chassis armor / shield
+140218,汽车喇叭,Car horn
+140219,汽修工具,Auto repair tools
+140220,贴膜,Film
+140221,改装配件,Modified parts
+140222,其他维修保养用品,Other maintenance supplies
+140223,进口维修保养用品,Import maintenance supplies
+140301,座垫,Cushion
+140302,脚垫,Door mat
+140303,座套,Seat cover
+140304,头枕腰靠,Headrest rest
+140305,方向盘套,Steering wheel cover
+140306,后备箱垫,Trunk mat
+140307,香水,Perfume
+140308,挂件摆件,Pendant ornaments
+140309,空气净化,Air purification
+140310,车衣,Car cover
+140311,功能小件,Functional small
+140312,车身装饰件,Body trim
+140313,其他汽车装饰,Other car decoration
+140314,进口汽车装饰,Imported car decoration
+140401,行车记录议,Driving record
+140402,净化器,purifier
+140403,蓝牙设备,Bluetooth device
+140404,电源,Power Supply
+140405,安全预警仪,Safety early warning instrument
+140406,导航仪,Navigator
+140407,冰箱,Refrigerator
+140408,车债影音,Car debt video
+140409,车载电台,Car radio
+140410,智能车机,Intelligent vehicle
+140411,倒车雷达,PDCParking Distance Control
+140412,电器配件,Electrical accessories
+140413,车载生活电器,Vehicle mounted electric appliance
+140414,吸尘器,Vacuum cleaner
+140415,智能驾驶,Intelligent driving
+140416,汽车音响,Car audio
+140417,其他车载电器,Other vehicle electrical equipment
+140418,进口车载电器,Imported electric vehicle
+140501,洗车机,Car washer
+140502,洗车水枪,Car wash
+140503,车蜡,Car wax
+140504,镀晶镀膜,Plating coating
+140505,玻璃水,Bath of glass
+140506,清洁剂,Cleaning agent
+140507,补漆笔,Color match paint pen
+140508,毛巾掸子,Towel duster
+140509,洗车配件,Car accessories
+140510,其他美容清洗用品,Other beauty products
+140511,进口美容清洗用品,Import beauty cleaning supplies
+140601,安全座椅,Safety seat
+140602,胎压监测,Tire pressure monitoring
+140603,车载提篮,Vehicle basket
+140604,轮胎报警器,Tyre alarm
+140605,摩托车,Motorcycle
+140606,摩托车装备,Motorcycle equipment
+140607,防盗设备,Anti-theft equipment
+140608,保温箱,Heat insulation box
+140609,储物箱,Storage box
+140610,自驾野营,Self driving camp
+140611,充气泵,Air pump
+140612,安全锤,Safety hammer
+140613,应急工具,Emergency tool
+140614,应急电源,Emergency supply
+140615,其他安全自驾品,Other safety driving
+140616,进口安全自驾品,Imported safe driving
+140701,汽车贴膜,Auto paster
+140702,装饰灯,Decorative lamp
+140703,改色膜,Color changing film
+140704,脚踏板,Pedal
+140705,车顶架,Roof frame
+140706,车顶箱,Roof box
+140707,太阳镜,Sunglasses
+140708,装饰条,Decorative strip
+140709,其他外饰改装用品,Other exterior modification products
+140710,进口外饰改装用品,Import exterior modification products
+140801,赛事服装,Sports apparel
+140802,赛事用品,Sporting goods
+140803,制动系统,Braking system
+140804,悬挂系统,Suspension system
+140805,进气系统,Intake system
+140806,排气系统,Exhaust system
+140807,电子管理,Electronic management
+140808,车身强化,Body reinforcement
+140809,进口赛事改装品,Import event modification
+150101,烹饪锅具,Cooking pot
+150102,烧烤器具,Barbecue Set
+150103,烹饪用具,Cooking utensil
+150104,烘焙用具,baking utensils
+150105,刀剪菜板,Scissors cutting board
+150106,厨房配件,Kitchen accessories
+150107,水具/酒具,Water / wine
+150108,餐具,Tableware
+150109,茶具/咖啡具,Tea / coffee set
+150110,进口厨具,Imported kitchenware
+150111,保温杯,Vacuum cup
+150112,一次性餐桌用品,Disposable tableware
+150113,其他,Other
+150201,床品套件,Bed Kit
+150202,被子,Quilt
+150203,枕芯,Pillow
+150204,蚊帐,Mosquito net
+150205,凉席,Summer sleeping mat
+150206,毛巾浴巾,Towel bath towel
+150207,地毯地垫,Carpet mat
+150208,床垫/床褥,Mattress / mattress
+150209,毯子,Blanket
+150210,抱枕靠垫,Pillow
+150211,窗帘/窗纱,Window curtain
+150212,床单/床笠,Fitted sheet / sheets
+150213,被套,Quilt cover
+150214,枕巾枕套,Pillow Pillowcase
+150215,沙发垫套/椅垫,Sofa cushion / cushion
+150216,桌布/罩件,Table / cover
+150217,电热毯,Electric blanket
+150218,布艺软饰,Fabric soft decoration
+150219,进口家纺,Imported textile
+150220,其他,Other
+150301,收纳用品,Storage products
+150302,雨伞雨具,Umbrella umbrella
+150303,净化除味,Purification and odor removal
+150304,浴室用品,Bathroom products
+150305,洗晒/熨烫,Wash / iron
+150306,缝纫/针织用品,Sewing / knitting products
+150307,清洁工具,Cleaning tool
+150308,进口日用,Import daily
+150309,其他日用,Other daily
+150401,装饰字画,Decorative calligraphy
+150402,装饰摆件,Decoration
+150403,手工/十字绣,Hand / Cross Stitch
+150404,相框/照片墙,Frame / photo wall
+150405,墙贴/装饰贴,Wall Stickers / decorative stickers
+150406,花瓶花艺,Flower vase
+150407,香薰蜡烛,Scented candles
+150408,节庆饰品,Festive decorations
+150409,钟饰,Bell ornaments
+150410,帘艺隔断,Curtain partition
+150411,创意家居,Creative home
+150412,保暖防护,Thermal protection
+150413,进口家装软饰,Imported home decoration
+150414,其他,Other
+150501,吸顶灯,Ceiling lamp
+150502,吊灯,A chandelier
+150503,台灯,Table lamp
+150504,筒灯射灯,Downlight lamp
+150505,装饰灯,Decorative lamp
+150506,LED灯,LED lamp
+150507,氛围照明,Ambient lighting
+150508,落地灯,Floor lamp
+150509,庭院灯,Yard lamp
+150510,应急灯/手电,Emergency light / flashlight
+150511,节能灯,Energy saving light
+150512,进口灯具,Imported lamps
+150513,其他,Other
+150601,卧室家具,Bedroom furniture
+150602,客厅家具,Living room furniture
+150603,餐厅家具,Restaurant furniture
+150604,书房家具,Study furniture
+150605,儿童家具,Children furniture
+150606,储物家具,Storage furniture
+150607,阳台/户外,Balcony / outdoor
+150608,办公家具,Office furniture
+150609,床,Bed
+150610,床垫/床褥,Mattress / mattress
+150611,沙发垫套/椅垫,Sofa cushion / cushion
+150612,电脑椅,Computer chair
+150613,衣柜,Wardrobe
+150614,茶几,Tea table
+150615,电视柜,TV cabinet
+150616,餐桌,Table
+150617,电脑桌,The computer table
+150618,鞋架/衣帽架,Shoe / coatrack
+150619,儿童桌椅,Children's furniture
+150620,儿童床,Children bed
+150621,晾衣架,Clothes hanger
+150622,进口家具,Imported furniture
+150623,其他,Other
+150701,瓷砖,Ceramic tile
+150702,地板,Floor
+150703,背景墙,Background wall
+150704,玻璃家装,Glass decoration
+150705,油漆涂料,Paint coating
+150706,壁纸,Wallpaper
+150707,涂刷辅料,Brushing accessories
+150708,进口家装主材,Decoration main material imported
+150709,其他,Other
+150801,水槽,Water tank
+150802,集成吊顶,Integrated ceiling
+150803,卫浴装修,Bathroom decoration
+150804,龙头,Faucet
+150805,淋浴花洒,Shower
+150806,马桶,Closestool
+150807,智能马桶盖,Intelligent toilet seat cover
+150808,厨卫挂件,Kitchen accessories
+150809,浴室柜,Bathroom cabinet
+150810,浴霸,Bath heater
+150811,垃圾处理器,Garbage processor
+150812,进口厨房卫浴,Imported kitchen bathroom
+150813,其他,Other
+150901,锁具,Lock
+150902,接线板,Terminal block
+150903,USB插座,USB socket
+150904,工具箱,Hold-all
+150905,门锁/拉手,Door lock / handle
+150906,电动工具,Electric tool
+150907,手动工具,Hand tools
+150908,测量工具,Measuring tool
+150909,劳防用品,PPE
+150910,开关插座,Switch socket
+150911,门铃,Doorbell
+150912,监控安防,Monitoring security
+150913,配电箱/断路器,Distribution box / circuit breaker
+150914,进口五金电工,Import hardware electrician
+150915,其他,Other
+151001,装修设计,Decoration design
+151002,装修全托,Boarding decoration
+151003,软饰设计,Soft decoration design
+151004,装修施工,Decoration construction
+151005,淋浴房,Shower room
+151006,橱柜,Cupboard
+151007,集成吊顶,integrated ceiling
+151008,门铃,Doorbell
+151009,窗帘/窗纱,Window curtain
+151010,壁挂炉,Wall hanging furnace
+151011,散热器,radiator
+151012,安装服务,Installation service
+151013,进口装修定制品,Imported decoration products
+151014,其他,Other
+160101,邮票,Stamp
+160102,钱币,Coin
+160103,邮资封片,Postage stamp
+160104,国外邮币,Foreign Youbi
+160105,其他,Other
+160201,音乐,Music
+160202,电影,Film
+160203,电视剧,TV play
+160204,纪录片,Documentary
+160205,影视器材,Video equipment
+160206,音乐器材,Music equipment
+160207,百科音像,Encyclopedia audio
+160208,教育音像,Educational audiovisual
+160209,游戏,Game
+160210,影视/动漫周边,Film / Animation
+160211,国外音像,Foreign video
+160212,其他音像产品,Other audio and video products
+160301,0-2岁,At the age of 0-2
+160302,3-6岁,At the age of 3-6
+160303,7-10岁,7-10 years
+160304,11-14岁,11-14 years
+160305,儿童文学,Children literature
+160306,绘本,Picture books
+160307,科普,Polular Science
+160308,幼儿启蒙,Infant enlightenment
+160309,进口图书,Imported Books
+160310,手工游戏,Manual game
+160311,智力开发,Intellectual development
+160312,动漫卡通,Cartoon
+160313,少儿英语,Children English
+160314,其他少儿产品,Other children's products
+160401,教学,Teaching
+160402,中小学教辅,Primary and secondary schools Supplementary
+160403,大中专教材,College textbook
+160404,职业证书教材,Professional certificate
+160405,课程考试,Course examination
+160406,外语学习,Foreign language learning
+160407,在线课堂,Online classroom
+160408,字典词典,Dictionary
+160409,国外书籍,Foreign books
+160410,其他,Other
+160501,小说,Novel
+160502,文字,Written words
+160503,青春文学,Youth Literature
+160504,传记,Biography
+160505,动漫,Comic
+160506,艺术,Art
+160507,摄影,Photography
+160508,书法,Calligraphy
+160509,音乐,Music
+160510,绘画,painting
+160511,国外书籍,Foreign books
+160512,其他,Other
+160601,管理,Administration
+160602,金融与投资,Finance and investment
+160603,智能,Intelligence
+160604,营销,Marketing
+160605,人在职场,Career
+160606,人际交往,Interpersonal communication
+160607,心灵鸡汤,Soul Soother
+160608,经济,Economics
+160609,励志与成功,Inspiration and success
+160610,国外书籍,Foreign books
+160611,其他,Other
+160701,历史,History
+160702,心理学,Psychology
+160703,政治/军事,Political / military
+160704,国学/古籍,Chinese Classics
+160705,哲学/宗教,Philosophy / religion
+160706,社会科学,Social Sciences
+160707,法律,Law
+160708,文化,Culture
+160709,国外书籍,Foreign books
+160710,其他,Other
+160801,育儿/家教,Child rearing
+160802,孕产/胎教,Maternal / fetal education
+160803,健身保健,Fitness health
+160804,旅游/地图,Travel / Map
+160805,烹饪/美食,Cooking / food
+160806,时尚美妆,Fashion beauty
+160807,家居,Home Furnishing
+160808,手工DIY,Manual DIY
+160809,婚恋两性,Love and marriage
+160810,体育,Sports
+160811,国外生活书籍,Foreign life books
+160812,其他,Other
+160901,计算机与互联网,Computers and the Internet
+160902,科普,Polular Science
+160903,建筑,Architecture
+160904,工业技术,Industrial Technology
+160905,电子/通信,Electronics / communication
+160906,医学,Medical Science
+160907,科学与自然,Science and nature
+160908,农林,Farming and Forestry
+160909,国外科技书籍,Foreign science and technology books
+160910,其他,Other
+161001,杂志/期刊,Journal
+161002,英文原版书,English original book
+161003,海外图书,Overseas books
+161004,港台图书,Hong Kong and Taiwan books
+161005,其他,Other
+173101,专利权,Patent right
+173102,商标权,Trademark right
+173103,商号权,Right to firm name
+173201,发表权,Right of publication
+173202,署名权,Right to sign one's name on a piece of work
+173203,修改权,Modification right
+173204,保护作品完整权,Protect the integrity of the work
+173205,复制权,Right of reproduction
+173206,发行权,Publishing right
+173207,出租权,Rental right
+173208,展览权,Right of public exhibition
+173209,表演权,Performing rights
+173210,放映权,Screening right
+173211,广播权,Right of broadcasting
+173212,信息网络传播权,Information network transmission right
+173213,摄制权,Right of production
+173214,改编权,Right of adaptation
+173215,翻译权,Translation right
+173216,汇编权,Assembly weight
+173217,其他著作权,Other copyright
+02010101,针织衫,Sweater
+02010102,蕾丝衫,Lace shirt
+02010103,Polo衫,Polo shirt
+02010104,牛仔服,Jeans wear
+02010105,雪服/雨服,Snow Suit
+02010106,夹克,Jacket
+02010107,T恤,T-shirt
+02010108,毛衣,sweater
+02010109,时尚套装,Fashion suit
+02010110,雪纺衫,Chiffon shirt
+02010111,针织衫,Sweater
+02010112,打底衫,Bottoming shirt
+02010113,吊带/背心,Sling / vest
+02010114,马甲,Vest
+02010115,衬衫,Shirt
+02010116,风衣,Windbreaker
+02010117,短外套,Short coat
+02010118,卫衣,Sweater
+02010119,小西装,Small suit
+02010120,羽绒服,Down Jackets
+02010121,毛呢大衣,woolen overcoat
+02010122,棉服,Cotton
+02010123,皮草,Leather and fur
+02010124,羊绒衫,Cashmere sweater
+02010125,毛衣,Sweater
+02010126,真皮皮衣,Leather garment
+02010127,仿皮皮衣,Leather leather
+02010128,其他女士上装,Other ladies
+02010201,牛仔裤,Jeans
+02010202,铅笔裤,Pencil pants
+02010203,喇叭裤,Bell-bottoms
+02010204,五分裤,Five minutes pants
+02010205,七分裤,Cropped Trousers
+02010206,九分裤,Ninth pants
+02010207,休闲裤,Casual pants
+02010208,哈伦裤,Haren pants
+02010209,背带裤,Rompers
+02010210,小脚裤,Pencil Pants
+02010211,西装裤,Suit pants
+02010212,打底裤,Leggings
+02010213,阔腿裤,Wide leg pants
+02010214,短裤,shorts
+02010215,棉裤,Cotton-padded trousers
+02010216,毛裤,Long woodlen underwear
+02010217,其他女士下装,The other ladies and
+02010301,连衣裙,Dress
+02010302,迷你裙,The Mini Skirt
+02010303,窄身裙,Narrow skirt
+02010304,九分裙,Nine point skirt
+02010305,直筒裙,Straight skirt
+02010306,圆台裙,Circular skirt
+02010307,拖地裙,Mopping skirt
+02010308,七分裙,Seven point skirt
+02010309,蕾丝连衣裙,Lace dress
+02010310,印花连衣裙,Print dress
+02010311,真丝连衣裙,Silk dress
+02010312,半身裙,Skirt
+02010313,百褶裙,Pleated skirt
+02010314,牛仔裙,Denim skirt
+02010315,背心裙,Vest skirt
+02010316,a字裙,A word skirt
+02010317,棉麻连衣裙,Cotton dress
+02010318,蕾丝半身裙,Lace skirt
+02010319,包臀裙,Skirt
+02010320,长袖连衣裙,Long sleeved dress
+02010321,其他裙装,Other dresses
+02010401,时尚气质套装,Fashion temperament
+02010402,婚纱,Wedding dress
+02010403,礼服,Full dress
+02010404,旗袍/唐装,Dress / Costume
+02010405,设计师/潮牌,Designer / tide card
+02010406,大码女装,Large women
+02010407,中老年女装,Middle-aged women
+02010408,职业套装,Occupation suit
+02010409,其他特色女装,Other women's wear
+02010501, 光面文胸,Smooth bra
+02010502,运动文胸,Sports bra
+02010503,美背文胸,Beauty bra
+02010504,聚拢文胸,Gather bra
+02010505,蕾丝文胸,Lace bra
+02010506,大杯文胸,Cup bra
+02010507,轻薄塑身,Slim body
+02010508,女士内裤,Women's underwear
+02010509,其他特色文胸,Other bra
+02020101,夹克,Jacket
+02020102,PoLO衫,PoLO shirt
+02020103,背心裙,Vest skirt
+02020104,单西,Single West
+02020105,棒球服,Baseball uniform
+02020106,棉衣,Cotton-padded clothes
+02020107,大衣,Coat
+02020108,风衣,Windbreaker
+02020109,西服套装,Suit
+02020110,羽绒服,Down Jackets
+02020111,皮衣,Leather clothing
+02020112,运动服,Athletic Wear
+02020113,工衣外套,Coat jacket
+02020114,针织开衫,Cardigan
+02020115,马甲,Vest
+02020116,其他男士上装,Other men's suits
+02020201,休闲裤,Casual pants
+02020202,羽绒裤,Down pants
+02020203,加绒裤,Add poil
+02020204,牛仔裤,Jeans
+02020205,喇叭裤,Bell-bottoms
+02020206,西裤,Western-style trousers
+02020207,小脚裤,Pencil Pants
+02020208,运动裤,Sports pants
+02020209,针织裤,Knitted trousers
+02020210,工装裤,Woriking clothes
+02020211,9分裤,9 minutes pants
+02020212,短裤,shorts
+02020213,其他男士裤装,Other men's pants
+02020301,潮牌,Tide brand
+02020302,中老年男装,Middle-aged men
+02020303,职场精英,Career Hero
+02020304,中国风,Chinese style
+02020305,其他特色男装,Other men's clothes
+02020401,短袖T恤,T-shirt
+02020402,长袖T恤,Long sleeve T-shirt
+02020403,短袖衬衫,A short sleeved shirt
+02020404,长袖衬衫,Long sleeved shirt
+02020405,卫衣,Sweater
+02020406,针织衫/毛衣,Knit / sweater
+02020407,男士内裤,Men's underwear
+02020408,其他男士内搭,Other men inside
+12020101,米粉,Rice noodles
+12020102,菜粉,Powder
+12020103,面条,noodle
+12020104,粥,Porridge
+12020105,果汁,Fruit juice
+12020106,果泥,Puree
+12020107,其他辅食,Other food supplement
+12020201,益生菌,Probiotics
+12020202,初乳,Colostrum
+12020203,DHA,DHA
+12020204,钙铁锌,Calcium iron zinc
+12020205,维生素,Vitamin
+12020206,其他营养品,Other nutrition
+12020301,宝宝零食,Baby snacks
+12020302,清火,Relieve inflammation or internal heat
+12020303,开胃,Appetizer
+12020304,其他零食,Other snacks
+12060201,提篮式,Basket type
+12060202,增高垫,Heightening pad
+12070201,电动车,Electric vehicle
+12070202,自行车,Bicycle
+12070203,三轮车,Tricycle
+12070204,滑板车,Scooter
+12070205,扭扭车,Swing car
+12070206,学步车,Walker car
+12070207,其他童车,Other bassinet
