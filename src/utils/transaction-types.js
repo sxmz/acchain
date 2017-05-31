@@ -11,4 +11,5 @@ module.exports = {
   UIA_ISSUER: 9,
   UIA_ASSET: 10,
   UIA_ISSUE: 11,
+  UIA_EXERCISE: 12,
 }

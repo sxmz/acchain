@@ -565,6 +565,52 @@ class Model {
       cb(null, totalSupply)
     })
   }
+
+  getExercises(filter, cb) {
+    var sql = jsonSql.build({
+      type: 'select',
+      condition: filter.condition,
+      limit: filter.limit,
+      offset: filter.offset,
+      table: 'exercises',
+      alias: 'e',
+      join: [
+        {
+          type: 'inner',
+          table: 'assets',
+          alias: 'a',
+          on: {
+            'a.currency': 'e.currency2'
+          }
+        },
+        {
+          type: 'inner',
+          table: 'trs',
+          alias: 't',
+          on: {
+            't.id': 'e.transactionId'
+          }
+        }
+      ],
+      fields: {
+        'e.transactionId': 'transactionId',
+        'e.currency2': 'currency',
+        'e.amount': 'amount',
+        'a.precision': 'precision',
+        't.senderId': 'senderId',
+        't.timestamp': 'timestamp',
+      }
+    })
+    var fieldConv = {
+      transactionId: String,
+      currency: String,
+      amount: String,
+      precision: Number,
+      senderId: String,
+      timestamp: Number
+    }
+    this.dbLite.query(sql.query, sql.values, fieldConv, cb)
+  }
 }
 
 module.exports = Model;

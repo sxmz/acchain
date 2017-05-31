@@ -153,7 +153,7 @@ function Asset() {
         currency: {
           type: 'string',
           minLength: 3,
-          maxLength: 26
+          maxLength: 30
         },
         category: {
           type: 'string',

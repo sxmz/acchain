@@ -121,6 +121,11 @@ message AssetUIAIssue {
   required string exchangeRate = 3;
 }
 
+message AssetUIAExercise {
+  required string currency = 1;
+  required string amount = 2;
+}
+
 message BlockPropose {
   required int64 height = 1;
   required string id = 2;

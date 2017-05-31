@@ -81,7 +81,9 @@ private.blocksDataFields = {
   'assets_unlockCondition': Number,
   'issues_currency': String,
   'issues_amount': String,
-  'issues_exchangeRate': String
+  'issues_exchangeRate': String,
+  'exercises_currency2': String,
+  'exercises_amount': String
 };
 // @formatter:on
 private.loaded = false;
@@ -105,7 +107,8 @@ const FULL_BLOCK_QUERY = "SELECT " +
   "approvals.topic, approvals.value, " +
   "issuers.name, issuers.desc, " +
   "assets.currency, assets.name, assets.desc, assets.category, assets.maximum, assets.precision, assets.estimateUnit, assets.estimatePrice, assets.exerciseUnit, assets.extra, assets.unlockCondition, " +
-  "issues.currency, issues.amount, issues.exchangeRate " +
+  "issues.currency, issues.amount, issues.exchangeRate, " +
+  "exercises.currency2, exercises.amount " +
   "FROM blocks b " +
   "left outer join trs as t on t.blockId=b.id " +
   "left outer join delegates as d on d.transactionId=t.id " +
@@ -118,7 +121,8 @@ const FULL_BLOCK_QUERY = "SELECT " +
   "left outer join approvals on approvals.transactionId=t.id " +
   "left outer join issuers on issuers.transactionId=t.id " +
   "left outer join assets on assets.transactionId=t.id " +
-  "left outer join issues on issues.transactionId=t.id ";
+  "left outer join issues on issues.transactionId=t.id " +
+  "left outer join exercises on exercises.transactionId=t.id ";
 
 // Constructor
 function Blocks(cb, scope) {

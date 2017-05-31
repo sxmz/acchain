@@ -128,4 +128,20 @@ module.exports = {
     var fee = 1 * constants.coin
     return createTransaction(asset, bytes, fee, 8, null, secret, secondSecret)
   },
+
+  createExercise: function (currency, amount, secret, secondSecret) {
+    var asset = {
+      uiaExercise: {
+        currency: currency,
+        amount: amount
+      }
+    }
+    var bb = new ByteBuffer(1, true)
+    bb.writeString(currency)
+    bb.writeString(amount)
+    bb.flip()
+    var bytes = toLocalBuffer(bb)
+    var fee = 0.1 * constants.coin
+    return createTransaction(asset, bytes, fee, 12, null, secret, secondSecret)
+  },
 }
