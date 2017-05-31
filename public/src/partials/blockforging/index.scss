@@ -337,12 +337,14 @@
 }
 #assignee{
   width: 840px;
-  //height: 530px;
   z-index: 1000;
   background-color: #fff;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -420px;
-  margin-top: -295px;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }

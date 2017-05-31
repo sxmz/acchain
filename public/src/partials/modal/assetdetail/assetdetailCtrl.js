@@ -15,6 +15,8 @@ angular.module('asch').controller('assetdetailCtrl', function ($scope, $rootScop
             if (res.success == true) {
                 $rootScope.assetdetailinfo = true;
                 $rootScope.isBodyMask = true;
+                var precision = res.asset.precision;
+                res.asset.maximum = parseInt(res.asset.maximum) / Math.pow(10, precision);
                 $scope.asset = res.asset;
                 var extra = res.asset.extra;
                 try{
