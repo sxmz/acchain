@@ -3,6 +3,7 @@
   "assets": [
     {
       "name": "eiSHesctQCbXA.RUBY",
+      "currency": "VIRTUAL",
       "desc": "valid desc",
       "maximum": "10000",
       "precision": 1,

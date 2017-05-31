@@ -1,6 +1,5 @@
 .voteto,.deletevote {
   width: 840px;
-  /*height: 590px;*/
   background-color: #fff;
   box-sizing: border-box;
   padding: 0 46px;
@@ -22,11 +21,6 @@
       color: #333;
       margin-left: 10px;
       font-size: 30px;
-      /*i{
-        font-style: normal;
-        color: #aaaaaa;
-        font-size: 30px;
-      }*/
     }
     .tips{
       font-size: 20px;
@@ -76,13 +70,14 @@
   }
   .item_detail {
     box-sizing: border-box;
-    //height: 188px;
     width: 100%;
     margin-top: 43px;
     font-size: 20px;
     color:#aaa;
     input{
       width: 500px;
+      border: 1px solid #d5dfec;
+      text-indent: 10px;
     }
   }
   .btn_wrap{
@@ -97,6 +92,7 @@
       line-height: 50px;
       text-align: center;
       float: right;
+      text-decoration: none;
     }
     button{
       width: 145px;
@@ -139,23 +135,27 @@
 }
 #voteto{
   width: 840px;
-  //height: 530px;
   z-index: 1000;
   background-color: #fff;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -420px;
-  margin-top: -295px;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
 #deletevoteto{
   width: 840px;
-  //height: 530px;
   z-index: 1000;
   background-color: #fff;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -420px;
-  margin-top: -295px;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }

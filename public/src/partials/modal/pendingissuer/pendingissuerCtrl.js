@@ -9,7 +9,6 @@ angular.module('asch').controller('pendingissuerCtrl', function ($scope, $rootSc
     };
     $rootScope.$on('pendingissuer', function (d, data) {
         $scope.address = data;
-        console.log(data);
         apiService.issuer({
             address: $scope.address
         }).success(function (res) {
@@ -17,7 +16,6 @@ angular.module('asch').controller('pendingissuerCtrl', function ($scope, $rootSc
                 $rootScope.pendingissuerInfo = true;
                 $rootScope.isBodyMask = true;
                 $scope.issuer = res.issuer;
-                console.log(res.issuer);
             };
         }).error(function () {
             toastError($translate.instant('ERR_SERVER_ERROR'));
