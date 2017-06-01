@@ -6,7 +6,7 @@ var amountHelper = require('../utils/amount.js')
 
 function Exercise() {
   this.create = function (data, trs) {
-    trs.amount = 0
+    trs.amount = '0'
     trs.recipientId = null
     trs.asset.uiaExercise = {
       currency: data.currency,

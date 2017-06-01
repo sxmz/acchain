@@ -22,7 +22,7 @@ function calcRound(height) {
 function Approval() {
   this.create = function (data, trs) {
     trs.recipientId = null
-    trs.amount = 0
+    trs.amount = '0'
     trs.asset.approval = {
       topic: data.topic,
       value: data.value

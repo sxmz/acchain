@@ -9,7 +9,7 @@ var assetHelper = require('./helper.js')
 function Issue() {
   this.create = function (data, trs) {
     trs.recipientId = null
-    trs.amount = 0
+    trs.amount = '0'
     trs.asset.uiaIssue = {
       currency: data.currency,
       amount: data.amount,
