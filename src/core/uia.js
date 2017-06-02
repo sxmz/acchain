@@ -520,6 +520,10 @@ shared.getExercises = function (req, cb) {
       currency: {
         type: 'string',
         maxLength: 30
+      },
+      id: {
+        type: 'string',
+        maxLength: 64
       }
     }
   }, function (err) {
@@ -527,6 +531,9 @@ shared.getExercises = function (req, cb) {
     var condition = null
     if (typeof query.currency !== 'undefined') {
       condition = { currency2: query.currency }
+    }
+    if (typeof query.currency !== 'undefined') {
+      condition = { transactionId: query.id }
     }
     library.model.count('exercises', condition, function (err, count) {
       if (err) return cb('Failed to get count: ' + err)
