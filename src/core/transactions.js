@@ -22,6 +22,7 @@ function Transfer() {
   this.create = function (data, trs) {
     trs.recipientId = data.recipientId;
     trs.amount = data.amount;
+    trs.currency = data.currency
 
     return trs;
   }
@@ -549,7 +550,7 @@ shared.getTransactions = function (req, cb) {
       type: {
         type: "integer",
         minimum: 0,
-        maximum: 10
+        maximum: 100
       },
       orderBy: {
         type: "string"
@@ -731,6 +732,10 @@ shared.addTransactions = function (req, cb) {
       multisigAccountPublicKey: {
         type: "string",
         format: "publicKey"
+      },
+      currency: {
+        type: "string",
+        maxLength: 30
       }
     },
     required: ["secret", "amount", "recipientId"]
@@ -811,7 +816,8 @@ shared.addTransactions = function (req, cb) {
                   recipientId: recipientId,
                   keypair: keypair,
                   requester: keypair,
-                  secondKeypair: secondKeypair
+                  secondKeypair: secondKeypair,
+                  currency: body.currency
                 });
               } catch (e) {
                 return cb(e.toString());
@@ -846,7 +852,8 @@ shared.addTransactions = function (req, cb) {
                 sender: account,
                 recipientId: recipientId,
                 keypair: keypair,
-                secondKeypair: secondKeypair
+                secondKeypair: secondKeypair,
+                currency: body.currency
               });
             } catch (e) {
               return cb(e.toString());
