@@ -550,7 +550,7 @@ shared.getTransactions = function (req, cb) {
       type: {
         type: "integer",
         minimum: 0,
-        maximum: 10
+        maximum: 100
       },
       orderBy: {
         type: "string"
