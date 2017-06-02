@@ -532,7 +532,7 @@ shared.getExercises = function (req, cb) {
     if (typeof query.currency !== 'undefined') {
       condition = { currency2: query.currency }
     }
-    if (typeof query.currency !== 'undefined') {
+    if (typeof query.id !== 'undefined') {
       condition = { transactionId: query.id }
     }
     library.model.count('exercises', condition, function (err, count) {
