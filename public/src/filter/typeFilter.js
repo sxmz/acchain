@@ -11,7 +11,8 @@ angular.module('asch').filter('typeFilter', function ($filter) {
         'TRS_TYPE_APPROVAL',
         'TRS_TYPE_UIA_ISSUER',
         'TRS_TYPE_UIA_ASSET',
-        'TRS_TYPE_UIA_ISSUE'
+        'TRS_TYPE_UIA_ISSUE',
+        'TRS_TYPE_UIA_EXERCISE'
     ]
     return function (value) {
         return $filter('translate')(TYPE_LABEL[value]);

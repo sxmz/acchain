@@ -39,7 +39,7 @@ window.Translations['en-us'] = {
   TRS_TYPE_UIA_ISSUER: 'Register Issuer',
   TRS_TYPE_UIA_ASSET: 'Register Asset',
   TRS_TYPE_UIA_ISSUE: 'Asset Issue',
-  
+  TRS_TYPE_UIA_EXERCISE: 'Exercise',
 
   // application
   DAPP_ICON: 'Icon',

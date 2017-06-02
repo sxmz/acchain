@@ -32,6 +32,7 @@ window.Translations['zh-cn'] = {
   TRS_TYPE_UIA_ISSUER: '注册发行商',
   TRS_TYPE_UIA_ASSET: '注册资产',
   TRS_TYPE_UIA_ISSUE: '资产发行',
+  TRS_TYPE_UIA_EXERCISE: '行权',
   
 
   // application
