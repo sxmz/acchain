@@ -567,6 +567,10 @@ class Model {
   }
 
   getExercises(filter, cb) {
+    if (filter.condition && filter.condition.transactionId) {
+      filter.condition['e.transactionId'] = filter.condition.transactionId
+      delete filter.condition.transactionId
+    }
     var sql = jsonSql.build({
       type: 'select',
       condition: filter.condition,
