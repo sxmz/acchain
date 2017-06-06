@@ -404,14 +404,9 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
         if (!parseInt(maximum)) {
             return toastError($translate.instant('INCORRECT_ISSUING_AMOUNT'));
         }
-        if (!precision) {
-            return toastError($translate.instant('INCORRECT_PRECISION'));
-        }else{
-        	var reg = /^[0-6]$/;
-			if(!reg.test($scope.precision)){
-				return toastError($translate.instant('INTEGER_UP_TO_6'));
-			}
-        }
+        if(!/^[0-6]$/.test($scope.precision)){
+		    return toastError($translate.instant('INTEGER_UP_TO_6'));
+		}
         if (!userService.secondPublicKey) {
             $scope.regAssetSecondPassword = '';
         }else{
