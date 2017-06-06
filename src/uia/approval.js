@@ -74,11 +74,15 @@ function Approval() {
   this.apply = function (trs, block, sender, cb) {
     var topic = trs.asset.approval.topic
     var value = trs.asset.approval.value
+    var memKey = trs.type + ':' + topic + ':' + value
+    var memCount = library.oneoff.get(memKey) || 0
+    memCount += 1
+    library.oneoff.set(memKey, memCount)
     library.model.getApprovals(topic, value, null, function (err, approvals) {
       if (err) return cb('Failed to get approvals: ' + err)
       // don't verify approvals in genesisblock
       if (block.height !== 1) {
-        var activeVote = 1
+        var activeVote = memCount
         for (var i = 0; i < approvals.length; ++i) {
           if (modules.delegates.isActiveDelegate(approvals[i].senderId)) {
             activeVote += 1
@@ -94,6 +98,7 @@ function Approval() {
         var transactionId = value
         library.model.getAssetIssue(transactionId, function (err, issue) {
           if (err) return cb('Failed to get asset issue: ' + err)
+          if (issue.approved) return cb()
           var diffPrecision = 6 - issue.precision
           var unlockAccAmount = bignum(issue.amount).mul(issue.exchangeRate).mul(Math.pow(10, diffPrecision)).toString()
           var lockAccAmount = bignum(issue.amount).mul(issue.exchangeRate).mul(Math.pow(10, diffPrecision)).mul(0.25).toString()
@@ -102,7 +107,6 @@ function Approval() {
             if (bignum(unlockAccAmount).plus(lockAccAmount).plus(totalAccQuantity).gt(constants.totalAmount)) {
               return cb('ACC over limit')
             }
-            if (issue.approved) return cb()
             library.model.setIssueApproved(transactionId, 1, function (err) {
               if (err) return cb('Failed to set issue approved' + err)
               library.model.addAssetQuantity(issue.currency, issue.amount, function (err) {
@@ -141,9 +145,13 @@ function Approval() {
   this.undo = function (trs, block, sender, cb) {
     var topic = trs.asset.approval.topic
     var value = trs.asset.approval.value
+    var memKey = trs.type + ':' + topic + ':' + value
+    var memCount = library.oneoff.get(memKey) || 0
+    memCount -= 1
+    library.oneoff.set(memKey, memCount)
     library.model.getApprovals(topic, value, null, function (err, approvals) {
       if (err) return cb('Failed to get approvals: ' + err)
-      var activeVote = 0
+      var activeVote = memCount + 1
       for (var i = 0; i < approvals.length; ++i) {
         if (modules.delegates.isActiveDelegate(approvals[i].senderId)) {
           activeVote += 1
