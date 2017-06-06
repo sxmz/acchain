@@ -558,6 +558,7 @@ Transaction.prototype.applyUnconfirmed = function (trs, sender, requester, cb) {
   } else {
     var key = trs.currency + ':' + sender.address
     var balance = library.balanceCache.getAssetBalance(sender.address, trs.currency) || 0
+console.log('-----', sender.address, trs.currency, balance);
     var surplus = bignum(balance).sub(trs.amount)
     if (surplus.lt(0)) return setImmediate(cb, 'Insufficient asset balance')
 
