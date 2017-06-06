@@ -84,7 +84,7 @@ function Approval() {
             activeVote += 1
           }
         }
-        if (activeVote < APPROVE_THRESHOLD) return cb()
+        if (activeVote !== APPROVE_THRESHOLD) return cb()
       }
       if (topic === TOPICS.ASSET_REGISTER) {
         var currency = value
@@ -149,7 +149,7 @@ function Approval() {
           activeVote += 1
         }
       }
-      if (activeVote < APPROVE_THRESHOLD) return cb()
+      if (activeVote !== APPROVE_THRESHOLD) return cb()
       if (topic === TOPICS.ASSET_REGISTER) {
         var currency = value
         library.model.setAssetApproved(currency, 0, cb)
