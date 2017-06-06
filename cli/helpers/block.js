@@ -228,8 +228,8 @@ module.exports = {
 			asset: {
 				uiaIssue: {
 					currency: 'BTC',
-					amount: '50000000000',
-					exchangeRate: '10000'
+					amount: '103000000',
+					exchangeRate: '9500'
 				}
 			}
 		})
@@ -248,6 +248,166 @@ module.exports = {
 					approval: {
 						topic: 2,
 						value: issueAssetTransaction.id
+					}
+				}
+			}));
+		})
+
+		var ethRegisterTransaction = signTransaction(genesisAccount.keypair, {
+			type: 10,
+			amount: '0',
+			fee: 0,
+			timestamp: 0,
+			recipientId: null,
+			senderId: genesisAccount.address,
+			senderPublicKey: genesisAccount.keypair.publicKey,
+			asset: {
+				uiaAsset: {
+					name: 'Ethereum',
+					desc: 'Ethereum is an open-source, public, blockchain-based distributed computing platform featuring smart contract (scripting) functionality, which facilitates online contractual agreements.Ethereum was proposed in late 2013 by Vitalik Buterin, a cryptocurrency researcher and programmer',
+					currency: 'ETH',
+					maximum: '1000000000000000',
+					precision: 6,
+					category: '1803',
+					estimateUnit: 'RMB',
+					estimatePrice: '560',
+					exerciseUnit: '1',
+					unlockCondition: 0,
+					extra: 'No extra information',
+				}
+			}
+		})
+		transactions.push(ethRegisterTransaction)
+
+		delegates.map(function (delegate) {
+			transactions.push(signTransaction(delegate.keypair, {
+				type: 8,
+				amount: '0',
+				fee: 0,
+				timestamp: 0,
+				recipientId: null,
+				senderId: delegate.address,
+				senderPublicKey: delegate.keypair.publicKey,
+				asset: {
+					approval: {
+						topic: 1,
+						value: 'ETH'
+					}
+				}
+			}));
+		})
+
+		var ethIssueTransaction = signTransaction(genesisAccount.keypair, {
+			type: 11,
+			amount: '0',
+			fee: 0,
+			timestamp: 0,
+			recipientId: null,
+			senderId: genesisAccount.address,
+			senderPublicKey: genesisAccount.keypair.publicKey,
+			asset: {
+				uiaIssue: {
+					currency: 'ETH',
+					amount: '1574000000',
+					exchangeRate: '560'
+				}
+			}
+		})
+		transactions.push(ethIssueTransaction)
+
+		delegates.map(function (delegate) {
+			transactions.push(signTransaction(delegate.keypair, {
+				type: 8,
+				amount: '0',
+				fee: 0,
+				timestamp: 0,
+				recipientId: null,
+				senderId: delegate.address,
+				senderPublicKey: delegate.keypair.publicKey,
+				asset: {
+					approval: {
+						topic: 2,
+						value: ethIssueTransaction.id
+					}
+				}
+			}));
+		})
+
+		var etfRegisterTransaction = signTransaction(genesisAccount.keypair, {
+			type: 10,
+			amount: '0',
+			fee: 0,
+			timestamp: 0,
+			recipientId: null,
+			senderId: genesisAccount.address,
+			senderPublicKey: genesisAccount.keypair.publicKey,
+			asset: {
+				uiaAsset: {
+					name: 'CBTETF',
+					desc: 'The Digital Asset ETF fund, sponsored by fund institutions, members of the ACCHAIN DAO organization, and numerous fund managers, is a digital asset index fund with an equal value ACC lead, was completed on June 6th, 2017.',
+					currency: 'CBTETF',
+					maximum: '266',
+					precision: 0,
+					category: '1801',
+					estimateUnit: 'USD',
+					estimatePrice: '150000',
+					exerciseUnit: '1',
+					unlockCondition: 0,
+					extra: 'No extra information',
+				}
+			}
+		})
+		transactions.push(etfRegisterTransaction)
+
+		delegates.map(function (delegate) {
+			transactions.push(signTransaction(delegate.keypair, {
+				type: 8,
+				amount: '0',
+				fee: 0,
+				timestamp: 0,
+				recipientId: null,
+				senderId: delegate.address,
+				senderPublicKey: delegate.keypair.publicKey,
+				asset: {
+					approval: {
+						topic: 1,
+						value: 'CBTETF'
+					}
+				}
+			}));
+		})
+
+		var etfIssueTransaction = signTransaction(genesisAccount.keypair, {
+			type: 11,
+			amount: '0',
+			fee: 0,
+			timestamp: 0,
+			recipientId: null,
+			senderId: genesisAccount.address,
+			senderPublicKey: genesisAccount.keypair.publicKey,
+			asset: {
+				uiaIssue: {
+					currency: 'CBTETF',
+					amount: '266',
+					exchangeRate: '424603'
+				}
+			}
+		})
+		transactions.push(etfIssueTransaction)
+
+		delegates.map(function (delegate) {
+			transactions.push(signTransaction(delegate.keypair, {
+				type: 8,
+				amount: '0',
+				fee: 0,
+				timestamp: 0,
+				recipientId: null,
+				senderId: delegate.address,
+				senderPublicKey: delegate.keypair.publicKey,
+				asset: {
+					approval: {
+						topic: 2,
+						value: etfIssueTransaction.id
 					}
 				}
 			}));

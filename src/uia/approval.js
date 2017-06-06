@@ -12,8 +12,13 @@ const TOPICS = {
   ASSET_ISSUE: 2
 }
 
-// const APPROVE_THRESHOLD = Math.ceil(101 * 2 / 3)
-const APPROVE_THRESHOLD = 5
+function getApprovalThreshold() {
+  if (global.Config.netVersion === 'mainnet') {
+    return Math.ceil(101 * 2 / 3)
+  } else {
+    return 5
+  }
+}
 
 function calcRound(height) {
   return Math.floor(height / slots.delegates) + (height % slots.delegates > 0 ? 1 : 0);
@@ -88,7 +93,7 @@ function Approval() {
             activeVote += 1
           }
         }
-        if (activeVote !== APPROVE_THRESHOLD) return cb()
+        if (activeVote !== getApprovalThreshold()) return cb()
       }
       if (topic === TOPICS.ASSET_REGISTER) {
         var currency = value
@@ -157,7 +162,7 @@ function Approval() {
           activeVote += 1
         }
       }
-      if (activeVote !== APPROVE_THRESHOLD) return cb()
+      if (activeVote !== getApprovalThreshold()) return cb()
       if (topic === TOPICS.ASSET_REGISTER) {
         var currency = value
         library.model.setAssetApproved(currency, 0, cb)
@@ -203,7 +208,7 @@ function Approval() {
   }
 
   this.applyUnconfirmed = function (trs, sender, cb) {
-    var key = trs.senderId + ':' + trs.asset.approval.topic + ':' + trs.type
+    var key = trs.senderId + ':' + trs.asset.approval.topic + ':' + trs.asset.approval.value + ':' + trs.type
     if (library.oneoff.has(key)) {
       return setImmediate(cb, 'Double submit')
     }
@@ -212,7 +217,8 @@ function Approval() {
   }
 
   this.undoUnconfirmed = function (trs, sender, cb) {
-    library.oneoff.delete(trs.senderId + ':' + trs.asset.approval.topic + ':' + trs.type)
+    var key = trs.senderId + ':' + trs.asset.approval.topic + ':' + trs.asset.approval.value + ':' + trs.type
+    library.oneoff.delete(key)
     setImmediate(cb)
   }
 
