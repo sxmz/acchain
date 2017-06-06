@@ -333,7 +333,7 @@ window.Translations['en-us'] = {
   ISSUER_DETAIL: 'Issuer Detail',
   //asset - placeholder
   UPPERCASE_NO_MORE_THAN_16: 'Please enter uppercase English letters no more than 16',
-  UPPERCASE_UP_TO_10: 'Please enter combinations of numbers and uppercase English letters, started with uppercase English letter. Maxlength is 10.',
+  UPPERCASE_UP_TO_10: 'Please enter combinations of numbers and uppercase English letters, started with uppercase English letter, which length between 3 and 10.',
   INTEGER_NO_MORE_THAN_9: 'Please enter no more than 9 positive integers',
   INTEGER_NO_MORE_THAN_12: 'Please enter no more than 12 positive integers',
   INTEGER_UP_TO_6: 'Please enter integer between 0 to 6',

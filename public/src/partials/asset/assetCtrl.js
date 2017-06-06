@@ -739,6 +739,7 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
                     $scope.topLimt = '';
                     $scope.precision = '';
                     $scope.rasecondPassword = '';
+                    $scope.regAssetSecondPassword = '';
                     //extra
                     $scope.productBrand = '';
                     $scope.productBrandRemark = '';

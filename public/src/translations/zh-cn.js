@@ -328,11 +328,11 @@ window.Translations['zh-cn'] = {
   ISSUER_DETAIL: '发行商详情',
   //asset - placeholder
   UPPERCASE_NO_MORE_THAN_16: '请输入不超过16位的大写英文字母',
-  UPPERCASE_UP_TO_10: '请输入不超过10位的大写英文字母与数字组合，开头为大写英文字母',
+  UPPERCASE_UP_TO_10: '请输入3-10位的大写英文字母与数字组合，开头为大写英文字母',
   INTEGER_NO_MORE_THAN_9: '请输入不超过9位的正整数',
   INTEGER_NO_MORE_THAN_12: '请输入不超过12位的正整数',
   INTEGER_UP_TO_6: '请输入0-6之间的整数',
-  ESTIMATE_PRICE_LIMIT: '请输入不超过1000000000的正数，小数点后数字不得超过2位',
+  ESTIMATE_PRICE_LIMIT: '请输入小于1000000000的正数，小数点后数字不得超过2位',
   //asset - reg error
   CURRENCY_SET_WRONG: '资产币种输入有误',
   ESTIMATE_PRICE_ENTER_WRONG: '估值价格输入有误',
