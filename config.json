@@ -1,5 +1,5 @@
 {
-  "port": 5000,
+  "port": 4000,
   "address": "0.0.0.0",
   "publicIp": "",
   "logLevel": "log",
@@ -10,7 +10,10 @@
     }
   },
   "peers": {
-    "list": [],
+    "list": [
+      {"ip": "47.90.11.55", "port": 4000},
+      {"ip":"120.76.222.251","port":4000}
+    ],
     "blackList": [],
     "options": {
       "timeout": 4000
