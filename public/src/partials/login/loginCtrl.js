@@ -4,6 +4,7 @@ angular.module('asch').controller('loginCtrl', function ($scope, $rootScope, api
 	$rootScope.creatpwd = false;
 	$rootScope.checkpwd = false;
 	$scope.showclaim = false;
+	$scope.savepwd = false;
 	$rootScope.homedata = {};
 	$scope.showprotocol = function(){
 		$scope.showclaim = true;
@@ -105,6 +106,7 @@ angular.module('asch').controller('loginCtrl', function ($scope, $rootScope, api
 		}
 	}
 	$scope.saveTxt = function (filename) {
+		$scope.savepwd = true;
 		var text = $scope.newsecret.trim();
 		//var address = AcchainJS.crypto.getAddress(newpublicKey);
 		//txt = 'secret:' + '\r\n' + text + '\r\n\r\n' + 'address:' + '\r\n' + address + '\r\n';
@@ -155,13 +157,17 @@ angular.module('asch').controller('loginCtrl', function ($scope, $rootScope, api
 	}
 	//下一步登录
 	$scope.nextStep = function () {
-		
-		if($scope.readCheck){
-			$rootScope.register = false;
-			$rootScope.creatpwd = false;
-			$rootScope.checkpwd = true;
+		if($scope.savepwd){
+			if($scope.readCheck){
+				$rootScope.register = false;
+				$rootScope.creatpwd = false;
+				$rootScope.checkpwd = true;
+			}else{
+				return toastError($translate.instant('PLEASE_CONFIRM_READ'));
+			}
 		}else{
-			return toastError($translate.instant('PLEASE_CONFIRM_READ'));
+			return toastError($translate.instant('PLEASE_SAVE_PASSWORD'));
 		}
+		
 	}
 });

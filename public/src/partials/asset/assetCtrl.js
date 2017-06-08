@@ -304,16 +304,20 @@ angular.module('asch').controller('assetCtrl', function ($scope, $rootScope, api
     };
     //注册发行商
     $scope.registerPublish = function () {
+		
         if(userService.issuerStatus){
             toastError($translate.instant('ISSUER_REG_COMPLETED'));
             return false;
         }
         var name = $scope.monname;
         var desc = $scope.mondesc;
-        if(!$scope.monname || !$scope.mondesc){
+        if(!$scope.mondesc){
             return toastError($translate.instant('ISSUER_DESC_NEEDED'));
         }
-
+        var reg = /^[A-Z]{1,16}$/;
+		if(!reg.test($scope.monname)){
+			return toastError($translate.instant('ISSUER_NAME_WRONG'));
+		}
         if (!userService.secondPublicKey) {
             $scope.rpsecondPassword = '';
         }
