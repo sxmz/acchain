@@ -10,18 +10,14 @@
     }
   },
   "peers": {
-    "list": [
-      {"ip": "47.91.150.2", "port": 5000},
-      {"ip":"120.76.235.169","port":5000}
-    ],
+    "list": [],
     "blackList": [],
     "options": {
       "timeout": 4000
     }
   },
   "forging": {
-    "secret": [
-    ],
+    "secret": [],
     "access": {
       "whiteList": [
         "127.0.0.1"

@@ -230,7 +230,7 @@ private.attachApi = function () {
       var block = library.base.block.objectNormalize(req.body.block);
       var votes = library.base.consensus.normalizeVotes(req.body.votes);
     } catch (e) {
-      library.logger.log('normalize block or votes object error: ' + e.toString());
+      library.logger.log('normalize block or votes object error: ' + e.toString(), req.body);
       library.logger.log('Block ' + (block ? block.id : 'null') + ' is not valid, ban 60 min', peerStr);
 
       if (peerIp && req.headers['port'] > 0 && req.headers['port'] < 65536) {
@@ -393,7 +393,7 @@ private.attachApi = function () {
     try {
       var transaction = library.base.transaction.objectNormalize(req.body.transaction);
     } catch (e) {
-      library.logger.error("transaction parse error", e.toString());
+      library.logger.error("transaction parse error: " + e.toString(), req.body.transaction);
       library.logger.log('Received transaction ' + (transaction ? transaction.id : 'null') + ' is not valid, ban 60 min', peerStr);
 
       if (peerIp && req.headers['port'] > 0 && req.headers['port' < 65536]) {
