@@ -1,4 +1,4 @@
-const CHAIN_LEVEL_TOKENS = ['BTC', 'ETH', 'LTC']
+const CHAIN_LEVEL_TOKENS = ['BTC', 'ETH', 'LTC', 'CBTETF']
 const UNLOCK_CNDITION = {
     VOTE: 0,
     ICO: 1

@@ -32,11 +32,12 @@ function genGenesisBlock(options) {
 	});
 	writeFileSync("./genesisBlock.json", newBlockInfo.block);
 	
-	var logFile = "./genGenesisBlock.log";
+	var logFile = "./secrets.log";
 	writeFileSync(logFile, "genesis account:\n");
 	appendFileSync(logFile, genesisAccount);
 	appendFileSync(logFile, "\ndelegates secrets:\n");
 	appendFileSync(logFile, delegateSecrets);
+	console.log('New genesis block and related account has been created, please see the two file: genesisBlock.json and secrets.log')
 }
 
 function peerstat() {

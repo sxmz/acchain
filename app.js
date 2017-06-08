@@ -108,6 +108,7 @@ function main() {
   }
 
   if (appConfig.netVersion === 'mainnet') {
+    /*
     var seeds = [
       757137132,
       1815983436,
@@ -124,6 +125,7 @@ function main() {
     for (var i = 0; i < seeds.length; ++i) {
       appConfig.peers.list.push({ ip: ip.fromLong(seeds[i]), port: 80 });
     }
+    */
   }
 
   if (program.log) {
@@ -137,7 +139,7 @@ function main() {
   }
 
   if (program.daemon) {
-    console.log('Asch server started as daemon ...');
+    console.log('Acchain server started as daemon ...');
     require('daemon')();
     fs.writeFileSync(pidFile, process.pid, 'utf8');
   }
