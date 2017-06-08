@@ -18,7 +18,7 @@
 					<th>ID</th>
 					<th>{{'PRODUCER' | translate}}</th>
 					<th>{{'TRANSACTIONS' | translate}}</th>
-					<th>{{'TOTAL' | translate}} {{'AMOUNTS' | translate}}</th>
+					<!--<th>{{'TOTAL' | translate}} {{'AMOUNTS' | translate}}</th>-->
 					<th>{{'TOTAL' | translate}} {{'FEES' | translate}}</th>
 					<th>{{'REWARDS' | translate}}</th>
 				</tr>
@@ -29,7 +29,7 @@
 				<td><i class="level" ng-click="showdetailInfo(i)">{{i.id}}</i></td>
 				<td><i class="level" ng-click="showaccountdetailInfo(i.generatorId)">{{i.generatorId}}</i></td>
 				<td><i class="level" ng-click="showdealInfo(i)">{{i.numberOfTransactions}}</i></td>
-				<td>{{i.totalAmount  | xasFilter }}</td>
+				<!--<td>{{i.totalAmount  | xasFilter }}</td>-->
 				<td>{{i.totalFee | xasFilter}}</td>
 				<td>{{i.reward | xasFilter}}</td>
 			</tr>

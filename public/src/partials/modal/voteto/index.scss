@@ -38,6 +38,8 @@
     }
   }
   .listing{
+    max-height: 400px;
+    overflow-y: auto;
     ul{
       li{
         line-height: 40px;
