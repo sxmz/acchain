@@ -821,7 +821,7 @@ private.attachApi = function () {
             return cb("Database error");
           }
 
-          if (!account || !account.publicKey) {
+          if (!account) {
             return cb("Account not found");
           }
 
@@ -2023,7 +2023,7 @@ private.addTransactions = function (req, cb) {
             return cb(err.toString());
           }
 
-          if (!account || !account.publicKey) {
+          if (!account) {
             return cb("Multisignature account not found");
           }
 
@@ -2081,7 +2081,7 @@ private.addTransactions = function (req, cb) {
           if (err) {
             return cb(err.toString());
           }
-          if (!account || !account.publicKey) {
+          if (!account) {
             return cb("Account not found");
           }
 
@@ -2323,7 +2323,7 @@ shared.sendWithdrawal = function (req, cb) {
             return cb(err.toString());
           }
 
-          if (!account || !account.publicKey) {
+          if (!account) {
             return cb("Multisignature account not found");
           }
 
@@ -2382,7 +2382,7 @@ shared.sendWithdrawal = function (req, cb) {
           if (err) {
             return cb(err.toString());
           }
-          if (!account || !account.publicKey) {
+          if (!account) {
             return cb("Account not found");
           }
 

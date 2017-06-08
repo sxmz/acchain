@@ -473,7 +473,7 @@ shared.getPublickey = function (req, cb) {
       if (err) {
         return cb(err.toString());
       }
-      if (!account || !account.publicKey) {
+      if (!account) {
         return cb("Account does not have a public key");
       }
       cb(null, { publicKey: account.publicKey });
@@ -626,7 +626,7 @@ shared.addDelegates = function (req, cb) {
             return cb(err.toString());
           }
 
-          if (!account || !account.publicKey) {
+          if (!account) {
             return cb("Multisignature account not found");
           }
 
@@ -682,7 +682,7 @@ shared.addDelegates = function (req, cb) {
           if (err) {
             return cb(err.toString());
           }
-          if (!account || !account.publicKey) {
+          if (!account) {
             return cb("Account not found");
           }
 

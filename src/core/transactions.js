@@ -772,7 +772,7 @@ shared.addTransactions = function (req, cb) {
               return cb(err.toString());
             }
 
-            if (!account || !account.publicKey) {
+            if (!account) {
               return cb("Multisignature account not found");
             }
 

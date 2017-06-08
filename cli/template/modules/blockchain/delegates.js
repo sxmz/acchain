@@ -132,7 +132,7 @@ Delegates.prototype.addDelegates = function (cb, query) {
 			if (err) {
 				return cb(err.toString());
 			}
-			if (!account || !account.publicKey) {
+			if (!account) {
 				return cb("Failed to get account");
 			}
 
