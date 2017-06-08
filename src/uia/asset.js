@@ -59,6 +59,9 @@ function Asset() {
 
     if (asset.precision > 16 || asset.precision < 0) return setImmediate(cb, 'Invalid asset precision')
 
+    var error = amountHelper.validate(asset.maximum)
+    if (error) return setImmediate(cb, error)
+
     if (!library.assetCategoryManager.isValidId(asset.category)) {
       return setImmediate(cb, 'Invalid asset category')
     }
