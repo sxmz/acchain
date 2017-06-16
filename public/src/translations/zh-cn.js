@@ -342,4 +342,8 @@ window.Translations['zh-cn'] = {
   CHOOSE_NEXT_CATEGORY: '请继续选择下级类目',
   BYTES_NO_MORE_THAN_256:'资产名称字节数不得超过256',
   BYTES_NO_MORE_THAN_4096:'资产描述节数不得超过4096',
+  //transactiondetail
+  TRANSACTION_DETAIL: '交易详情',
+  BLOCK_ID: '区块ID',
+  COMFIRMATIONS: '确认次数',
 };

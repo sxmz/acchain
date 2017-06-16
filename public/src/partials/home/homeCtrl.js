@@ -23,6 +23,12 @@ angular.module('asch').controller('homeCtrl', function ($scope, $rootScope, apiS
 			toastError(res.error);
 		});
 	};
+	$rootScope.showtransactiondetailInfo = function (i) {
+        $rootScope.blockdetailinfo = false;
+        $rootScope.transactiondetailinfo = false;
+        $scope.i = i;
+        $rootScope.$broadcast('transactiondetail', $scope.i)
+    }
 	// 交易ngtable版
 
 	function jiaoyi(recipientId, senderPublicKey) {

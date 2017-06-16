@@ -1,0 +1,23 @@
+<div class="transactiondetail" ng-controller="transactiondetailCtrl" ng-init="init()">
+    <div class="h_header">
+        {{'TRANSACTION_DETAIL' | translate}}
+        <a class="close"href="" ng-click="Close()"><img src="/assets/common/close.png" alt=""></a>
+    </div>
+
+    <div class="deal_info" >
+		<table class="table">
+			<tr><td>ID:</td><td>{{transaction.id}}</td></tr>
+            <tr><td>{{'HEIGHT' | translate}}:</td><td>{{transaction.height}}</td></tr>
+            <tr><td>{{'BLOCK_ID' | translate}}:</td><td>{{transaction.blockId}}</td></tr>
+            <tr><td>{{'TYPE' | translate}}:</td><td>{{transaction.type | typeFilter}}</td></tr>
+            <tr><td>{{'DATE' | translate}}:</td><td>{{transaction.timestamp | timestampFilter}}</td></tr>
+            <tr><td>{{'SENDER' | translate}}:</td><td>{{transaction.senderId}}</td></tr>
+            <tr><td>{{'RECIPIENT' | translate}}:</td><td>{{transaction.recipientId}}</td></tr>
+			<tr><td>{{'AMOUNTS' | translate}}:</td><td>{{transaction.amountShow}}</td></tr>
+            <tr><td>{{'FEES' | translate}}:</td><td>{{transaction.fee | xasFilter}}</td></tr>
+            <tr><td>{{'COMFIRMATIONS' | translate}}:</td><td>{{transaction.confirmations}}</td></tr>
+            <tr><td>{{'ASSET_CURRENCY' | translate}}:</td><td>{{transaction.currency}}</td></tr>
+            <tr><td>{{'REMARK' | translate}}:</td><td>{{transaction.message}}</td></tr>
+        </table>
+    </div>
+</div>

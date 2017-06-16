@@ -72,13 +72,14 @@ angular.module('asch').controller('payCtrl', function ($scope, $rootScope, $filt
         if (!userService.secondPublicKey) {
             $scope.secondPassword = '';
         }
-        transaction = AcchainJS.transaction.createTransaction(String($scope.fromto), amount.toString(), currency, userService.secret, $scope.secondPassword);
+        transaction = AcchainJS.transaction.createTransaction(String($scope.fromto), amount.toString(), currency, $scope.remark, userService.secret, $scope.secondPassword);
         postSerivice.post(transaction).success(function (res) {
             if (res.success == true) {
                 $scope.passwordsure = true;
                 $scope.fromto = '';
                 $scope.amount = '';
                 $scope.secondPassword = '';
+                $scope.remark = '';
                 toast($translate.instant('INF_TRANSFER_SUCCESS'));
             } else {
                 toastError(res.error)

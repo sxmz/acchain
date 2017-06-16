@@ -347,4 +347,8 @@ window.Translations['en-us'] = {
   CHOOSE_NEXT_CATEGORY: 'Please continue choosing next category',
   BYTES_NO_MORE_THAN_256:'Bytes of asset name should be no more than 256',
   BYTES_NO_MORE_THAN_4096:'Bytes of asset description should be no more than 4096',
+  //transactiondetail
+  TRANSACTION_DETAIL: 'Transaction detail',
+  BLOCK_ID: 'Block ID',
+  COMFIRMATIONS: 'Comfirmations',
 };

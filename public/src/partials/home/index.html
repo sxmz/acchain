@@ -34,7 +34,7 @@
 					</tr>
 			</thread>
 			<tr ng-repeat="i in $data"  >
-				<td> {{i.id}}</td>
+				<td> <i class="level" ng-click="showtransactiondetailInfo(i.id)">{{i.id}}</i></td>
 				<td>{{i.type | typeFilter}}</td>
 				<td> <i class="level" ng-click="showaccountdetailInfo(i.senderId)">{{i.senderId}}</i></td>
 				<td class="item_accept"> <i class="level" ng-click="showaccountdetailInfo(i.recipientId)">{{i.recipientId || 'SYSTEM' | translate}}</i></td>

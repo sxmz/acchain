@@ -131,4 +131,9 @@ angular.module('asch').service('apiService', function ($http, $rootScope, $locat
 	this.assetcategorynext = function (params) {
 		return fetch('{{assetcategorynextApi}}', params, 'get');
 	};
+	//added 2017/06/16
+	//Home-获取具体交易信息
+	this.transactiondetail = function(params){
+		return fetch('{{transactiondetailApi}}', params, 'get');
+	};
 });
