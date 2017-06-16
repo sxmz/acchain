@@ -11,7 +11,7 @@ module.exports.connect = function (connectString, cb) {
   var db = dblite(connectString);
   var sql = [
     "CREATE TABLE IF NOT EXISTS blocks (id VARCHAR(64) PRIMARY KEY, version INT NOT NULL, timestamp INT NOT NULL, height INT NOT NULL, previousBlock VARCHAR(64), numberOfTransactions INT NOT NULL, totalFee BIGINT NOT NULL, reward BIGINT NOT NULL, payloadLength INT NOT NULL, payloadHash BINARY(32) NOT NULL, generatorPublicKey BINARY(32) NOT NULL, blockSignature BINARY(64) NOT NULL, FOREIGN KEY ( previousBlock ) REFERENCES blocks ( id ) ON DELETE SET NULL)",
-    "CREATE TABLE IF NOT EXISTS trs (id VARCHAR(64) PRIMARY KEY, blockId VARCHAR(64) NOT NULL, type TINYINT NOT NULL, timestamp INT NOT NULL, senderPublicKey BINARY(32) NOT NULL, senderId VARCHAR(50) NOT NULL, recipientId VARCHAR(50), amount BIGINT NOT NULL, fee BIGINT NOT NULL, signature BINARY(64) NOT NULL, signSignature BINARY(64), requesterPublicKey BINARY(32), signatures TEXT, currency VARCHAR(30), FOREIGN KEY(blockId) REFERENCES blocks(id) ON DELETE CASCADE)",
+    "CREATE TABLE IF NOT EXISTS trs (id VARCHAR(64) PRIMARY KEY, blockId VARCHAR(64) NOT NULL, type TINYINT NOT NULL, timestamp INT NOT NULL, senderPublicKey BINARY(32) NOT NULL, senderId VARCHAR(50) NOT NULL, recipientId VARCHAR(50), amount BIGINT NOT NULL, fee BIGINT NOT NULL, signature BINARY(64) NOT NULL, signSignature BINARY(64), requesterPublicKey BINARY(32), signatures TEXT, currency VARCHAR(30), message VARCHAR(256), FOREIGN KEY(blockId) REFERENCES blocks(id) ON DELETE CASCADE)",
     "CREATE TABLE IF NOT EXISTS signatures (transactionId VARCHAR(64) NOT NULL PRIMARY KEY, publicKey BINARY(32) NOT NULL, FOREIGN KEY(transactionId) REFERENCES trs(id) ON DELETE CASCADE)",
     "CREATE TABLE IF NOT EXISTS delegates(username VARCHAR(20) NOT NULL, transactionId VARCHAR(64) NOT NULL, FOREIGN KEY(transactionId) REFERENCES trs(id) ON DELETE CASCADE)",
     "CREATE TABLE IF NOT EXISTS votes(votes TEXT, transactionId VARCHAR(64) NOT NULL, FOREIGN KEY(transactionId) REFERENCES trs(id) ON DELETE CASCADE)",
@@ -35,7 +35,7 @@ module.exports.connect = function (connectString, cb) {
 
     "CREATE TABLE IF NOT EXISTS map_bigint(key VARCHAR(256) NOT NULL PRIMARY KEY, value BIGINT NOT NULL)",
 
-    // UIA indexs;\
+    // UIA indexs
     "CREATE INDEX IF NOT EXISTS issuers_trs_id ON issuers(transactionId)",
     "CREATE INDEX IF NOT EXISTS issuers_issuer_id ON issuers(issuerId)",
     "CREATE INDEX IF NOT EXISTS assets_trs_id ON assets(transactionId)",
@@ -70,6 +70,7 @@ module.exports.connect = function (connectString, cb) {
     "CREATE INDEX IF NOT EXISTS trs_type on trs(type)",
     "CREATE INDEX IF NOT EXISTS trs_timestamp on trs(timestamp)",
     "CREATE INDEX IF NOT EXISTS trs_currency on trs(currency)",
+    "CREATE INDEX IF NOT EXISTS trs_message on trs(message)",
     "CREATE INDEX IF NOT EXISTS signatures_trs_id ON signatures(transactionId)",
     "CREATE INDEX IF NOT EXISTS votes_trs_id ON votes(transactionId)",
     "CREATE INDEX IF NOT EXISTS delegates_trs_id ON delegates(transactionId)",

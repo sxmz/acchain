@@ -193,6 +193,7 @@ function sendMoney(options) {
     options.to,
     String(options.amount * 1000000),
     options.currency,
+    options.message,
     options.secret,
     options.secondSecret
   );
@@ -295,7 +296,7 @@ function issueAsset(options) {
 }
 
 function exercise(options) {
-  var trs = aschJS.uia.createExercise(options.currency, options.amount, options.secret, options.secondSecret);
+  var trs = aschJS.uia.createExercise(options.currency, options.amount, options.message, options.secret, options.secondSecret);
   getApi().broadcastTransaction(trs, function (err, result) {
     console.log(err || result.transactionId);
   });
@@ -438,6 +439,7 @@ module.exports = function (program) {
     .option("-a, --amount <n>", "")
     .option("-t, --to <address>", "")
     .option("-c, --currency <currency>")
+    .option("-m, --message <message>")
     .action(sendMoney);
 
   program
@@ -522,5 +524,6 @@ module.exports = function (program) {
     .option("-s, --secondSecret <secret>", "")
     .option("-a, --amount <amount>", "")
     .option("-c, --currency <currency>", "")
+    .option("-m, --message <message>", "")
     .action(exercise)
 }

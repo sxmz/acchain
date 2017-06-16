@@ -30,6 +30,7 @@ message Transaction {
   optional int64 height = 13;
   optional string blockId = 14;
   optional string currency = 15;
+  optional string message = 16;
   required Asset asset = 100;
 }
 

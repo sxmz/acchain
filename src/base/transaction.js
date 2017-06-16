@@ -132,6 +132,8 @@ Transaction.prototype.getBytes = function (trs, skipSignature, skipSecondSignatu
 
     bb.writeString(trs.currency || '0')
 
+    if (trs.message) bb.writeString(trs.message)
+
     if (assetSize > 0) {
       for (var i = 0; i < assetSize; i++) {
         bb.writeByte(assetBytes[i]);
@@ -607,7 +609,7 @@ Transaction.prototype.dbSave = function (trs, cb) {
     return cb(e.toString())
   }
 
-  this.scope.dbLite.query("INSERT INTO trs(id, blockId, type, timestamp, senderPublicKey, requesterPublicKey, senderId, recipientId, amount, fee, signature, signSignature, signatures, currency) VALUES($id, $blockId, $type, $timestamp, $senderPublicKey, $requesterPublicKey, $senderId, $recipientId, $amount, $fee, $signature, $signSignature, $signatures, $currency)", {
+  this.scope.dbLite.query("INSERT INTO trs(id, blockId, type, timestamp, senderPublicKey, requesterPublicKey, senderId, recipientId, amount, fee, signature, signSignature, signatures, currency, message) VALUES($id, $blockId, $type, $timestamp, $senderPublicKey, $requesterPublicKey, $senderId, $recipientId, $amount, $fee, $signature, $signSignature, $signatures, $currency, $message)", {
     id: trs.id,
     blockId: trs.blockId,
     type: trs.type,
@@ -621,7 +623,8 @@ Transaction.prototype.dbSave = function (trs, cb) {
     signature: signature,
     signSignature: signSignature,
     signatures: trs.signatures ? trs.signatures.join(',') : null,
-    currency: trs.currency || null
+    currency: trs.currency || null,
+    message: trs.message || null
   }, function (err) {
     if (err) {
       return cb(err);
@@ -696,6 +699,10 @@ Transaction.prototype.objectNormalize = function (trs) {
       },
       asset: {
         type: "object"
+      },
+      message: {
+        type: "string",
+        maxLength: 256
       }
     },
     required: ['type', 'timestamp', 'senderPublicKey', 'signature']
@@ -735,6 +742,7 @@ Transaction.prototype.dbRead = function (raw) {
       signatures: raw.t_signatures ? raw.t_signatures.split(',') : null,
       confirmations: raw.confirmations,
       currency: raw.t_currency,
+      message: raw.t_message,
       asset: {}
     }
 

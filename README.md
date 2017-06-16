@@ -58,14 +58,16 @@ Then you can open ```localhost:8008``` in you browser
 
 ## Default localnet genesis account
 
+You can use this account to test acchain immediately
+
 ```
 {
   "keypair": {
-    "publicKey": "8065a105c785a08757727fded3a06f8f312e73ad40f1f3502e0232ea42e67efd",
-    "privateKey": "a64af28537545301f66579604628b55c7a7a102752bbd8f0b0d152f9754e78d58065a105c785a08757727fded3a06f8f312e73ad40f1f3502e0232ea42e67efd"
+    "publicKey": "67ac5286a374c053df43c5376bd2294c20e0defd61aa6596bb747f16e87d44b6",
+    "privateKey": "09e5169152d3590877026995c02456cdc01698876498b6fe6f906db11be0d92f67ac5286a374c053df43c5376bd2294c20e0defd61aa6596bb747f16e87d44b6"
   },
-  "address": "14762548536863074694",
-  "secret": "someone manual strong movie roof episode eight spatial brown soldier soup motor"
+  "address": "ALbSNySoqbJYomcJCpMcBdyv1os6aRZ4v",
+  "secret": "debris prosper crush furnace bomb start problem regular abandon ice artefact clay"
 }
 ```
 

@@ -15,7 +15,7 @@ function toLocalBuffer(buf) {
   }
 }
 
-function createTransaction(asset, bytes, fee, type, recipientId, secret, secondSecret) {
+function createTransaction(asset, bytes, fee, type, recipientId, message, secret, secondSecret) {
   var keys = crypto.getKeys(secret)
 
   var transaction = {
@@ -25,6 +25,7 @@ function createTransaction(asset, bytes, fee, type, recipientId, secret, secondS
     recipientId: recipientId,
     senderPublicKey: keys.publicKey,
     timestamp: getClientFixedTime(),
+    message: message,
     asset: asset,
     __assetBytes__: bytes
   }
@@ -57,7 +58,7 @@ module.exports = {
     var bytes = toLocalBuffer(bb)
     //var fee = (100 + (Math.floor(bytes.length / 200) + 1) * 0.1) * constants.coin
     var fee = 100 * constants.coin
-    return createTransaction(asset, bytes, fee, 9, null, secret, secondSecret)
+    return createTransaction(asset, bytes, fee, 9, null, null, secret, secondSecret)
   },
 
   createAsset: function (data, secret, secondSecret) {
@@ -92,7 +93,7 @@ module.exports = {
     var bytes = toLocalBuffer(bb)
     // var fee = (500 + (Math.floor(bytes.length / 200) + 1) * 0.1) * constants.coin
     var fee = 10 * constants.coin
-    return createTransaction(asset, bytes, fee, 10, null, secret, secondSecret)
+    return createTransaction(asset, bytes, fee, 10, null, null, secret, secondSecret)
   },
 
   createIssue: function (currency, amount, exchangeRate, secret, secondSecret) {
@@ -110,7 +111,7 @@ module.exports = {
     bb.flip()
     var bytes = toLocalBuffer(bb)
     var fee = 100 * constants.coin
-    return createTransaction(asset, bytes, fee, 11, null, secret, secondSecret)
+    return createTransaction(asset, bytes, fee, 11, null, null, secret, secondSecret)
   },
 
   createApproval: function (topic, value, secret, secondSecret) {
@@ -126,10 +127,10 @@ module.exports = {
     bb.flip()
     var bytes = toLocalBuffer(bb)
     var fee = 1 * constants.coin
-    return createTransaction(asset, bytes, fee, 8, null, secret, secondSecret)
+    return createTransaction(asset, bytes, fee, 8, null, null, secret, secondSecret)
   },
 
-  createExercise: function (currency, amount, secret, secondSecret) {
+  createExercise: function (currency, amount, message, secret, secondSecret) {
     var asset = {
       uiaExercise: {
         currency: currency,
@@ -142,6 +143,6 @@ module.exports = {
     bb.flip()
     var bytes = toLocalBuffer(bb)
     var fee = 0.1 * constants.coin
-    return createTransaction(asset, bytes, fee, 12, null, secret, secondSecret)
+    return createTransaction(asset, bytes, fee, 12, null, message, secret, secondSecret)
   },
 }

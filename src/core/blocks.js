@@ -46,6 +46,7 @@ private.blocksDataFields = {
   't_signature': String,
   't_signSignature': String,
   't_currency': String,
+  't_message': String,
   's_publicKey': String,
   'd_username': String,
   'v_votes': String,
@@ -95,7 +96,7 @@ private.lastPropose = null;
 
 const FULL_BLOCK_QUERY = "SELECT " +
   "b.id, b.version, b.timestamp, b.height, b.previousBlock, b.numberOfTransactions, b.totalFee, b.reward, b.payloadLength, lower(hex(b.payloadHash)), lower(hex(b.generatorPublicKey)), lower(hex(b.blockSignature)), " +
-  "t.id, t.type, t.timestamp, lower(hex(t.senderPublicKey)), t.senderId, t.recipientId, t.amount, t.fee, lower(hex(t.signature)), lower(hex(t.signSignature)), t.currency, " +
+  "t.id, t.type, t.timestamp, lower(hex(t.senderPublicKey)), t.senderId, t.recipientId, t.amount, t.fee, lower(hex(t.signature)), lower(hex(t.signSignature)), t.currency, t.message, " +
   "lower(hex(s.publicKey)), " +
   "d.username, " +
   "v.votes, " +

@@ -152,6 +152,8 @@ function getBytes(transaction) {
 	bb.writeString(transaction.amount);
 	bb.writeString(transaction.currency || '0')
 
+	if (transaction.message) bb.writeString(transaction.message)
+
 	if (assetSize > 0) {
 		for (var i = 0; i < assetSize; i++) {
 			bb.writeByte(assetBytes[i]);

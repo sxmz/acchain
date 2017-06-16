@@ -8,7 +8,7 @@ function calculateFee(amount) {
     return fee < min ? min : fee;
 }
 
-function createTransaction(recipientId, amount, currency, secret, secondSecret) {
+function createTransaction(recipientId, amount, currency, message, secret, secondSecret) {
 	var transaction = {
 		type: 0,
 		currency: currency,
@@ -16,6 +16,7 @@ function createTransaction(recipientId, amount, currency, secret, secondSecret) 
 		fee: constants.fees.send,
 		recipientId: recipientId,
 		timestamp: slots.getTime() - constants.clientDriftSeconds,
+		message: message,
 		asset: {}
 	};
 
