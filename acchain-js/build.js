@@ -1,1 +1,1 @@
-window.AschJS = AschJS = require('./index.js');
+window.AcchainJS = AcchainJS = require('./index.js');
