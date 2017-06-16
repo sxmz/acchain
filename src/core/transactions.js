@@ -867,7 +867,8 @@ shared.addTransactions = function (req, cb) {
                 recipientId: recipientId,
                 keypair: keypair,
                 secondKeypair: secondKeypair,
-                currency: body.currency
+                currency: body.currency,
+                message: body.message
               });
             } catch (e) {
               return cb(e.toString());
