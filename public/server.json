@@ -2,7 +2,7 @@
 	"server": {
 		"dev": "http://localhost:4096",
 		"dev2": "https://tnode.acchain.org",
-		"dev3": "http://192.168.1.79:5000"
+		"dev3": "http://192.168.1.152:5000"
 	},
 	//登录接口
 	"loginApi": {
@@ -140,5 +140,9 @@
 	//注册资产-获取资产类别下级类目
 	"assetcategorynextApi":{
 		"url": "/api/uia/categories/:id"
+	},
+	//Home-获取具体交易信息
+	"transactiondetailApi":{
+		"url": "/api/transactions/get"
 	}
 }
