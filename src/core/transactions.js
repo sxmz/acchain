@@ -598,8 +598,12 @@ shared.getTransactions = function (req, cb) {
       },
       currency: {
         type: "string",
-        minimum: 1,
-        maximum: 22
+        minLength: 1,
+        maxLength: 30
+      },
+      message: {
+        type: "string",
+        maxLength: 256
       }
     }
   }, function (err) {
@@ -741,6 +745,10 @@ shared.addTransactions = function (req, cb) {
       currency: {
         type: "string",
         maxLength: 30
+      },
+      message: {
+        type: "string",
+        maxLength: 256
       }
     },
     required: ["secret", "amount", "recipientId"]
@@ -822,7 +830,8 @@ shared.addTransactions = function (req, cb) {
                   keypair: keypair,
                   requester: keypair,
                   secondKeypair: secondKeypair,
-                  currency: body.currency
+                  currency: body.currency,
+                  message: body.message
                 });
               } catch (e) {
                 return cb(e.toString());
