@@ -641,7 +641,18 @@ shared.getTransaction = function (req, cb) {
       if (!transaction || err) {
         return cb("Transaction not found");
       }
-      cb(null, { transaction: transaction });
+      if (!transaction.currency) {
+        transaction.precision = 6
+        transaction.amountShow = bignum(transaction.amount).div(Math.pow(10, transaction.precision)).toString()
+        return cb(null, { transaction: transaction });
+      } else {
+        library.model.getAssetByCurrency(transaction.currency, function (err, assetInfo) {
+          if (err) return cb('Failed to get asset info: ' + transaction.currency)
+          transaction.precision = assetInfo.precision
+          transaction.amountShow = bignum(transaction.amount).div(Math.pow(10, transaction.precision)).toString()
+          return cb(null, {transaction: transaction})
+        })
+      }
     });
   });
 }
