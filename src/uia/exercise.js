@@ -115,12 +115,12 @@ function Exercise() {
   }
 
   this.dbRead = function (raw) {
-    if (!raw.exercises_currency) {
+    if (!raw.t_id) {
       return null
     } else {
       var asset = {
         transactionId: raw.t_id,
-        currency: raw.exercises_currency,
+        currency: raw.exercises_currency2,
         amount: raw.exercises_amount
       }
 
