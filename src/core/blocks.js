@@ -689,6 +689,10 @@ Blocks.prototype.setLastBlock = function (block) {
     if (block.height > 89401 && !private.blocksDataFields['t_message']) {
       private.blocksDataFields['t_message'] = String
     }
+  } else {
+    if (!private.blocksDataFields['t_message']) {
+      private.blocksDataFields['t_message'] = String
+    }
   }
 }
 
