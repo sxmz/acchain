@@ -46,7 +46,7 @@ private.blocksDataFields = {
   't_signature': String,
   't_signSignature': String,
   't_currency': String,
-  't_message': String,
+  //'t_message': String,
   's_publicKey': String,
   'd_username': String,
   'v_votes': String,
@@ -685,6 +685,11 @@ Blocks.prototype.loadBlocksOffset = function (limit, offset, verify, cb) {
 
 Blocks.prototype.setLastBlock = function (block) {
   private.lastBlock = block
+  if (global.Config.netVersion === 'mainnet') {
+    if (block.height > 89401 && !private.blocksDataFields['t_message']) {
+      private.blocksDataFields['t_message'] = String
+    }
+  }
 }
 
 Blocks.prototype.getLastBlock = function () {
@@ -1068,7 +1073,6 @@ Blocks.prototype.loadBlocksFromPeer = function (peer, lastCommonBlockId, cb) {
 
         blocks = blocks.map(library.dbLite.row2parsed, library.dbLite.parseFields(private.blocksDataFields));
         blocks = private.readDbRows(blocks);
-
         if (blocks.length == 0) {
           loaded = true;
           next();
