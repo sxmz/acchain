@@ -46,7 +46,7 @@ private.blocksDataFields = {
   't_signature': String,
   't_signSignature': String,
   't_currency': String,
-  //'t_message': String,
+  't_message': String,
   's_publicKey': String,
   'd_username': String,
   'v_votes': String,
@@ -686,12 +686,10 @@ Blocks.prototype.loadBlocksOffset = function (limit, offset, verify, cb) {
 Blocks.prototype.setLastBlock = function (block) {
   private.lastBlock = block
   if (global.Config.netVersion === 'mainnet') {
-    if (block.height > 89401 && !private.blocksDataFields['t_message']) {
+    if (block.height > 89401) {
       private.blocksDataFields['t_message'] = String
-    }
-  } else {
-    if (!private.blocksDataFields['t_message']) {
-      private.blocksDataFields['t_message'] = String
+    } else {
+      delete private.blocksDataFields['t_message']
     }
   }
 }
