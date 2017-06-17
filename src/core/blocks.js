@@ -3,6 +3,7 @@ var crypto = require('crypto');
 var ip = require('ip');
 var ByteBuffer = require("bytebuffer");
 var async = require('async');
+var extend = require('util-extend');
 var ed = require('../utils/ed.js');
 var bignum = require('bignumber');
 var constants = require("../utils/constants.js");
@@ -86,6 +87,7 @@ private.blocksDataFields = {
   'exercises_currency2': String,
   'exercises_amount': String
 };
+
 // @formatter:on
 private.loaded = false;
 private.isActive = false;
@@ -131,6 +133,7 @@ function Blocks(cb, scope) {
   genesisblock = library.genesisblock;
   self = this;
   self.__private = private;
+
   private.attachApi();
 
   private.saveGenesisBlock(function (err) {
@@ -685,13 +688,6 @@ Blocks.prototype.loadBlocksOffset = function (limit, offset, verify, cb) {
 
 Blocks.prototype.setLastBlock = function (block) {
   private.lastBlock = block
-  if (global.Config.netVersion === 'mainnet') {
-    if (block.height > 89401) {
-      private.blocksDataFields['t_message'] = String
-    } else {
-      delete private.blocksDataFields['t_message']
-    }
-  }
 }
 
 Blocks.prototype.getLastBlock = function () {
@@ -1072,7 +1068,14 @@ Blocks.prototype.loadBlocksFromPeer = function (peer, lastCommonBlockId, cb) {
         if (!report) {
           return next("Error, can't parse blocks...");
         }
-
+        if (blocks[0] && blocks[0].length == 61) {
+          blocks.forEach(function (b) {
+            for (var i = 62; i >= 24; --i) {
+              b[i] = b[i-1]
+            }
+            b[23] = ''
+          })
+        }
         blocks = blocks.map(library.dbLite.row2parsed, library.dbLite.parseFields(private.blocksDataFields));
         blocks = private.readDbRows(blocks);
         if (blocks.length == 0) {

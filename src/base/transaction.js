@@ -716,6 +716,7 @@ Transaction.prototype.objectNormalize = function (trs) {
   try {
     trs = private.types[trs.type].objectNormalize.call(this, trs);
   } catch (e) {
+    library.logger.error('transaction asset normalize failed: ', trs)
     throw Error(e.toString());
   }
 
