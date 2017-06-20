@@ -8,6 +8,10 @@
     td:nth-child(1){
         min-width: 180px;
     }
+    td:nth-child(2){
+        max-width: 528px;
+        overflow: auto;
+    }
   }
   .h_header {
     height: 70px;

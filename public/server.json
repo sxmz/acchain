@@ -1,7 +1,7 @@
 {
 	"server": {
 		"dev": "http://localhost:4096",
-		"dev2": "https://tnode.acchain.org",
+		"dev2": "https://testnet.acchain.org",
 		"dev3": "http://192.168.1.152:5000"
 	},
 	//登录接口
