@@ -2,7 +2,7 @@ var async = require('async');
 var crypto = require('crypto');
 var extend = require('util-extend');
 var ByteBuffer = require("bytebuffer");
-var ed = require('ed25519');
+var ed = require('../utils/ed.js');
 var bignum = require('bignumber');
 var constants = require('../utils/constants.js');
 var slots = require('../utils/slots.js');
@@ -716,6 +716,7 @@ Transaction.prototype.objectNormalize = function (trs) {
   try {
     trs = private.types[trs.type].objectNormalize.call(this, trs);
   } catch (e) {
+    library.logger.error('transaction asset normalize failed: ', trs)
     throw Error(e.toString());
   }
 
