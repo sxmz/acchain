@@ -580,6 +580,10 @@ shared.exerciseAsset = function (req, cb) {
       currency: {
         type: 'string',
         maxLength: 30
+      },
+      message: {
+        type: 'string',
+        maxLength: 256
       }
     }
   }, function (err) {
@@ -644,6 +648,7 @@ shared.exerciseAsset = function (req, cb) {
                 type: TransactionTypes.UIA_EXERCISE,
                 currency: body.currency,
                 amount: body.amount,
+                message: body.message,
                 sender: account,
                 keypair: keypair,
                 secondKeypair: secondKeypair,
@@ -680,6 +685,7 @@ shared.exerciseAsset = function (req, cb) {
               type: TransactionTypes.UIA_EXERCISE,
               currency: body.currency,
               amount: body.amount,
+              message: body.message,
               sender: account,
               keypair: keypair,
               secondKeypair: secondKeypair
