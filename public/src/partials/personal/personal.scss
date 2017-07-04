@@ -108,11 +108,17 @@
         }
     }
     .address_text{
+        position: relative;
         width: 61%;
         height: 100%;
         border-left: 1px solid #e1e4e9;
         border-bottom: 1px solid #e1e4e9;
         float: left;
+        img{
+            position: absolute;
+            right: 6.82011%;
+            top: 40px;
+        }
         .oneFont{
             margin: 60px 0 0 30px ;
         }

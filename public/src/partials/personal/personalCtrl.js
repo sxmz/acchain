@@ -6,7 +6,7 @@ angular.module('asch').controller('personalCtrl', function ($scope, $rootScope, 
 	// 账单默认显示
 	$scope.accountInfo = true;
 	$scope.passwordInfo = false;
-
+	$scope.qrcode = userService.address;
 	// 二级密码 $scope.secondpassword
 
 	$scope.init = function (params) {
