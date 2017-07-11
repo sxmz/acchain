@@ -42,6 +42,8 @@ angular.module('asch').controller('blockdetailCtrl', function ($scope, $rootScop
                 $rootScope.isBodyMask = true;
                 $rootScope.accountdetailinfo = false;
                 $rootScope.dealdetailinfo = false;
+                res.block.totalFee = res.block.totalFee / Math.pow(10,6);
+                res.block.reward = res.block.reward / Math.pow(10,6);
                 $scope.block = res.block;
             };
         }).error(function () {
