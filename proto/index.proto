@@ -48,6 +48,7 @@ message Asset {
     AssetUIAIssuer uiaIssuer = 10;
     AssetUIAAsset uiaAsset = 10;
     AssetUIAIssue uiaIssue = 11;
+    AssetUIAExercise uiaExercise = 12;
   }
 }
 
