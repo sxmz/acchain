@@ -375,4 +375,5 @@ window.Translations['zh-cn'] = {
   LOADING_DATA: '加载数据中...',
   SHOW_MORE: '显示更多',
   NO_MORE_DATA: '没有更多了',
+  CURRENT_BLOCK_HEIGHT: '当前区块高度',
 };

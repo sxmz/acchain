@@ -179,6 +179,9 @@ angular.module('asch').controller('blockchainCtrl', function ($scope, $rootScope
 	    		if(res.count != 0){
 	    			$rootScope.isBodyMask = true;
 	    			$rootScope.otherbalancesInfo = true;
+	    			for(var i=0;i<res.balances.length;i++){
+	    				res.balances[i].balance = res.balances[i].balance / Math.pow(10,res.balances[i].precision);
+	    			}
 	    			$scope.otherbalances = res.balances;	
 	    		}else{
 	    			toastError($translate.instant('NO_OTHERBALANCES'));

@@ -139,7 +139,7 @@
 				<ul class="fl statistic">
 					<li class="title"><span>{{'TRANSACTION_STATISTIC' | translate}}</span></li>
 					<li><span>{{'TRANSACTION_TIMES' | translate}}</span><span class="info">{{addrTransactionCount}}</span></li>
-					<li><span>{{'LATEST_BLOCK' | translate}}</span><span class="info level" ng-click="showBlockTransactionsByHeight(addressInfo.latestBlock.height)">{{addressInfo.latestBlock.height}}</span></li>
+					<li><span>{{'CURRENT_BLOCK_HEIGHT' | translate}}</span><span class="info level" ng-click="showBlockTransactionsByHeight(addressInfo.latestBlock.height)">{{addressInfo.latestBlock.height}}</span></li>
 				</ul>
 			</div>
 		</div>
@@ -169,7 +169,7 @@
 						</span>
 					</li>
 					<p class="clearfix">
-						<span class="fr color_btn" ng-class="{'red_bg':addressInfo.account.address == addressItem.senderId}"><em ng-show="addressInfo.account.address == addressItem.senderId">-</em>{{addressItem.amountShow}} {{addressItem.currency}}</span>
+						<span class="fr color_btn" ng-class="{'red_bg':addressInfo.account.address == addressItem.senderId}"><em ng-show="addressInfo.account.address == addressItem.senderId && addressItem.amountShow != '0'">-</em>{{addressItem.amountShow}} {{addressItem.currency}}</span>
 						<span class="fr color_btn"><em>{{addressItem.confirmations}}</em> {{'TRANSACTION_CONFIRMATIONS' | translate}}</span>
 					</p>
 				</ul>

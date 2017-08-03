@@ -239,7 +239,7 @@
             
             li{
                 padding: 20px 20px;
-                font-size: 12px;
+                
                 color: #656f7b;
                 .data_id{
                     cursor: pointer;
@@ -335,7 +335,6 @@
     }
     .addresstransTop{
         width: 100%;
-        min-height: 400px;
         border: 1px solid #e1e4e9;
         background-color: #fff;
         border-radius: 6px;
@@ -401,7 +400,7 @@
             
             li{
                 padding: 20px 20px;
-                font-size: 12px;
+                
                 color: #656f7b;
                 .data_id{
                     cursor: pointer;
@@ -542,7 +541,7 @@
                 }
             }
             
-            li:nth-child(odd){
+            li:nth-child(even){
                 background: #f8fbfc;
             }
             li.title{
@@ -576,7 +575,7 @@
             
             li{
                 padding: 20px 20px;
-                font-size: 12px;
+                
                 color: #656f7b;
                 .data_time{
                     margin-left: 10px;

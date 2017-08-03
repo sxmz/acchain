@@ -380,4 +380,5 @@ window.Translations['en-us'] = {
   LOADING_DATA: 'Loading data...',
   SHOW_MORE: 'Show more',
   NO_MORE_DATA: 'No more',
+  CURRENT_BLOCK_HEIGHT: 'Current Block Height',
 };
