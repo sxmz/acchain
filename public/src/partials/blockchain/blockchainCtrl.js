@@ -52,7 +52,6 @@ angular.module('asch').controller('blockchainCtrl', function ($scope, $rootScope
 			$scope.init();
 		}
 		var content = $scope.search.replace(/(^\s*)|(\s*$)/g, "");
-		//console.log(content+":"+content.length);
 		if(/^[A-Za-z\d]{33,34}$/.test(content)){
 			$rootScope.showAddressTransactions(content);
 		}else if(/^\d+$/.test(content)){
@@ -110,19 +109,6 @@ angular.module('asch').controller('blockchainCtrl', function ($scope, $rootScope
 		$scope.blockTransactions = new TransactionRecords(i,"block");
 	}
 	//地址下的交易详情
-//	$scope.addressTransactions = new TransactionRecords("AHPMTUbhfh9CmT2yw3gnk2UYZjsLntzGkS","address");
-//	apiService.accountdetail({
-//		address: "AHPMTUbhfh9CmT2yw3gnk2UYZjsLntzGkS"
-//	}).success(function (res) {
-//		res.account.balance = res.account.balance / Math.pow(10,6);
-//		$scope.addressInfo = res;
-//	});
-//	apiService.transactions({
-//		senderId:"AHPMTUbhfh9CmT2yw3gnk2UYZjsLntzGkS",//56条
-//  	recipientId:"AHPMTUbhfh9CmT2yw3gnk2UYZjsLntzGkS"
-//	}).success(function (res) {
-//		$scope.addrTransactionCount = res.count;
-//	});
 	$rootScope.showAddressTransactions = function(i){
 		if(i == "System")return;
 		$scope.addressTransactions = new TransactionRecords(i,"address");
@@ -155,20 +141,6 @@ angular.module('asch').controller('blockchainCtrl', function ($scope, $rootScope
 		
 	}
 	//根据交易id查询交易信息
-//	apiService.transactiondetail({
-//		id: "0be2d7c8602de90ee663a38df0b6da3257e658200351100dc4ba6ff3f7ae50d7"
-//  }).success(function (res) {
-//  	if(res.success){
-//  		res.transaction.currency = res.transaction.currency === ""?"ACC":res.transaction.currency;
-//	    	res.transaction.fee = res.transaction.fee / Math.pow(10,6);
-//	    	$scope.bytesCount = JSON.stringify(res).length;
-//			$scope.transactionsDetail = res.transaction;
-//  	}else{
-//  		toast(res.error);
-//  	}
-//	}).error(function (res) {
-//		toastError($translate.instant('ERR_SERVER_ERROR'));
-//	});
 	$rootScope.showTransactionDetailById=function(i){
 		apiService.transactiondetail({
 			id: i
