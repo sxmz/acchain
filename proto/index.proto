@@ -46,8 +46,9 @@ message Asset {
     AssetOutTransfer outTransfer = 8;
     AssetApproval approval = 9;
     AssetUIAIssuer uiaIssuer = 10;
-    AssetUIAAsset uiaAsset = 10;
-    AssetUIAIssue uiaIssue = 11;
+    AssetUIAAsset uiaAsset = 11;
+    AssetUIAIssue uiaIssue = 12;
+    AssetUIAExercise uiaExercise = 13;
   }
 }
 

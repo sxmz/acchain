@@ -27,7 +27,7 @@ function Api(options) {
   this.host = this.options.host || "127.0.0.1";
   this.port = this.options.port || (this.mainnet ? 4000 : 5000);
   this.baseUrl = "http://" + this.host + ":" + this.port;
-  this.magic = this.mainnet ? '5f5b3cf5' : '8e9b66ed';
+  this.magic = this.mainnet ? '7e9b88ed' : '8e9b66ed';
 }
 
 Api.prototype.get = function (path, params, cb) {
