@@ -153,3 +153,541 @@
   cursor: pointer;
   font-style: normal;
 }
+
+#transactionsUnderBlock{
+    .latest {
+          height: 70px;
+          line-height: 70px;
+          padding: 0 0 0 40px;
+          border: 0;
+          .table_title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #394047;
+            .grey{
+                font-weight: normal;
+                color: #999999;
+            }
+          }
+          .return{
+                margin: 15px 30px 0 0;
+                padding: 0 20px;
+                height: 40px;
+                background: #4199f3;
+                color: #fff;
+                float: right;
+                line-height: 40px;
+                border-radius: 3px;
+                cursor: pointer;
+          }
+    }
+    .blocktransTop{
+        width: 100%;
+        min-height: 400px;
+        border: 1px solid #e1e4e9;
+        background-color: #fff;
+        border-radius: 6px;
+        .block_info{
+            margin: 0 20px 20px 20px;
+            li{
+                padding:20px 0;
+                font-size: 14px;
+                position: relative;
+                color: #656f7b;
+                span{
+                    padding-left: 20px;
+                }
+                span.info{
+                    position: absolute;
+                    left: 160px;
+                    word-break: break-all;
+                }
+            }
+            
+            li:nth-child(odd){
+                background: #f8fbfc;
+            }
+            li.title{
+                padding: 10px 0;
+                background: #eef0f3;
+            }
+        }
+    }
+    .blocktransBottom{
+        width: 100%;
+        border: 1px solid #e1e4e9;
+        background-color: #fff;
+        border-radius: 6px;
+        margin-top: 30px;
+        .no_records{
+            width: 100px;
+            margin: 100px auto;
+            text-align: center;
+            color: #acadad;
+            p{
+                margin-top: 10px;
+            }
+        }
+        .transactions{
+            margin: 0 20px 20px 20px;
+            .fl{
+                float: left;
+            }
+            .fr{
+                float: right;
+            }
+            
+            li{
+                padding: 20px 20px;
+                font-size: 12px;
+                color: #656f7b;
+                .data_id{
+                    cursor: pointer;
+                }
+                .data_id:hover{
+                    color: #4199f3;
+                }
+                .data_time{
+                    margin-left: 10px;
+                }
+                .data_num,.data_time{
+                    color: #919ab0;
+                }
+            }
+            li:first-child{
+                background: #eef0f3;
+                padding: 10px 20px;
+            }
+            .color_btn{
+                height: 40px;
+                line-height: 40px;
+                padding: 0 20px;
+                display: inline-block;
+                color: white;
+                border-radius: 5px;
+                background: #4199f3;
+            }
+            .color_btn:first-child{
+                background: #61c161;
+                margin-left: 10px;
+            }
+            .transaction_info{
+                img{
+                    margin: 0 30px 0 30px;
+                    position: relative;
+                    top: 6px;
+                }
+                p{
+                    margin-top: 12px;
+                }
+                span.fl,span.fr{
+                    display: inline-block;
+                    width: 44%;
+                }
+            }
+        }
+        .loading{
+            margin-top: 20px;
+            text-align: center;
+        }
+        .show_more_records{
+            height: 40px;
+            line-height: 40px;
+            background: #eaf1f7;
+            text-align: center;
+            color: #a1b3c9;
+            font-size: 14px;
+            margin: 40px 20px 30px 20px;
+            cursor: pointer;
+        }
+    }
+    
+    
+}
+#transactionsUnderAddress{
+    .fl{
+        float: left;
+    }
+    .fr{
+        float: right;
+    }
+    .latest {
+          height: 70px;
+          line-height: 70px;
+          padding: 0 0 0 40px;
+          border: 0;
+          .table_title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #394047;
+          }
+          .return{
+                margin: 15px 30px 0 0;
+                padding: 0 20px;
+                height: 40px;
+                background: #4199f3;
+                color: #fff;
+                float: right;
+                line-height: 40px;
+                border-radius: 3px;
+                cursor: pointer;
+          }
+    }
+    .addresstransTop{
+        width: 100%;
+        min-height: 400px;
+        border: 1px solid #e1e4e9;
+        background-color: #fff;
+        border-radius: 6px;
+        .address{
+            margin: 0 20px 20px 20px;
+            .profile{
+                width: 64%;
+                .level{
+                    margin-right: 20px;
+                }
+            }
+            .statistic{
+                width: 34%;
+                margin-left: 2%;
+            }
+            li{
+                padding:20px 0;
+                font-size: 14px;
+                position: relative;
+                color: #656f7b;
+                span{
+                    padding-left: 20px;
+                }
+                span.info{
+                    position: absolute;
+                    left: 160px;
+                    word-break: break-all;
+                }
+            }
+            
+            li:nth-child(odd){
+                background: #f8fbfc;
+            }
+            li.title{
+                padding: 10px 0;
+                background: #eef0f3;
+            }
+        }
+    }
+    .addresstransBottom{
+        width: 100%;
+        border: 1px solid #e1e4e9;
+        background-color: #fff;
+        border-radius: 6px;
+        margin-top: 30px;
+        .no_records{
+            width: 100px;
+            margin: 100px auto;
+            text-align: center;
+            color: #acadad;
+            p{
+                margin-top: 10px;
+            }
+        }
+        .transactions{
+            margin: 0 20px 20px 20px;
+            .fl{
+                float: left;
+            }
+            .fr{
+                float: right;
+            }
+            
+            li{
+                padding: 20px 20px;
+                font-size: 12px;
+                color: #656f7b;
+                .data_id{
+                    cursor: pointer;
+                }
+                .data_id:hover{
+                    color: #4199f3;
+                }
+                .data_time{
+                    margin-left: 10px;
+                }
+                .data_num,.data_time{
+                    color: #919ab0;
+                }
+            }
+            li:first-child{
+                background: #eef0f3;
+                padding: 10px 20px;
+            }
+            .color_btn{
+                height: 40px;
+                line-height: 40px;
+                padding: 0 20px;
+                display: inline-block;
+                color: white;
+                border-radius: 5px;
+                background: #4199f3;
+            }
+            .color_btn:first-child{
+                background: #61c161;
+                margin-left: 10px;
+            }
+            .color_btn.red_bg{
+                background: #e83a3a;
+            }
+            .transaction_info{
+                img{
+                    margin: 0 30px 0 30px;
+                    position: relative;
+                    top: 6px;
+                }
+                p{
+                    margin-top: 12px;
+                }
+                span.fl,span.fr{
+                    display: inline-block;
+                    width: 44%;
+                }
+            }
+        }
+        .loading{
+            margin-top: 20px;
+            text-align: center;
+        }
+        .show_more_records{
+            height: 40px;
+            line-height: 40px;
+            background: #eaf1f7;
+            text-align: center;
+            color: #a1b3c9;
+            font-size: 14px;
+            margin: 40px 20px 30px 20px;
+            cursor: pointer;
+        }
+    }
+    
+    
+}
+#transactionsDetail{
+    .fl{
+        float: left;
+    }
+    .fr{
+        float: right;
+    }
+    .latest {
+          height: 70px;
+          line-height: 70px;
+          padding: 0 0 0 40px;
+          border: 0;
+          .table_title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #394047;
+            .grey{
+                font-weight: normal;
+                color: #999999;
+            }
+          }
+          .return{
+                margin: 15px 30px 0 0;
+                padding: 0 20px;
+                height: 40px;
+                background: #4199f3;
+                color: #fff;
+                float: right;
+                line-height: 40px;
+                border-radius: 3px;
+                cursor: pointer;
+          }
+    }
+    .transactionsDetailBottom{
+        width: 100%;
+        min-height: 400px;
+        border: 1px solid #e1e4e9;
+        background-color: #fff;
+        border-radius: 6px;
+        margin-top: 30px;
+        .address{
+            margin: 0 20px 20px 20px;
+            .profile{
+                width: 49%;
+                .level{
+                    margin-right: 20px;
+                }
+                .latest{
+                    padding: 0 0 0 20px;
+                }
+            }
+            .statistic{
+                width: 49%;
+                margin-left: 2%;
+                .latest{
+                    padding: 0 0 0 20px;
+                }
+            }
+            li{
+                padding:20px 0;
+                font-size: 14px;
+                position: relative;
+                color: #656f7b;
+                span{
+                    padding-left: 20px;
+                }
+                span.info{
+                    position: absolute;
+                    left: 160px;
+                    word-break: break-all;
+                }
+            }
+            
+            li:nth-child(odd){
+                background: #f8fbfc;
+            }
+            li.title{
+                padding: 10px 0;
+                background: #eef0f3;
+            }
+        }
+    }
+    .transactionsDetailTop{
+        width: 100%;
+        border: 1px solid #e1e4e9;
+        background-color: #fff;
+        border-radius: 6px;
+        .no_records{
+            width: 100px;
+            margin: 100px auto;
+            text-align: center;
+            color: #acadad;
+            p{
+                margin-top: 10px;
+            }
+        }
+        .transactions{
+            margin: 0 20px 20px 20px;
+            .fl{
+                float: left;
+            }
+            .fr{
+                float: right;
+            }
+            
+            li{
+                padding: 20px 20px;
+                font-size: 12px;
+                color: #656f7b;
+                .data_time{
+                    margin-left: 10px;
+                }
+                .data_num,.data_time{
+                    color: #919ab0;
+                }
+            }
+            li:first-child{
+                background: #eef0f3;
+                padding: 10px 20px;
+            }
+            .color_btn{
+                height: 40px;
+                line-height: 40px;
+                padding: 0 20px;
+                display: inline-block;
+                color: white;
+                border-radius: 5px;
+                background: #4199f3;
+            }
+            .color_btn:first-child{
+                background: #61c161;
+                margin-left: 10px;
+            }
+            .color_btn.red_bg{
+                background: #e83a3a;
+            }
+            .transaction_info{
+                img{
+                    margin: 0 30px 0 30px;
+                    position: relative;
+                    top: 6px;
+                }
+                p{
+                    margin-top: 12px;
+                }
+                span.fl,span.fr{
+                    display: inline-block;
+                    width: 44%;
+                }
+            }
+        }
+        .loading{
+            margin-top: 20px;
+            text-align: center;
+        }
+        .show_more_records{
+            height: 40px;
+            line-height: 40px;
+            background: #eaf1f7;
+            text-align: center;
+            color: #a1b3c9;
+            font-size: 14px;
+            margin: 40px 20px 30px 20px;
+            cursor: pointer;
+        }
+    }
+    
+    
+}
+.blockchainwrap{
+    .dialog {
+        width: 600px;
+        height: 350px;
+        position: fixed;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #ffffff;
+        color: #999999;
+        z-index: 37;
+        border-radius: 5px;
+        .dialog_tit{
+            line-height: 68px;
+            text-align: center;
+            font-size: 24px;
+            color: #575b63;
+            position: relative;
+            img{
+                width: 32px;
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                cursor: pointer;
+            }
+        }
+        ul{
+            margin: 0 20px;
+            max-height: 240px;
+            overflow-y: auto;
+            li{
+                padding: 20px 0;
+                font-size: 14px;
+                position: relative;
+                color: #656f7b;
+                
+                .currency{
+                  color: #919ab0;  
+                }
+                span {
+                    float: left;
+                    width: 50%;
+                    text-align: center;
+                }
+            }
+            li:nth-child(odd) {
+                background: #f8fbfc;
+            }
+        }
+    }
+}

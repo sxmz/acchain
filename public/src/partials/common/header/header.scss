@@ -1,5 +1,8 @@
 #header {
-    position: absolute;
+    /*position: absolute;
+    20170731-适配ngScorll调整左侧菜单为fixed定位*/
+    position: fixed;
+    
     //height: 119px;
     width: 200px;
     top: 0;

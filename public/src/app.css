@@ -509,7 +509,9 @@ body {
     top: 0px;
     left: 200px;
     right: 0;
-    height: 100%;
+    /*height: 100%;
+    20170731-适配ngScorll调整右侧内容高度为最低100%*/
+    min-height: 100%;
     overflow-y: auto;
     padding: 30px 48px 30px 48px;
     -webkit-box-sizing: border-box;
@@ -534,7 +536,9 @@ body {
 }
 
 .bodyMask {
-    position: absolute;
+    /*position: absolute;
+     20170731-适配ngScorll调整bodyMask为fixed定位*/
+    position: fixed;
     height: 100vh;
     width: 100vw;
     background: #000;

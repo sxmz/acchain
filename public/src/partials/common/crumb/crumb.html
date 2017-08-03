@@ -4,7 +4,7 @@
         <span ng-show="$root.active == 'personal'">/ {{'PERSONAL' | translate}}</span>
         <span ng-show="$root.active == 'application'">/ {{'APPLICATIONS' | translate}}</span>
         <span ng-show="$root.active == 'blockforging'">/ {{'FORGING' | translate}}</span>
-        <span ng-show="$root.active == 'blockchain'">/ {{'BLOCKS' | translate}}</span>
+        <span ng-show="$root.active == 'blockchain'">/ {{'BLOCKS' | translate}} <em ng-show="blocktransactionsUnderBlock">/ {{'BLOCK_DETAIL' | translate}}</em> <em ng-show="blocktransactionsUnderAddress">/ {{'ACCOUNT_DETAIL' | translate}}</em> <em ng-show="blocktransactionsDetail">/ {{'TRANSACTION_DETAIL' | translate}}</em></span>
         <span ng-show="$root.active == 'vote'">/ {{'VOTE' | translate}}</span>
         <span ng-show="$root.active == 'pay'">/ {{'TRANSFER' | translate}}</span>
         <span ng-show="$root.active == 'peer'">/ {{'PEERS' | translate}}</span>

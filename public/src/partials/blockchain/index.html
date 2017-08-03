@@ -1,66 +1,249 @@
 <div  ng-include="'partials/common/crumb/crumb.html'"></div>
-<div id="blockchain" ng-controller="blockchainCtrl" ng-init="init()">
-
-	<div class="latest">
-		<div class="table_title">{{'LATEST_BLOCK' | translate}}</div>
-		<div class="search">
-			<input type="text" ng-model="search" placeholder="{{'INPUT_SEARCH_CONTENT' | translate}}">
-			<a class="search_icon" ng-click="searchBlock()"><img src="../assets/common/search.png" alt=""></a>
+<div ng-controller="blockchainCtrl" class="blockchainwrap">
+	<div id="blockchain" ng-init="init()" ng-show="blockchaintopList">
+		<div class="latest">
+			<div class="table_title">{{'LATEST_BLOCK' | translate}}</div>
+			<div class="search">
+				<input type="text" ng-model="search" placeholder="{{'BLOCKCHAIN_SEARCHING' | translate}}">
+				<a class="search_icon" ng-click="searchBlockOrAddress()"><img src="../assets/common/search.png" alt=""></a>
+			</div>
+		</div>
+		<div class="deal_table">
+			<table class="table" ng-table="blockchaintableparams" border="0" width="100%" cellpadding="0" cellspacing="0"
+				   template-pagination="custom/pager" >
+				<thread>
+					<tr>
+						<th>{{'HEIGHT' | translate}}</th>
+						<th>{{'DATE' | translate}}</th>
+						<th>ID</th>
+						<th>{{'PRODUCER' | translate}}</th>
+						<th>{{'TRANSACTIONS' | translate}}</th>
+						<th>{{'TOTAL' | translate}} {{'FEES' | translate}}</th>
+						<th>{{'REWARDS' | translate}}</th>
+					</tr>
+				</thread>
+				<tr ng-repeat="i in $data"  >
+					<!--<td> <i class="level" ng-click="showdetailInfo(i)">{{i.height}}</i></td>-->
+					<td> <i class="level" ng-click="showBlockTransactionsByHeight(i.height)">{{i.height}}</i></td>
+					<td><span ng-show="i.timestamp > 0">{{i.timestamp | timestampFilter}}</span></td>
+					<!--<td><i class="level" ng-click="showdetailInfo(i)">{{i.id}}</i></td>-->
+					<td><i class="level" ng-click="showBlockTransactionsById(i.id)">{{i.id}}</i></td>
+					<td><i class="level" ng-click="showAddressTransactions(i.generatorId)">{{i.generatorId}}</i></td>
+					<!--<td><i class="level" ng-click="showdealInfo(i)">{{i.numberOfTransactions}}</i></td>-->
+					<td><i>{{i.numberOfTransactions}}</i></td>
+					<td>{{i.totalFee | xasFilter}}</td>
+					<td>{{i.reward | xasFilter}}</td>
+				</tr>
+			</table>
+			<script type="text/ng-template" id="custom/pager">
+				<ul class="pagination ng-table-pagination">
+					<li ng-class="{'disabled': !page.active && !page.current, 'active': page.current}" ng-repeat="page in pages" ng-switch="page.type">
+						<a ng-switch-when="prev" ng-click="params.page(page.number)" href="">
+							<i class="mdi-hardware-keyboard-arrow-left">{{'PREV_PAGE' | translate}}</i>
+						</a>
+						<a ng-switch-when="first" ng-click="params.page(page.number)" href="">
+							<span ng-bind="page.number"></span>
+						</a>
+						<a ng-switch-when="page" ng-click="params.page(page.number)" href="">
+							<span ng-bind="page.number"></span>
+						</a>
+						<a ng-switch-when="more" ng-click="params.page(page.number)" href="">&#8230;</a>
+						<a ng-switch-when="last" ng-click="params.page(page.number)" href="">
+							<span ng-bind="page.number"></span>
+						</a>
+						<a ng-switch-when="next" ng-click="params.page(page.number)" href="">
+							<i class="mdi-hardware-keyboard-arrow-right">{{'NEXT_PAGE' | translate}}</i>
+						</a>
+					</li>
+				</ul>
+			</script>
 		</div>
 	</div>
-	<div class="deal_table">
-		<table class="table" ng-table="blockchaintableparams" border="0" width="100%" cellpadding="0" cellspacing="0"
-			   template-pagination="custom/pager" >
-			<thread>
-				<tr>
-					<th>{{'HEIGHT' | translate}}</th>
-					<th>{{'DATE' | translate}}</th>
-					<th>ID</th>
-					<th>{{'PRODUCER' | translate}}</th>
-					<th>{{'TRANSACTIONS' | translate}}</th>
-					<!--<th>{{'TOTAL' | translate}} {{'AMOUNTS' | translate}}</th>-->
-					<th>{{'TOTAL' | translate}} {{'FEES' | translate}}</th>
-					<th>{{'REWARDS' | translate}}</th>
-				</tr>
-			</thread>
-			<tr ng-repeat="i in $data"  >
-				<td> <i class="level" ng-click="showdetailInfo(i)">{{i.height}}</i></td>
-				<td><span ng-show="i.timestamp > 0">{{i.timestamp | timestampFilter}}</span></td>
-				<td><i class="level" ng-click="showdetailInfo(i)">{{i.id}}</i></td>
-				<td><i class="level" ng-click="showaccountdetailInfo(i.generatorId)">{{i.generatorId}}</i></td>
-				<td><i class="level" ng-click="showdealInfo(i)">{{i.numberOfTransactions}}</i></td>
-				<!--<td>{{i.totalAmount  | xasFilter }}</td>-->
-				<td>{{i.totalFee | xasFilter}}</td>
-				<td>{{i.reward | xasFilter}}</td>
-			</tr>
-		</table>
-
-		<script type="text/ng-template" id="custom/pager">
-			<ul class="pagination ng-table-pagination">
-				<li ng-class="{'disabled': !page.active && !page.current, 'active': page.current}" ng-repeat="page in pages" ng-switch="page.type">
-					<a ng-switch-when="prev" ng-click="params.page(page.number)" href="">
-						<i class="mdi-hardware-keyboard-arrow-left">{{'PREV_PAGE' | translate}}</i>
-					</a>
-					<a ng-switch-when="first" ng-click="params.page(page.number)" href="">
-						<span ng-bind="page.number"></span>
-					</a>
-					<a ng-switch-when="page" ng-click="params.page(page.number)" href="">
-						<span ng-bind="page.number"></span>
-					</a>
-					<a ng-switch-when="more" ng-click="params.page(page.number)" href="">&#8230;</a>
-					<a ng-switch-when="last" ng-click="params.page(page.number)" href="">
-						<span ng-bind="page.number"></span>
-					</a>
-					<a ng-switch-when="next" ng-click="params.page(page.number)" href="">
-						<i class="mdi-hardware-keyboard-arrow-right">{{'NEXT_PAGE' | translate}}</i>
-					</a>
-				</li>
-				<!--<button ng-click="params.page(inputPage)">跳转到</button>-->
-				<!--<input type="text" placeholder="" ng-model="inputPage">-->
-			  <!--<label>页</label>-->
+	<div id="transactionsUnderBlock" ng-show="blocktransactionsUnderBlock">
+		<div class="blocktransTop">
+			<div class="latest">
+				<div class="table_title">
+					{{'BLOCK' | translate}}#{{block.height}}
+					<div class="return" ng-click="returnTopList()">
+						{{'CANCEL' | translate}}
+					</div>
+				</div>
+			</div>
+			<ul class="block_info">
+				<li class="title"><span>ID</span><span class="info">{{block.id}}</span></li>
+				<li><span>{{'VERSION' | translate}}</span><span class="info">{{block.version}}</span></li>
+				<li><span>{{'TIME' | translate}}</span><span class="info" >{{block.timestamp | timestampFilter}}</span></li>
+				<li><span>{{'HEIGHT' | translate}}</span><span class="info">{{block.height}}</span></li>
+				<li><span>{{'PREVIOUS_BLOCK' | translate}}</span><span class="info level" ng-click="showBlockTransactionsById(block.previousBlock)">{{block.previousBlock}}</span></li>
+				<li><span>{{'TRANSACTIONS_COUNT' | translate}}</span><span class="info">{{block.numberOfTransactions}}</span></li>
+				<li><span>{{'FEES' | translate}}</span><span class="info">{{block.totalFee}} ACC</span></li>
+				<li><span>{{'REWARDS' | translate}}</span><span class="info">{{block.reward}} ACC</span></li>
+				<li><span>{{'PAYLOAD_HASH' | translate}}</span><span class="info">{{block.blockSignature}}</span></li>
+				<li><span>{{'PRODUCER' | translate}}</span><span class="info level" ng-click="showAddressTransactions(block.generatorId)">{{block.generatorId}}</span></li>
+				<li><span>{{'PRODUCER_PUBKEY' | translate}}</span><span class="info">{{block.generatorPublicKey}}</span></li>
 			</ul>
-		</script>
+		</div>
+		<div class="blocktransBottom">
+			<div class="latest">
+				<div class="table_title">{{'TRANSACTIONS' | translate}}<em class="grey">{{'TRANSACTIONS_UNDER_BLOCK' | translate}}</em></div>
+			</div>
+			<div class="no_records" ng-show="blockTransactions.items.length == 0">
+				<img src="../../assets/blockchain/no_records.png"/>
+				<p>{{'NO_RECORDS' | translate}}</p>
+			</div>
+			<div infinite-scroll='blockTransactions.nextPage()' infinite-scroll-disabled='blockTransactions.disable' infinite-scroll-distance='0' ng-show="blockTransactions.items.length != 0" infinite-scroll-immediate-check="true">
+			    <ul class="transactions" ng-repeat='item in blockTransactions.items'>
+					<li>
+						<span class="data_id" ng-click="showTransactionDetailById(item.id)">{{item.id}}</span> 
+						<span class="data_time fr">{{item.timestamp | timestampFilter}}</span>
+						<span class="data_num fr">{ {{'TRANSACTION_FEE' | translate}}: <em>{{item.fee}} ACC</em> }</span> 
+					</li>
+					<li class="transaction_info clearfix">
+						<span class="fl">
+							<p><em class="level" ng-click="showAddressTransactions(item.senderId)">{{item.senderId}}</em> <em class="fr">({{item.amountShow}} ACC)</em></p>
+						</span>
+						<img src="../../assets/blockchain/data_arrow_grey.png" alt="" class="fl"/>
+						<span class="fl ti_txt">
+							<p><em ng-class="{level:item.recipientId!='System'}" ng-click="showAddressTransactions(item.recipientId)">{{item.recipientId}}</em> <em class="fr">{{item.amountShow}} ACC</em></p>
+						</span>
+					</li>
+					<p class="clearfix">
+						<span class="fr color_btn">{{item.amountShow}} ACC</span>
+						<span class="fr color_btn"><em>{{item.confirmations}}</em> {{'TRANSACTION_CONFIRMATIONS' | translate}}</span>
+					</p>
+				</ul>
+			    <div ng-show='blockTransactions.busy' class="loading">{{'LOADING_DATA' | translate}}</div>
+			    <div ng-show='!blockTransactions.disable' class="show_more_records" ng-click="blockTransactions.nextPage()" ng-cloak>{{'SHOW_MORE' | translate}}</div>
+			    <div ng-show='blockTransactions.disable' class="show_more_records">{{'NO_MORE_DATA' | translate}}</div>
+			</div>
+		</div>
+	
 	</div>
-
-
+	<div id="transactionsUnderAddress"  ng-show="blocktransactionsUnderAddress">
+		<div class="addresstransTop">
+			<div class="latest">
+				<div class="table_title">
+					{{'ASSET_CHAIN_ADDRESS' | translate}}
+					<div class="return" ng-click="returnTopList()">
+						{{'CANCEL' | translate}}
+					</div>
+				</div>
+			</div>
+			<div class="address clearfix">
+				<ul class="fl profile">
+					<li class="title"><span>{{'SUMMARY' | translate}}</span></li>
+					<li><span>{{'ADDRESS' | translate}}</span><span class="info level" ng-click="showAddressTransactions(addressInfo.account.address)">{{addressInfo.account.address}}</span></li>
+					<li><span>{{'PUBLIC_KEY' | translate}}</span><span class="info">{{addressInfo.account.publicKey}}</span></li>
+					<li><span>{{'ACCOUNT_BALANCE' | translate}}</span><span class="info">{{addressInfo.account.balance}} ACC</span><span class="level fr" ng-click="showotherbalancesInfo(addressInfo.account.address)">{{'ALL' | translate}}</span></li>
+				</ul>
+				<ul class="fl statistic">
+					<li class="title"><span>{{'TRANSACTION_STATISTIC' | translate}}</span></li>
+					<li><span>{{'TRANSACTION_TIMES' | translate}}</span><span class="info">{{addrTransactionCount}}</span></li>
+					<li><span>{{'LATEST_BLOCK' | translate}}</span><span class="info level" ng-click="showBlockTransactionsByHeight(addressInfo.latestBlock.height)">{{addressInfo.latestBlock.height}}</span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="addresstransBottom">
+			<div class="latest">
+				<div class="table_title">{{'TRANSACTION_RECORD' | translate}}</div>
+			</div>
+			<div class="no_records" ng-show="addressTransactions.items.length == 0">
+				<img src="../../assets/blockchain/no_records.png"/>
+				<p>{{'NO_RECORDS' | translate}}</p>
+			</div>
+			<div infinite-scroll='addressTransactions.nextPage()' infinite-scroll-disabled='addressTransactions.disable' infinite-scroll-distance='0' infinite-scroll-immediate-check="true" ng-show="addressTransactions.items.length != 0">
+			    <ul class="transactions" ng-repeat='addressItem in addressTransactions.items'>
+					<li>
+						<span class="data_id" ng-click="showTransactionDetailById(addressItem.id)">{{addressItem.id}}</span> 
+						<span class="data_time fr">{{addressItem.timestamp | timestampFilter}}</span>
+						<span class="data_num fr">{ {{'TRANSACTION_FEE' | translate}}: <em>{{addressItem.fee}} ACC</em> }</span> 
+					</li>
+					<li class="transaction_info clearfix">
+						<span class="fl">
+							<p><em class="level" ng-click="showAddressTransactions(addressItem.senderId)">{{addressItem.senderId}}</em> <em class="fr">({{addressItem.amountShow}} {{addressItem.currency}})</em></p>
+						</span>
+						<img src="../../assets/blockchain/data_arrow_green.png" alt="" class="fl" ng-show="addressInfo.account.address == addressItem.recipientId" />
+						<img src="../../assets/blockchain/data_arrow_red.png" alt="" class="fl" ng-show="addressInfo.account.address == addressItem.senderId" />
+						<span class="fl ti_txt">
+							<p><em ng-class="{level:addressItem.recipientId!='System'}" ng-click="showAddressTransactions(addressItem.recipientId)">{{addressItem.recipientId}}</em> <em class="fr">{{addressItem.amountShow}} {{addressItem.currency}}</em></p>
+						</span>
+					</li>
+					<p class="clearfix">
+						<span class="fr color_btn" ng-class="{'red_bg':addressInfo.account.address == addressItem.senderId}"><em ng-show="addressInfo.account.address == addressItem.senderId">-</em>{{addressItem.amountShow}} {{addressItem.currency}}</span>
+						<span class="fr color_btn"><em>{{addressItem.confirmations}}</em> {{'TRANSACTION_CONFIRMATIONS' | translate}}</span>
+					</p>
+				</ul>
+			    <div ng-show='addressTransactions.busy' class="loading">{{'LOADING_DATA' | translate}}</div>
+			    <div ng-show='!addressTransactions.disable' class="show_more_records" ng-click="addressTransactions.nextPage()" ng-cloak>{{'SHOW_MORE' | translate}}</div>
+			    <div ng-show='addressTransactions.disable' class="show_more_records">{{'NO_MORE_DATA' | translate}}</div>
+			</div>
+		</div>
+	</div>
+	<div id="transactionsDetail"  ng-show="blocktransactionsDetail">
+		<div class="transactionsDetailTop">
+			<div class="latest">
+				<div class="table_title">
+					{{'TRANSACTIONS' | translate}}<em class="grey">{{'RELATED_INFO' | translate}}</em>
+					<div class="return" ng-click="returnTopList()">
+						{{'CANCEL' | translate}}
+					</div>
+				</div>
+			</div>
+			<ul class="transactions">
+				<li>
+					<span class="data_id">{{transactionsDetail.id}}</span> 
+					<span class="data_time fr">{{transactionsDetail.timestamp | timestampFilter}}</span>
+					<span class="data_num fr">{ {{'TRANSACTION_FEE' | translate}}: <em>{{transactionsDetail.fee}} ACC</em> }</span> 
+				</li>
+				<li class="transaction_info clearfix">
+					<span class="fl">
+						<p><em class="level" ng-click="showAddressTransactions(transactionsDetail.senderId)">{{transactionsDetail.senderId}}</em> <em class="fr">({{transactionsDetail.amountShow}} {{transactionsDetail.currency}})</em></p>
+					</span>
+					<img src="../../assets/blockchain/data_arrow_green.png" alt="" class="fl" />
+					<span class="fl ti_txt">
+						<p><em ng-class="{level:transactionsDetail.recipientId!='System'}" ng-click="showAddressTransactions(transactionsDetail.recipientId)">{{transactionsDetail.recipientId}}</em> <em class="fr">{{transactionsDetail.amountShow}} {{transactionsDetail.currency}}</em></p>
+					</span>
+				</li>
+				<p class="clearfix">
+					<span class="fr color_btn">{{transactionsDetail.amountShow}} {{transactionsDetail.currency}}</span>
+					<span class="fr color_btn"><em>{{transactionsDetail.confirmations}}</em> {{'TRANSACTION_CONFIRMATIONS' | translate}}</span>
+				</p>
+			</ul>
+		</div>
+		<div class="transactionsDetailBottom">
+			<div class="address clearfix">
+				<ul class="fl profile">
+					<div class="latest">
+						<div class="table_title">
+							{{'TRANSACTIONS_INFO_SUMMARY' | translate}}
+						</div>
+					</div>
+					<li class="title"><span>{{'DATA_VOLUME' | translate}}</span><span class="info">{{bytesCount}}</span></li>
+					<li><span>{{'RECEIVE_TIME' | translate}}</span><span class="info">{{transactionsDetail.timestamp | timestampFilter}}</span></li>
+					<li><span>{{'ACCEPT_BLOCK' | translate}}</span><span class="info level" ng-click="showBlockTransactionsById(transactionsDetail.blockId)">{{transactionsDetail.blockId}}</span></li>
+				</ul>
+				<ul class="fl statistic">
+					<div class="latest">
+						<div class="table_title">
+							{{'TRANSFER_IN_AND_OUT' | translate}}
+						</div>
+					</div>
+					<li class="title"><span>{{'TRANSACTION_AMOUNT' | translate}}</span><span class="info">{{transactionsDetail.amountShow}} {{transactionsDetail.currency}}</span></li>
+					<li><span>{{'TRANSACTION_FEE' | translate}}</span><span class="info">{{transactionsDetail.fee}} ACC</span></li>
+					<li><span>{{'NOTE' | translate}}</span><span class="info">{{transactionsDetail.message}}</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="dialog multi_currency" ng-show="otherbalancesInfo">
+		<div class="clearfix dialog_tit">
+			<span>{{'ACCOUNT_BALANCE' | translate}}</span>
+			<img src="/assets/common/close.png" ng-click="close()"/>
+		</div>
+		<ul>
+			<li class="clearfix" ng-repeat='balances in otherbalances'>
+				<span class="currency">{{balances.currency}}</span><span>{{balances.balance}}</span>
+			</li>
+		</ul>
+	</div>
 </div>

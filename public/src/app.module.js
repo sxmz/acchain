@@ -1,4 +1,4 @@
-var app = angular.module('asch', ['ngRoute', 'ui.bootstrap', 'ngTable', 'ipCookie', 'pascalprecht.translate', 'ja.qr']);
+var app = angular.module('asch', ['ngRoute', 'ui.bootstrap', 'ngTable', 'ipCookie', 'pascalprecht.translate', 'ja.qr','infinite-scroll']);
 
 app.config(function ($httpProvider) {
     // Use x-www-form-urlencoded Content-Type
