@@ -381,5 +381,5 @@ window.Translations['en-us'] = {
   SHOW_MORE: 'Show more',
   NO_MORE_DATA: 'No more',
   CURRENT_BLOCK_HEIGHT: 'Current Block Height',
-  ERR_SEARCH_EMPTY: 'Empty seacrching content',
+  ERR_SEARCH_EMPTY: 'Empty searching content',
 };
