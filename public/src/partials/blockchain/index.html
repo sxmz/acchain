@@ -87,11 +87,11 @@
 			<div class="latest">
 				<div class="table_title">{{'TRANSACTIONS' | translate}}<em class="grey">{{'TRANSACTIONS_UNDER_BLOCK' | translate}}</em></div>
 			</div>
-			<div class="no_records" ng-show="blockTransactions.items.length == 0">
+			<div class="no_records" ng-show="block.numberOfTransactions == 0">
 				<img src="../../assets/blockchain/no_records.png"/>
 				<p>{{'NO_RECORDS' | translate}}</p>
 			</div>
-			<div infinite-scroll='blockTransactions.nextPage()' infinite-scroll-disabled='blockTransactions.disable' infinite-scroll-distance='0' ng-show="blockTransactions.items.length != 0" infinite-scroll-immediate-check="true">
+			<div infinite-scroll='blockTransactions.nextPage()' infinite-scroll-disabled='blockTransactions.disable' infinite-scroll-distance='0' ng-show="block.numberOfTransactions != 0" infinite-scroll-immediate-check="true">
 			    <ul class="transactions" ng-repeat='item in blockTransactions.items'>
 					<li>
 						<span class="data_id" ng-click="showTransactionDetailById(item.id)">{{item.id}}</span> 
@@ -147,11 +147,11 @@
 			<div class="latest">
 				<div class="table_title">{{'TRANSACTION_RECORD' | translate}}</div>
 			</div>
-			<div class="no_records" ng-show="addressTransactions.items.length == 0">
+			<div class="no_records" ng-show="addrTransactionCount == 0">
 				<img src="../../assets/blockchain/no_records.png"/>
 				<p>{{'NO_RECORDS' | translate}}</p>
 			</div>
-			<div infinite-scroll='addressTransactions.nextPage()' infinite-scroll-disabled='addressTransactions.disable' infinite-scroll-distance='0' infinite-scroll-immediate-check="true" ng-show="addressTransactions.items.length != 0">
+			<div infinite-scroll='addressTransactions.nextPage()' infinite-scroll-disabled='addressTransactions.disable' infinite-scroll-distance='0' infinite-scroll-immediate-check="true" ng-show="addrTransactionCount != 0">
 			    <ul class="transactions" ng-repeat='addressItem in addressTransactions.items'>
 					<li>
 						<span class="data_id" ng-click="showTransactionDetailById(addressItem.id)">{{addressItem.id}}</span> 
