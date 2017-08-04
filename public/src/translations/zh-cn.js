@@ -376,4 +376,5 @@ window.Translations['zh-cn'] = {
   SHOW_MORE: '显示更多',
   NO_MORE_DATA: '没有更多了',
   CURRENT_BLOCK_HEIGHT: '当前区块高度',
+  ERR_SEARCH_EMPTY: '搜索内容不得为空',
 };

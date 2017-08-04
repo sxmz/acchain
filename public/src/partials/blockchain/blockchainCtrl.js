@@ -24,6 +24,9 @@ angular.module('asch').controller('blockchainCtrl', function ($scope, $rootScope
 		$rootScope.$broadcast('accountdetail', $scope.i)
 	}
 	$scope.init = function () {
+		initialTable();
+	};
+	function initialTable(){
 		$scope.blockchaintableparams = new NgTableParams({
 			page: 1,
 			count: 20,
@@ -31,40 +34,42 @@ angular.module('asch').controller('blockchainCtrl', function ($scope, $rootScope
 				height: 'desc'
 			}
 		}, {
-				total: 0,
-				getData: function ($defer, params) {
-					apiService.blocks({
-						limit: params.count(),
-						orderBy: 'height:desc',
-						offset: (params.page() - 1) * params.count()
-					}).success(function (res) {
-						params.total(res.count);
-						$defer.resolve(res.blocks);
-					}).error(function (res) {
-						toastError($translate.instant('ERR_SERVER_ERROR'));
-					});
-				}
-			});
-	};
-	//搜索区块或地址
+			total: 0,
+			getData: function ($defer, params) {
+				apiService.blocks({
+					limit: params.count(),
+					orderBy: 'height:desc',
+					offset: (params.page() - 1) * params.count()
+				}).success(function (res) {
+					params.total(res.count);
+					$defer.resolve(res.blocks);
+				}).error(function (res) {
+					toastError($translate.instant('ERR_SERVER_ERROR'));
+				});
+			}
+		});
+	}
+	//搜索区块或地址或交易ID
 	$scope.searchBlockOrAddress = function () {
 		if (!$scope.search) {
-			$scope.init();
+			initialTable();
+			toast($translate.instant('ERR_SEARCH_EMPTY'));
+		}else{
+			var content = $scope.search.replace(/(^\s*)|(\s*$)/g, "");
+			if(/^[A-Za-z\d]{33,34}$/.test(content)){
+				$rootScope.showAddressTransactions(content);
+			}else if(/^\d+$/.test(content)){
+				$rootScope.showBlockTransactionsByHeight(content);
+			}else if(content.length==64){
+		        $rootScope.showTransactionDetailById(content);
+		    }else if(content.length<33 && !/^\d+$/.test(content)){
+		        toast($translate.instant('ACCOUNT_NOT_FOUND'));
+		    }else if(content.length>34 && !/^\d+$/.test(content)){
+		        toast($translate.instant('TRANSACTION_ID_NOT_FOUND'));
+		    }else{
+		    	toast($translate.instant('INCORRECT_TYPEIN'));
+		    }
 		}
-		var content = $scope.search.replace(/(^\s*)|(\s*$)/g, "");
-		if(/^[A-Za-z\d]{33,34}$/.test(content)){
-			$rootScope.showAddressTransactions(content);
-		}else if(/^\d+$/.test(content)){
-			$rootScope.showBlockTransactionsByHeight(content);
-		}else if(content.length==64){
-	        $rootScope.showBlockTransactionsById(content);
-	    }else if(content.length<33 && !/^\d+$/.test(content)){
-	        toast($translate.instant('ACCOUNT_NOT_FOUND'));
-	    }else if(content.length>34 && !/^\d+$/.test(content)){
-	        toast($translate.instant('TRANSACTION_ID_NOT_FOUND'));
-	    }else{
-	    	toast($translate.instant('INCORRECT_TYPEIN'));
-	    }
 	}
 	//区块下的交易详情
 	$rootScope.showBlockTransactionsByHeight = function(i){
@@ -80,6 +85,7 @@ angular.module('asch').controller('blockchainCtrl', function ($scope, $rootScope
 		        res.block.reward = res.block.reward / Math.pow(10,6);
 		        $scope.block = res.block;
 		        $scope.blockTransactions = new TransactionRecords(res.block.id,"block");
+		        $scope.blockTransactions.nextPage();
 		    }else{
 				toast(res.error);
 			}
@@ -107,11 +113,13 @@ angular.module('asch').controller('blockchainCtrl', function ($scope, $rootScope
 			toastError($translate.instant('ERR_SERVER_ERROR'));
 		});
 		$scope.blockTransactions = new TransactionRecords(i,"block");
+		$scope.blockTransactions.nextPage();
 	}
 	//地址下的交易详情
 	$rootScope.showAddressTransactions = function(i){
 		if(i == "System")return;
 		$scope.addressTransactions = new TransactionRecords(i,"address");
+		$scope.addressTransactions.nextPage();
 		apiService.accountdetail({
 			address: i
 		}).success(function (res) {
@@ -164,6 +172,7 @@ angular.module('asch').controller('blockchainCtrl', function ($scope, $rootScope
 	}
 	//返回
 	$scope.returnTopList = function(){
+		initialTable();
 		$rootScope.blockchaintopList = true;
 		$rootScope.blocktransactionsUnderBlock = false;
 		$rootScope.blocktransactionsUnderAddress = false;

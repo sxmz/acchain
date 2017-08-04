@@ -1,6 +1,6 @@
 <div  ng-include="'partials/common/crumb/crumb.html'"></div>
-<div ng-controller="blockchainCtrl" class="blockchainwrap">
-	<div id="blockchain" ng-init="init()" ng-show="blockchaintopList">
+<div ng-controller="blockchainCtrl" class="blockchainwrap" ng-init="init()">
+	<div id="blockchain" ng-show="blockchaintopList">
 		<div class="latest">
 			<div class="table_title">{{'LATEST_BLOCK' | translate}}</div>
 			<div class="search">
