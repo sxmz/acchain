@@ -273,17 +273,29 @@
                 margin-left: 10px;
             }
             .transaction_info{
-                img{
-                    margin: 0 30px 0 30px;
-                    position: relative;
-                    top: 6px;
+                position: relative;
+                div.fl{
+                    position: absolute;
+                    top: 10px;
+                    left: 50%;
+                    -webkit-transform: translate(-50%,0);
+                    -moz-transform: translate(-50%,0);
+                    -ms-transform: translate(-50%,0);
+                    -o-transform: translate(-50%,0);
+                    transform: translate(-50%,0);
+                    text-align: center;
+                    img{
+                        width: 28px;
+                    }
+                    div{
+                       margin-top: 10px; 
+                    }
                 }
-                p{
-                    margin-top: 12px;
-                }
-                span.fl,span.fr{
+                p.fl,p.fr{
                     display: inline-block;
-                    width: 44%;
+                    width: 50%;
+                    text-align: center;
+                    margin-top: 8px;
                 }
             }
         }
@@ -437,17 +449,29 @@
                 background: #e83a3a;
             }
             .transaction_info{
-                img{
-                    margin: 0 30px 0 30px;
-                    position: relative;
-                    top: 6px;
+                position: relative;
+                div.fl{
+                    position: absolute;
+                    top: 10px;
+                    left: 50%;
+                    -webkit-transform: translate(-50%,0);
+                    -moz-transform: translate(-50%,0);
+                    -ms-transform: translate(-50%,0);
+                    -o-transform: translate(-50%,0);
+                    transform: translate(-50%,0);
+                    text-align: center;
+                    img{
+                        width: 28px;
+                    }
+                    div{
+                       margin-top: 10px; 
+                    }
                 }
-                p{
-                    margin-top: 12px;
-                }
-                span.fl,span.fr{
+                p.fl,p.fr{
                     display: inline-block;
-                    width: 44%;
+                    width: 50%;
+                    text-align: center;
+                    margin-top: 8px;
                 }
             }
         }
@@ -606,17 +630,29 @@
                 background: #e83a3a;
             }
             .transaction_info{
-                img{
-                    margin: 0 30px 0 30px;
-                    position: relative;
-                    top: 6px;
+                position: relative;
+                div.fl{
+                    position: absolute;
+                    top: 10px;
+                    left: 50%;
+                    -webkit-transform: translate(-50%,0);
+                    -moz-transform: translate(-50%,0);
+                    -ms-transform: translate(-50%,0);
+                    -o-transform: translate(-50%,0);
+                    transform: translate(-50%,0);
+                    text-align: center;
+                    img{
+                        width: 28px;
+                    }
+                    div{
+                       margin-top: 10px; 
+                    }
                 }
-                p{
-                    margin-top: 12px;
-                }
-                span.fl,span.fr{
+                p.fl,p.fr{
                     display: inline-block;
-                    width: 44%;
+                    width: 50%;
+                    text-align: center;
+                    margin-top: 8px;
                 }
             }
         }

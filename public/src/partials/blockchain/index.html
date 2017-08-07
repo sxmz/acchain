@@ -99,13 +99,16 @@
 						<span class="data_num fr">{ {{'TRANSACTION_FEE' | translate}}: <em>{{item.fee}} ACC</em> }</span> 
 					</li>
 					<li class="transaction_info clearfix">
-						<span class="fl">
-							<p><em class="level" ng-click="showAddressTransactions(item.senderId)">{{item.senderId}}</em> <em class="fr">({{item.amountShow}} ACC)</em></p>
-						</span>
-						<img src="../../assets/blockchain/data_arrow_grey.png" alt="" class="fl"/>
-						<span class="fl ti_txt">
-							<p><em ng-class="{level:item.recipientId!='System'}" ng-click="showAddressTransactions(item.recipientId)">{{item.recipientId}}</em> <em class="fr">{{item.amountShow}} ACC</em></p>
-						</span>
+						<p class="fl">
+							<em class="level" ng-click="showAddressTransactions(item.senderId)">{{item.senderId}}</em>
+						</p>
+						<div class="fl">
+							<img src="../../assets/blockchain/data_arrow_grey.png" alt="" />
+							<div>{{item.amountShow}} ACC</div>
+						</div>
+						<p class="fl ti_txt">
+							<em ng-class="{level:item.recipientId!='System'}" ng-click="showAddressTransactions(item.recipientId)">{{item.recipientId}}</em>
+						</p>
 					</li>
 					<p class="clearfix">
 						<span class="fr color_btn">{{item.amountShow}} ACC</span>
@@ -159,14 +162,17 @@
 						<span class="data_num fr">{ {{'TRANSACTION_FEE' | translate}}: <em>{{addressItem.fee}} ACC</em> }</span> 
 					</li>
 					<li class="transaction_info clearfix">
-						<span class="fl">
-							<p><em class="level" ng-click="showAddressTransactions(addressItem.senderId)">{{addressItem.senderId}}</em> <em class="fr">({{addressItem.amountShow}} {{addressItem.currency}})</em></p>
-						</span>
-						<img src="../../assets/blockchain/data_arrow_green.png" alt="" class="fl" ng-show="addressInfo.account.address == addressItem.recipientId" />
-						<img src="../../assets/blockchain/data_arrow_red.png" alt="" class="fl" ng-show="addressInfo.account.address == addressItem.senderId" />
-						<span class="fl ti_txt">
-							<p><em ng-class="{level:addressItem.recipientId!='System'}" ng-click="showAddressTransactions(addressItem.recipientId)">{{addressItem.recipientId}}</em> <em class="fr">{{addressItem.amountShow}} {{addressItem.currency}}</em></p>
-						</span>
+						<p class="fl">
+							<em class="level" ng-click="showAddressTransactions(addressItem.senderId)">{{addressItem.senderId}}</em>
+						</p>
+						<div class="fl">
+							<img src="../../assets/blockchain/data_arrow_green.png" alt="" ng-show="addressInfo.account.address == addressItem.recipientId" />
+							<img src="../../assets/blockchain/data_arrow_red.png" alt="" ng-show="addressInfo.account.address == addressItem.senderId" />
+							<div>{{addressItem.amountShow}} {{addressItem.currency}}</div>
+						</div>
+						<p class="fl ti_txt">
+							<em ng-class="{level:addressItem.recipientId!='System'}" ng-click="showAddressTransactions(addressItem.recipientId)">{{addressItem.recipientId}}</em>
+						</p>
 					</li>
 					<p class="clearfix">
 						<span class="fr color_btn" ng-class="{'red_bg':addressInfo.account.address == addressItem.senderId}"><em ng-show="addressInfo.account.address == addressItem.senderId && addressItem.amountShow != '0'">-</em>{{addressItem.amountShow}} {{addressItem.currency}}</span>
@@ -196,13 +202,16 @@
 					<span class="data_num fr">{ {{'TRANSACTION_FEE' | translate}}: <em>{{transactionsDetail.fee}} ACC</em> }</span> 
 				</li>
 				<li class="transaction_info clearfix">
-					<span class="fl">
-						<p><em class="level" ng-click="showAddressTransactions(transactionsDetail.senderId)">{{transactionsDetail.senderId}}</em> <em class="fr">({{transactionsDetail.amountShow}} {{transactionsDetail.currency}})</em></p>
-					</span>
-					<img src="../../assets/blockchain/data_arrow_green.png" alt="" class="fl" />
-					<span class="fl ti_txt">
-						<p><em ng-class="{level:transactionsDetail.recipientId!='System'}" ng-click="showAddressTransactions(transactionsDetail.recipientId)">{{transactionsDetail.recipientId}}</em> <em class="fr">{{transactionsDetail.amountShow}} {{transactionsDetail.currency}}</em></p>
-					</span>
+					<p class="fl">
+						<em class="level" ng-click="showAddressTransactions(transactionsDetail.senderId)">{{transactionsDetail.senderId}}</em>
+					</p>
+					<div class="fl">
+						<img src="../../assets/blockchain/data_arrow_green.png" />
+						<div>{{transactionsDetail.amountShow}} {{transactionsDetail.currency}}</div>
+					</div>
+					<p class="fl ti_txt">
+						<em ng-class="{level:transactionsDetail.recipientId!='System'}" ng-click="showAddressTransactions(transactionsDetail.recipientId)">{{transactionsDetail.recipientId}}</em>
+					</p>
 				</li>
 				<p class="clearfix">
 					<span class="fr color_btn">{{transactionsDetail.amountShow}} {{transactionsDetail.currency}}</span>
