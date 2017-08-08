@@ -139,7 +139,7 @@
   width: 840px;
   z-index: 1000;
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%,-50%);
@@ -152,7 +152,7 @@
   width: 840px;
   z-index: 1000;
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%,-50%);
