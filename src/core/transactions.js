@@ -541,6 +541,7 @@ Transactions.prototype.onBind = function (scope) {
 // Shared
 shared.getTransactions = function (req, cb) {
   var query = req.body;
+  if (query.message) query.message = String(query.message)
   library.scheme.validate(query, {
     type: "object",
     properties: {
