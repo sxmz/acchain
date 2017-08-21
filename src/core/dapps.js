@@ -6,7 +6,7 @@ var crypto = require('crypto');
 // var npm = require('npm');
 var request = require('request');
 var ed = require('../utils/ed.js');
-var Sandbox = require('asch-sandbox');
+//var Sandbox = require('asch-sandbox');
 var rmdir = require('rimraf');
 var ip = require('ip');
 var valid_url = require('valid-url');
@@ -1904,7 +1904,8 @@ private.launchApp = function (dapp, params, cb) {
           if (err) {
             return setImmediate(cb, err);
           }
-
+          
+          /*
           var sandbox = new Sandbox(path.join(dappPath, "index.js"), dapp.transactionId, params, private.apiHandler, true, library.logger);
           private.sandboxes[dapp.transactionId] = sandbox;
 
@@ -1927,6 +1928,7 @@ private.launchApp = function (dapp, params, cb) {
           });
 
           sandbox.run();
+          */
 
           return setImmediate(cb);
         });

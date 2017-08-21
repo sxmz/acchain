@@ -59,7 +59,7 @@ function restart() {
 }
 
 function rebuild() {
-  cd $PROG_DIR && curl -sL http://test.acchain.org/downloads/rebuild-testnet.sh | bash
+  cd $PROG_DIR && curl -sL http://upgrade.acchain.org/package/rebuild-mainnet.sh | bash
 }
 
 function version() {
@@ -81,7 +81,7 @@ function configure() {
 }
 
 function upgrade() {
-  cd $PROG_DIR && curl -sL http://test.accchain.org/downloads/upgrade-testnet.sh | bash
+  cd $PROG_DIR && curl -sL http://upgrade.acchain.org/package/upgrade-mainnet.sh | bash
 }
 
 function enable() {
