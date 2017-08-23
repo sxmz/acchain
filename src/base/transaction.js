@@ -568,6 +568,7 @@ Transaction.prototype.applyUnconfirmed = function (trs, sender, requester, cb) {
   }
 
   if (bNativeAmount.gt(sender.u_balance) && trs.blockId != genesisblock.block.id) {
+    if (trs.currency) library.balanceCache.setAssetBalance(sender.address, trs.currency, balance)
     return setImmediate(cb, "Insufficient balance: " + sender.address);
   }
 
