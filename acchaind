@@ -24,7 +24,7 @@ function start() {
     echo "Acchain server is already started"
   else
     rm -f $PID_FILE
-    node $PROG_DIR/app.js --base $PROG_DIR --daemon $@
+    ./bin/node $PROG_DIR/app.js --base $PROG_DIR --daemon $@
   fi
 }
 
