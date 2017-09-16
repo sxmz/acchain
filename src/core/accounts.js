@@ -10,7 +10,8 @@ var constants = require('../utils/constants.js');
 var TransactionTypes = require('../utils/transaction-types.js');
 var Diff = require('../utils/diff.js');
 var sandboxHelper = require('../utils/sandbox.js');
-var addressHelper = require('../utils/address.js')
+var addressHelper = require('../utils/address.js');
+var Mnemonic = require('bitcore-mnemonic');
 
 // Private fields
 var modules, library, self, private = {}, shared = {};
@@ -178,7 +179,8 @@ private.attachApi = function () {
     "get /delegates": "getDelegates",
     "get /delegates/fee": "getDelegatesFee",
     "put /delegates": "addDelegates",
-    "get /": "getAccount"
+    "get /": "getAccount",
+    "get /new": "newAccount"
   });
 
   if (process.env.DEBUG && process.env.DEBUG.toUpperCase() == "TRUE") {
@@ -331,6 +333,18 @@ Accounts.prototype.sandboxApi = function (call, args, cb) {
 // Events
 Accounts.prototype.onBind = function (scope) {
   modules = scope;
+}
+
+shared.newAccount = function (req, cb) {
+  var secret = new Mnemonic(Mnemonic.Words.ENGLISH).toString();
+  var keypair = ed.MakeKeypair(crypto.createHash('sha256').update(secret, 'utf8').digest());
+  var address = self.generateAddressByPublicKey2(keypair.publicKey)
+  cb(null, {
+    secret: secret,
+    publicKey: keypair.publicKey.toString('hex'),
+    privateKey: keypair.privateKey.toString('hex'),
+    address: address
+  })
 }
 
 // Shared

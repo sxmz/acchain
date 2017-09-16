@@ -13,6 +13,7 @@
     "array.prototype.findindex": "2.0.0",
     "async": "1.5.2",
     "bignumber": "https://github.com/sqfasd/bignumber/tarball/master",
+    "bitcore-mnemonic": "^1.2.5",
     "body-parser": "1.15.2",
     "bytebuffer": "5.0.1",
     "change-case": "3.0.0",
