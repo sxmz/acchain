@@ -520,7 +520,7 @@ Transactions.prototype.receiveTransactions = function (transactions, cb) {
     return;
   }
   let validTrs = transactions.filter(function (t) {
-    return !!private.invalidIds[t.id]
+    return !private.invalidIds[t.id]
   })
   async.eachSeries(validTrs, function (transaction, cb) {
     self.processUnconfirmedTransaction(transaction, true, cb);
