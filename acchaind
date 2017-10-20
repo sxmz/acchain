@@ -62,6 +62,10 @@ function rebuild() {
   cd $PROG_DIR && curl -sL http://upgrade.acchain.org/package/rebuild-mainnet.sh | bash
 }
 
+function rebuild_testnet() {
+  cd $PROG_DIR && curl -sL http://upgrade.acchain.org/package/rebuild-testnet.sh | bash
+}
+
 function version() {
   node $PROG_DIR/app.js --version
 }
@@ -82,6 +86,10 @@ function configure() {
 
 function upgrade() {
   cd $PROG_DIR && curl -sL http://upgrade.acchain.org/package/upgrade-mainnet.sh | bash
+}
+
+function upgrade_testnet() {
+  cd $PROG_DIR && curl -sL http://upgrade.acchain.org/package/upgrade-testnet.sh | bash
 }
 
 function enable() {
