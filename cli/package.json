@@ -1,14 +1,14 @@
 {
   "name": "acchain-cli",
   "preferGlobal": true,
-  "version": "1.1.2",
+  "version": "1.0.2",
   "description": "Command line interface for bootstrapping and managing asch dapps",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "asch",
+    "acchain",
     "dapps",
     "cli"
   ],
@@ -33,6 +33,10 @@
     "request": "^2.62.0",
     "rmdir": "^1.1.0",
     "valid-url": "=1.0.9"
+  },
+  "devDependencies": {
+    "webpack-node-externals": "^1.2.0",
+    "webpack-stream": "^3.2.0"
   },
   "bugs": {
     "url": "https://github.com/acchain/issues"
