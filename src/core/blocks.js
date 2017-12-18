@@ -888,6 +888,7 @@ Blocks.prototype.applyBlock = function (block, votes, broadcast, saveBlock, call
             error: err
           };
           library.logger.error("Failed to apply transaction", errorContext);
+          modules.transactions.addInvalidId(transaction.id)
           nextTr(err);
           return;
         }

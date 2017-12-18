@@ -14,6 +14,7 @@ var modules, library, self, private = {}, shared = {};
 private.headers = {};
 private.loaded = false;
 private.messages = {};
+private.invalidTrsCache = {}
 
 // Constructor
 function Transport(cb, scope) {
@@ -403,6 +404,10 @@ private.attachApi = function () {
       return res.status(200).json({ success: false, error: "Invalid transaction body" });
     }
 
+    if (private.invalidTrsCache[transaction.id]) {
+      return res.status(200).json({ success: false, error: "Already processed transaction" });
+    }
+
     library.balancesSequence.add(function (cb) {
       if (modules.transactions.hasUnconfirmedTransaction(transaction)) {
         return cb('Already exists');
@@ -412,6 +417,7 @@ private.attachApi = function () {
     }, function (err, transactions) {
       if (err) {
         library.logger.debug('Receive invalid transaction', err);
+        private.invalidTrsCache[transaction.id] = true
         res.status(200).json({ success: false, error: err });
       } else {
         res.status(200).json({ success: true, transactionId: transactions[0].id });

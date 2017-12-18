@@ -50,6 +50,10 @@ function Approval() {
     if (topic < TOPICS.ASSET_REGISTER || topic > TOPICS.ASSET_ISSUE) {
       return setImmediate(cb, 'Invalid approval topic')
     }
+    var value = trs.asset.approval.value
+    if (topic === TOPICS.ASSET_ISSUE && value.length !== 64) {
+      return setImmediate(cb, 'Invalid topic or value')
+    }
     var condition = {
       senderId: sender.address,
       topic: topic,

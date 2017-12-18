@@ -1,7 +1,8 @@
 {
   "name": "acchain",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "private": true,
+  "config": { "unsafe-perm": true },
   "scripts": {
     "start": "node app.js",
     "test": "./node_modules/.bin/mocha --require mocha-babel",
@@ -11,9 +12,9 @@
   "dependencies": {
     "array.prototype.find": "1.0.0",
     "array.prototype.findindex": "2.0.0",
-    "asch-sandbox": "https://github.com/sqfasd/asch-sandbox/tarball/master",
     "async": "1.5.2",
     "bignumber": "https://github.com/sqfasd/bignumber/tarball/master",
+    "bitcore-mnemonic": "^1.2.5",
     "body-parser": "1.15.2",
     "bytebuffer": "5.0.1",
     "change-case": "3.0.0",
@@ -36,7 +37,7 @@
     "request": "2.74.0",
     "rimraf": "2.5.4",
     "socket.io": "1.4.8",
-    "sodium": "git+https://github.com/sqfasd/node-sodium.git",
+    "sodium": "2.0.3",
     "strftime": "0.9.2",
     "util-extend": "1.0.3",
     "valid-url": "1.0.9",

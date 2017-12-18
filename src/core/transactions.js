@@ -17,6 +17,7 @@ var modules, library, self, private = {}, shared = {};
 private.unconfirmedNumber = 0;
 private.unconfirmedTransactions = [];
 private.unconfirmedTransactionsIdIndex = {};
+private.invalidIds = {}
 
 function Transfer() {
   this.create = function (data, trs) {
@@ -518,11 +519,18 @@ Transactions.prototype.receiveTransactions = function (transactions, cb) {
     setImmediate(cb, "Too many transactions");
     return;
   }
-  async.eachSeries(transactions, function (transaction, cb) {
+  let validTrs = transactions.filter(function (t) {
+    return !private.invalidIds[t.id]
+  })
+  async.eachSeries(validTrs, function (transaction, cb) {
     self.processUnconfirmedTransaction(transaction, true, cb);
   }, function (err) {
     cb(err, transactions);
   });
+}
+
+Transactions.prototype.addInvalidId = function (id) {
+  private.invalidIds[id] = true
 }
 
 Transactions.prototype.sandboxApi = function (call, args, cb) {
@@ -541,6 +549,7 @@ Transactions.prototype.onBind = function (scope) {
 // Shared
 shared.getTransactions = function (req, cb) {
   var query = req.body;
+  if (query.message) query.message = String(query.message)
   library.scheme.validate(query, {
     type: "object",
     properties: {
