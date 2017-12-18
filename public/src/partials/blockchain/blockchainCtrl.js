@@ -234,6 +234,7 @@ angular.module('asch').factory('TransactionRecords', function(apiService) {
 					var items = response.transactions;
 					for (var i = 0; i < items.length; i++) {
 						items[i].recipientId = items[i].recipientId === ""?"System":items[i].recipientId;
+						items[i].currency = items[i].currency === ""?"ACC":items[i].currency;
 						items[i].fee = items[i].fee / Math.pow(10,6);
 			            this.items.push(items[i]);
 			        }
