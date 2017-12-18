@@ -104,14 +104,14 @@
 						</p>
 						<div class="fl">
 							<img src="../../assets/blockchain/data_arrow_grey.png" alt="" />
-							<div>{{item.amountShow}} ACC</div>
+							<div>{{item.amountShow}} {{item.currency}}</div>
 						</div>
 						<p class="fl ti_txt">
 							<em ng-class="{level:item.recipientId!='System'}" ng-click="showAddressTransactions(item.recipientId)">{{item.recipientId}}</em>
 						</p>
 					</li>
 					<p class="clearfix">
-						<span class="fr color_btn">{{item.amountShow}} ACC</span>
+						<span class="fr color_btn">{{item.amountShow}} {{item.currency}}</span>
 						<span class="fr color_btn"><em>{{item.confirmations}}</em> {{'TRANSACTION_CONFIRMATIONS' | translate}}</span>
 					</p>
 				</ul>
