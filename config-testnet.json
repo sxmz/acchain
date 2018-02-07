@@ -2,7 +2,7 @@
   "port": 5000,
   "address": "0.0.0.0",
   "publicIp": "",
-  "logLevel": "log",
+  "logLevel": "info",
   "magic": "8e9b66ed",
   "api": {
     "access": {
