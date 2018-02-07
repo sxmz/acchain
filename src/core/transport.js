@@ -617,11 +617,13 @@ Transport.prototype.getFromPeer = function (peer, options, cb) {
 
       if (peer) {
         if (err && (err.code == "ETIMEDOUT" || err.code == "ESOCKETTIMEDOUT" || err.code == "ECONNREFUSED")) {
+          /*
           modules.peer.remove(peer.ip, peer.port, function (err) {
             if (!err) {
               library.logger.info('Removing peer ' + req.method + ' ' + req.url)
             }
           });
+          */
         } else {
           if (!options.not_ban) {
             modules.peer.state(peer.ip, peer.port, 0, 600, function (err) {
