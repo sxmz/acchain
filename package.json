@@ -2,7 +2,9 @@
   "name": "acchain",
   "version": "1.0.7",
   "private": true,
-  "config": { "unsafe-perm": true },
+  "config": {
+    "unsafe-perm": true
+  },
   "scripts": {
     "start": "node app.js",
     "test": "./node_modules/.bin/mocha --require mocha-babel",
@@ -14,7 +16,7 @@
     "array.prototype.findindex": "2.0.0",
     "async": "1.5.2",
     "bignumber": "https://github.com/sqfasd/bignumber/tarball/master",
-    "bitcore-mnemonic": "^1.2.5",
+    "bitcore-mnemonic": "1.2.5",
     "body-parser": "1.15.2",
     "bytebuffer": "5.0.1",
     "change-case": "3.0.0",
@@ -37,11 +39,14 @@
     "request": "2.74.0",
     "rimraf": "2.5.4",
     "socket.io": "1.4.8",
-    "sodium": "2.0.3",
+    "sodium": "^2.0.3",
     "strftime": "0.9.2",
     "util-extend": "1.0.3",
     "valid-url": "1.0.9",
-    "z-schema": "https://github.com/sqfasd/z-schema/tarball/master"
+    "z-schema": "https://github.com/sqfasd/z-schema/tarball/master",
+    "browserify": "16.1.0",
+    "del": "3.0.0",
+    "fs-extra": "5.0.0"
   },
   "devDependencies": {
     "babel": "=5.8.23",
