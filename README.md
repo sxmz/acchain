@@ -73,7 +73,7 @@ You can use this account to test acchain immediately
 
 ## Releated projects
 
-- [acchain_docs](http://git.oschina.net/sxmz/acchain_docs)
+- [acchain_docs](https://github.com/sxmz/acchain_docs)
 
 ## License
 
