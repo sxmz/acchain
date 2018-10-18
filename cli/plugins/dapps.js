@@ -9,7 +9,7 @@ var npm = require("npm");
 var request = require("request");
 var valid_url = require("valid-url");
 var fsExtra = require('fs-extra');
-var AschJS = require('asch-js');
+var AschJS = require('../../acchain-js');
 var accountHelper = require("../helpers/account.js");
 var blockHelper = require("../helpers/block.js");
 var dappHelper = require("../helpers/dapp.js");
@@ -183,7 +183,7 @@ function addDapp() {
 					icon: result.icon || "",
 					type: 0
 				};
-				dappTrs = AschJS.dapp.createDapp(account.secret, secondSecret, dappParams);
+				dappTrs = AschJS.dapp.createDapp(dappParams, account.secret, secondSecret);
 				console.log("Generate dapp transaction", dappTrs);
 				next();
 			});
@@ -281,6 +281,9 @@ function addDapp() {
 			});
 		},
 		function(next) {
+                        if(dappTrs.id == undefined) {
+                                dappTrs.id = ""
+                        }
 			dappPath = path.join(dappsPath, dappTrs.id);
 			fsExtra.copy(templatePath, dappPath, {clobber: true}, next);
 		},
