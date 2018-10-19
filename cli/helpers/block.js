@@ -65,49 +65,49 @@ module.exports = {
 			delegates = [];
 
 		// fund recipient account
-		// if (accountsFile && fs.existsSync(accountsFile)) {
-		// 	var lines = fs.readFileSync(accountsFile, 'utf8').split('\n');
-		// 	for (var i in lines) {
-		// 		var parts = lines[i].split('\t');
-		// 		if (parts.length != 2) {
-		// 			console.error('Invalid recipient balance format');
-		// 			process.exit(1);
-		// 		}
-		// 		var trs = {
-		// 			type: 0,
-		// 			amount: Number(parts[1]) * 100000000,
-		// 			fee: 0,
-		// 			timestamp: 0,
-		// 			recipientId: parts[0],
-		// 			senderId: sender.address,
-		// 			senderPublicKey: sender.keypair.publicKey
-		// 		};
+		 if (accountsFile && fs.existsSync(accountsFile)) {
+		 	var lines = fs.readFileSync(accountsFile, 'utf8').split('\n');
+		 	for (var i in lines) {
+		 		var parts = lines[i].split('\t');
+		 		if (parts.length != 2) {
+		 			console.error('Invalid recipient balance format');
+		 			process.exit(1);
+		 		}
+		 		var trs = {
+		 			type: 0,
+		 			amount: Number(parts[1]) * 100000000,
+		 			fee: 0,
+		 			timestamp: 0,
+		 			recipientId: parts[0],
+		 			senderId: sender.address,
+		 			senderPublicKey: sender.keypair.publicKey
+		 		};
 
-		// 		var bytes = transactionsLib.getTransactionBytes(trs);
-		// 		trs.signature = cryptoLib.sign(sender.keypair, bytes);
-		// 		bytes = transactionsLib.getTransactionBytes(trs);
-		// 		trs.id = cryptoLib.getId(bytes);
+		 		var bytes = transactionsLib.getTransactionBytes(trs);
+		 		trs.signature = cryptoLib.sign(sender.keypair, bytes);
+		 		bytes = transactionsLib.getTransactionBytes(trs);
+		 		trs.id = cryptoLib.getId(bytes);
 
-		// 		transactions.push(trs);
-		// 	}
-		// } else {
-		// 	var balanceTransaction = {
-		// 		type: 0,
-		// 		amount: '1000000000',
-		// 		fee: 0,
-		// 		timestamp: 0,
-		// 		recipientId: genesisAccount.address,
-		// 		senderId: sender.address,
-		// 		senderPublicKey: sender.keypair.publicKey
-		// 	};
+		 		transactions.push(trs);
+		 	}
+		 } else {
+		 	var balanceTransaction = {
+		 		type: 0,
+		 		amount: '1000000000',
+		 		fee: 0,
+		 		timestamp: 0,
+		 		recipientId: genesisAccount.address,
+		 		senderId: sender.address,
+		 		senderPublicKey: sender.keypair.publicKey
+		 	};
 
-		// 	var bytes = transactionsLib.getTransactionBytes(balanceTransaction);
-		// 	balanceTransaction.signature = cryptoLib.sign(sender.keypair, bytes);
-		// 	bytes = transactionsLib.getTransactionBytes(balanceTransaction);
-		// 	balanceTransaction.id = cryptoLib.getId(bytes);
+		 	var bytes = transactionsLib.getTransactionBytes(balanceTransaction);
+		 	balanceTransaction.signature = cryptoLib.sign(sender.keypair, bytes);
+		 	bytes = transactionsLib.getTransactionBytes(balanceTransaction);
+		 	balanceTransaction.id = cryptoLib.getId(bytes);
 
-		// 	transactions.push(balanceTransaction);
-		// }
+		 	transactions.push(balanceTransaction);
+		 }
 
 		// make delegates
 		for (var i = 0; i < 101; i++) {
