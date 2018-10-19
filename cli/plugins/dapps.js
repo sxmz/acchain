@@ -299,7 +299,7 @@ function addDapp() {
 		},
 		function (next) {
 			console.log("Registering dapp in localnet");
-			var api = new Api({port: 4096});
+			var api = new Api({port: 5000});
 			api.broadcastTransaction(dappTrs, function (err) {
 				if (err) {
 					next("Failed to register dapp: " + err);
