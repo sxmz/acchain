@@ -185,14 +185,15 @@ function getBytes(transaction) {
 
 function getId(transaction) {
 	//return
-	var hash = crypto.createHash("sha256").update(getBytes(transaction).toString("hex"), "hex").digest();
-	var temp = new Buffer(8);
-	for (var i = 0; i < 8; i++) {
-		temp[i] = hash[7 - i];
-	}
+	//var hash = crypto.createHash("sha256").update(getBytes(transaction).toString("hex"), "hex").digest();
+        var hash = crypto.createHash("sha256").update(getBytes(transaction)).digest();
+	//var temp = new Buffer(8);
+	//for (var i = 0; i < 8; i++) {
+	//	temp[i] = hash[7 - i];
+	//}
 
-	var id = bignum.fromBuffer(temp).toString();
-	return id;
+	//var id = bignum.fromBuffer(temp).toString();
+	return hash.toString("hex");
 }
 function getHash(transaction) {
 	var bytes = getBytes(transaction)
