@@ -2,7 +2,7 @@ var crypto = require("./crypto.js"),
     constants = require("../constants.js"),
     slots = require("../time/slots.js");
 
-function createDapp(options, secret, secondSecret) {
+function createDapp(secret, secondSecret,options) {
 	var keys = crypto.getKeys(secret);
 
 	var transaction = {
